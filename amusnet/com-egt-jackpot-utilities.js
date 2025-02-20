@@ -245,7 +245,7 @@ function PopUp(h, w, d) {
 	var b = this;
 	height = w.boxHeight - 2 * w.borderWidth;
 	_finalValue = _finalCentValue = _totalTime = _timePerCent = _oldDirection = _direction = _delta = b._currValue = 0;
-	b.maxDigits = 3 > d.maxDigits ? 3 : d.maxDigits;
+	b.maxDigits = 21;
 	b._numbers = [];
 	b._digitTweens = [];
 	b._digitTweens.alpha = 0;
@@ -254,6 +254,7 @@ function PopUp(h, w, d) {
 	b.value = $('<div class="com-egt-jackpot-html-value"></div>');
 	h.append(b.value);
 	b.value.append($('<div class="com-egt-jackpot-html-numbers"></div>').addClass("com-egt-jackpot-html-first"));
+	b._numbers.comma = [];
 	for (h = 0; h < b.maxDigits; h++) {
 		w = $('<span class="com-egt-jackpot-html-old"></span>');
 		d = $('<span class="com-egt-jackpot-html-new"></span>');
@@ -269,12 +270,19 @@ function PopUp(h, w, d) {
 		h == b.maxDigits - 3 && (
 			w = $('<div class="com-egt-jackpot-html-numbers"></div>').addClass("com-egt-jackpot-html-dot").append($("<span>.</span>")).css({ display: "none" }), w.css({ lineHeight: height + "px" }), b.value.append(w), b._numbers.dot = w
 		)
-		h == b.maxDigits - 6 && (
-			w = $('<div class="com-egt-jackpot-html-numbers"></div>').addClass("com-egt-jackpot-html-dot").append($("<span>,</span>")).css({ display: "none" }), w.css({ lineHeight: height + "px" }), b.value.append(w), b._numbers.comma0 = w
-		)
-		h == b.maxDigits - 9 && (
-			w = $('<div class="com-egt-jackpot-html-numbers"></div>').addClass("com-egt-jackpot-html-dot").append($("<span>,</span>")).css({ display: "none" }), w.css({ lineHeight: height + "px" }), b.value.append(w), b._numbers.comma1 = w
-		)
+
+		for (let i = 6, index = 0; i < b.maxDigits; i += 3, index++) {
+			if (h === b.maxDigits - i) {
+				let w = $('<div class="com-egt-jackpot-html-numbers"></div>')
+					.addClass("com-egt-jackpot-html-dot")
+					.append($("<span>,</span>"))
+					.css({ display: "none", lineHeight: height + "px" });
+		
+				b.value.append(w);
+				b._numbers.comma[index] = w;
+			}
+		}
+		
 	}
 	b.isAnimating = function () {
 		for (var c = b._digitTweens.length, d = 0; d < c; d++)if (b._digitTweens[d]) return !0;
@@ -298,12 +306,14 @@ function PopUp(h, w, d) {
 			for (var d = c.length, f = 0; f < b; f++)f >= b - d ? (this._numbers[f].css({ display: "block" }).digits.oldNum.html(c[f - (b - c.length)]), this._numbers[f].visible = !0) : (this._numbers[f].css({ display: "none" }), this._numbers[f].visible = !1);
 			this._digitTweens.alpha = 1;
 			this._numbers.dot.css({ display: "block" })
-			if (this._finalValue >= 100000) {
-				this._numbers.comma0.css({ display: "block" })
-			}
-			if (this._finalValue >= 100000000) {
-				this._numbers.comma1.css({ display: "block" })
-			}
+			let thresholds = [100000, 100000000, 100000000000, 100000000000000, 100000000000000000];
+
+			thresholds.forEach((threshold, index) => {
+				if (this._finalValue >= threshold) {
+					this._numbers.comma[index].css({ display: "block" });
+				}
+			});
+			
 		};
 	b.animateDigit = function (c) {
 		var b = this;
