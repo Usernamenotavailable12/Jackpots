@@ -275,6 +275,13 @@ function RollingComponent(h, w, d, b) {
 		b._numbers[h].digits.oldNum.text(0);
 		b._numbers[h].digits.newNum = d;
 		h == b.maxDigits - 3 && (w = $('<div class="com-egt-jackpot-html-numbers"></div>').addClass("com-egt-jackpot-html-dot").append($("<span>.</span>")).css({ display: "none" }), w.css({ lineHeight: height + "px" }), b.value.append(w), b._numbers.dot = w)
+		
+		h == b.maxDigits - 6 && (
+			w = $('<div class="com-egt-jackpot-html-numbers"></div>').addClass("com-egt-jackpot-html-dot").append($("<span>,</span>")).css({ display: "none" }), w.css({ lineHeight: height + "px" }), b.value.append(w), b._numbers.comma0 = w
+		)
+		h == b.maxDigits - 9 && (
+			w = $('<div class="com-egt-jackpot-html-numbers"></div>').addClass("com-egt-jackpot-html-dot").append($("<span>,</span>")).css({ display: "none" }), w.css({ lineHeight: height + "px" }), b.value.append(w), b._numbers.comma1 = w
+		)
 	}
 	b.isAnimating = function () {
 		for (var c = b._digitTweens.length, d = 0; d < c; d++)if (b._digitTweens[d]) return !0;
@@ -297,8 +304,14 @@ function RollingComponent(h, w, d, b) {
 			1 >= d ? c = "00" + c : 2 >= d && (c = "0" + c);
 			for (var d = c.length, f = 0; f < b; f++)f >= b - d ? (this._numbers[f].css({ display: "block" }).digits.oldNum.html(c[f - (b - c.length)]), this._numbers[f].visible = !0) : (this._numbers[f].css({ display: "none" }), this._numbers[f].visible = !1);
 			this._digitTweens.alpha = 1;
+
 			this._numbers.dot.css({ display: "block" })
-		};
+			if (this._finalValue >= 100000) {
+				this._numbers.comma0.css({ display: "block" })
+			}
+			if (this._finalValue >= 100000000) {
+				this._numbers.comma1.css({ display: "block" })
+			}		};
 	b.animateDigit = function (c) {
 		var b = this;
 		if (0 != c) if (b._digitTweens[c] &&

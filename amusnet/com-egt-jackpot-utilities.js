@@ -5,15 +5,15 @@ function maskUsername(username) {
 	// Return early if username is null, undefined or empty
 	if (!username) return '';
 	if (username.length <= 2) return username;
-	
+
 	// Get first and last characters
 	const firstChar = username.charAt(0);
 	const lastChar = username.charAt(username.length - 1);
-	
+
 	// Return masked string with exactly 5 asterisks between first and last char
 	return firstChar + '*****' + lastChar;
-  }
-  
+}
+
 function PopUp(h, w, d) {
 	var b = this;
 	CENTER = "com-egt-jackpot-html-center";
@@ -185,7 +185,8 @@ function PopUp(h, w, d) {
 	f.level.attr("height", f.id == "II" ? 36 : d.levelSize);
 	f.generateLevels(w, d.levelSize);
 	f.currency = $(sadasdlas).css({
-		lineHeight: d.boxHeight / 4 + "px", fontSize: 14 + "px" });
+		lineHeight: d.boxHeight / 4 + "px", fontSize: 14 + "px"
+	});
 	f.box.height = 900
 
 	f.jackpotBox = new RollingNumberView(f.box, d, b);
@@ -265,7 +266,15 @@ function PopUp(h, w, d) {
 		b._numbers[h].digits.oldNum = w;
 		b._numbers[h].digits.oldNum.text(0);
 		b._numbers[h].digits.newNum = d;
-		h == b.maxDigits - 3 && (w = $('<div class="com-egt-jackpot-html-numbers"></div>').addClass("com-egt-jackpot-html-dot").append($("<span>.</span>")).css({ display: "none" }), w.css({ lineHeight: height + "px" }), b.value.append(w), b._numbers.dot = w)
+		h == b.maxDigits - 3 && (
+			w = $('<div class="com-egt-jackpot-html-numbers"></div>').addClass("com-egt-jackpot-html-dot").append($("<span>.</span>")).css({ display: "none" }), w.css({ lineHeight: height + "px" }), b.value.append(w), b._numbers.dot = w
+		)
+		h == b.maxDigits - 6 && (
+			w = $('<div class="com-egt-jackpot-html-numbers"></div>').addClass("com-egt-jackpot-html-dot").append($("<span>,</span>")).css({ display: "none" }), w.css({ lineHeight: height + "px" }), b.value.append(w), b._numbers.comma0 = w
+		)
+		h == b.maxDigits - 9 && (
+			w = $('<div class="com-egt-jackpot-html-numbers"></div>').addClass("com-egt-jackpot-html-dot").append($("<span>,</span>")).css({ display: "none" }), w.css({ lineHeight: height + "px" }), b.value.append(w), b._numbers.comma1 = w
+		)
 	}
 	b.isAnimating = function () {
 		for (var c = b._digitTweens.length, d = 0; d < c; d++)if (b._digitTweens[d]) return !0;
@@ -289,6 +298,12 @@ function PopUp(h, w, d) {
 			for (var d = c.length, f = 0; f < b; f++)f >= b - d ? (this._numbers[f].css({ display: "block" }).digits.oldNum.html(c[f - (b - c.length)]), this._numbers[f].visible = !0) : (this._numbers[f].css({ display: "none" }), this._numbers[f].visible = !1);
 			this._digitTweens.alpha = 1;
 			this._numbers.dot.css({ display: "block" })
+			if (this._finalValue >= 100000) {
+				this._numbers.comma0.css({ display: "block" })
+			}
+			if (this._finalValue >= 100000000) {
+				this._numbers.comma1.css({ display: "block" })
+			}
 		};
 	b.animateDigit = function (c) {
 		var b = this;
@@ -523,7 +538,7 @@ function PopUp(h, w, d) {
 					n.send()
 				} else $.ajax({
 					url: a,
-					type: "GET", 
+					type: "GET",
 					cache: false,
 					dataType: "json",
 					headers: null,
