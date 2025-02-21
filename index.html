@@ -126,6 +126,9 @@
     originalSlides.forEach(slide => sliderTrack.appendChild(slide));
     let currentIndex = 0;
     let isTransitioning = false;
+    let touchStartX = 0;
+    let touchEndX = 0;
+    let touchThrottle = false;
     function updateSliderPosition() {
       sliderTrack.style.transform = `translateX(-${currentIndex * 100}%)`;
     }
@@ -219,6 +222,33 @@
       }
       updateSliderPosition();
     }, { passive: false });
+    container.addEventListener('touchstart', (e) => {
+      touchStartX = e.touches[0].clientX;
+    });
+    container.addEventListener('touchmove', (e) => {
+      touchEndX = e.touches[0].clientX;
+    }, { passive: true });
+    container.addEventListener('touchend', () => {
+      if (touchThrottle || isTransitioning) return;
+      touchThrottle = true;
+      setTimeout(() => touchThrottle = false, 600);
+      resetAutoTimer();
+      let deltaX = touchStartX - touchEndX;
+      if (deltaX > 50) {
+        let targetIndex = currentIndex === originalSlides.length - 1 ? 0 : currentIndex + 1;
+        if (!isSlideLoaded(targetIndex)) {
+          loadSlide(targetIndex);
+        }
+        currentIndex = targetIndex;
+      } else if (deltaX < -50) {
+        let targetIndex = currentIndex === 0 ? originalSlides.length - 1 : currentIndex - 1;
+        if (!isSlideLoaded(targetIndex)) {
+          loadSlide(targetIndex);
+        }
+        currentIndex = targetIndex;
+      }
+      updateSliderPosition();
+    });
     window.addEventListener('load', () => {
       container.focus();
     });
