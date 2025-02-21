@@ -1,4 +1,5 @@
 <html lang="en">
+
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
@@ -8,26 +9,65 @@
       margin: 0;
       padding: 0;
     }
+
     .container {
       position: relative;
       width: 239px;
       height: 320px;
-      overflow: hidden;
+      overflow-x: scroll;
+      /* Enable horizontal scrolling */
+      overflow-y: hidden;
+      /* Disable vertical scrolling */
+      scroll-snap-type: x mandatory;
+      -webkit-overflow-scrolling: touch;
+      -webkit-user-select: none;
+      -ms-user-select: none;
+      user-select: none;
+      -webkit-touch-callout: none;
+
+      /* Hide scrollbar for Chrome, Safari and Opera */
+      &::-webkit-scrollbar {
+        display: none;
+      }
+
+      /* Hide scrollbar for IE, Edge and Firefox */
+      -ms-overflow-style: none;
+      /* IE and Edge */
+      scrollbar-width: none;
+      /* Firefox */
     }
+
     .slider-track {
       display: flex;
-      transition: transform 0.5s ease;
+      gap: 4px;
+      /* Remove the transition since we're using scroll snapping */
+      /* transition: transform 0.5s ease; */
     }
+
     .slide {
       flex: 0 0 100%;
       width: 239px;
       height: 320px;
+      scroll-snap-align: center;
+      /* Makes slides snap to center */
+      scroll-snap-stop: always;
+      /* Forces snapping to each slide */
     }
+
     iframe {
       width: 100%;
       height: 100%;
+      border-radius: 5px !important;
       border: none;
     }
+    .nav-button:focus {
+      border-color: aliceblue !important;
+    }
+    .nav-button:active {
+      border-color: aliceblue !important;
+
+    }
+
     .nav-button {
       position: absolute;
       top: 50%;
@@ -41,59 +81,76 @@
       display: flex;
       align-items: center;
       justify-content: center;
+
     }
+
     .prev {
       left: 0;
       transform: translateY(-50%) scaleX(-1);
       background: rgba(0, 0, 0, 0.5);
       border-radius: 25px 0 0 25px;
     }
+
     .next {
       right: 0;
       background: rgba(0, 0, 0, 0.5);
       border-radius: 25px 0 0 25px;
     }
-    @media screen and (max-height: 260px) {
-  .container {
-    width: 380px !important;
-    height: 160px !important;
-  }
-  iframe {
-    width: 100% !important;
-    height: 100% !important;
-  }
-  .slider-track{
-    width: 100% !important;
-    height: 100% !important;
-  }
-  .slide{
-    width: 100% !important;
-    height: 100% !important;
-  }
-  .prev {
-    display: none;
-  }
-  .next {
-    width: 100%;
-    height: 100%;
-    background: none;
-    svg {
-        display: none;
+    .big-boss {
+      position: relative;
+      width: 239px;
+      height: 320px;
+      margin: 0 auto;
     }
-  }
-}
+
+    @media screen and (max-height: 260px) {
+      .container {
+        width: 380px !important;
+        height: 160px !important;
+      }
+      .big-boss {
+      position: relative;
+      width: 380px;
+      height: 160px;
+      margin: 0 auto;
+    }
+
+      iframe {
+        width: 100% !important;
+        height: 100% !important;
+      }
+
+      .slider-track {
+        width: 100% !important;
+        height: 100% !important;
+      }
+
+      .slide {
+        width: 100% !important;
+        height: 100% !important;
+      }
+
+    }
   </style>
 </head>
+
 <body>
-  <div class="container" tabindex="0">
+  <div class="big-boss">
     <button style="cursor: pointer;" class="nav-button prev">
       <svg xmlns="http://www.w3.org/2000/svg" width="25" height="51" viewBox="0 0 16 51" fill="none">
-        <path fill-rule="evenodd" clip-rule="evenodd" d="M14.7071 25.2929C15.0976 25.6834 15.0976 26.3166 14.7071 26.7071L9.70712 31.7071C9.31659 32.0976 8.68342 32.0976 8.29289 31.7071C7.90237 31.3166 7.90237 30.6834 8.29289 30.2929L12.5858 26L8.29289 21.7071C7.90237 21.3166 7.90237 20.6834 8.29289 20.2929C8.68342 19.9024 9.31659 19.9024 9.70712 20.2929L14.7071 25.2929Z" fill="white"/>
+        <path fill-rule="evenodd" clip-rule="evenodd"
+          d="M14.7071 25.2929C15.0976 25.6834 15.0976 26.3166 14.7071 26.7071L9.70712 31.7071C9.31659 32.0976 8.68342 32.0976 8.29289 31.7071C7.90237 31.3166 7.90237 30.6834 8.29289 30.2929L12.5858 26L8.29289 21.7071C7.90237 21.3166 7.90237 20.6834 8.29289 20.2929C8.68342 19.9024 9.31659 19.9024 9.70712 20.2929L14.7071 25.2929Z"
+          fill="white" />
       </svg>
     </button>
+    <div class="container" tabindex="0">
+
+    </div>
     <button style="cursor: pointer;" class="nav-button next">
       <svg xmlns="http://www.w3.org/2000/svg" width="25" height="51" viewBox="0 0 16 51" fill="none">
-        <path fill-rule="evenodd" clip-rule="evenodd" d="M14.7071 25.2929C15.0976 25.6834 15.0976 26.3166 14.7071 26.7071L9.70712 31.7071C9.31659 32.0976 8.68342 32.0976 8.29289 31.7071C7.90237 31.3166 7.90237 30.6834 8.29289 30.2929L12.5858 26L8.29289 21.7071C7.90237 21.3166 7.90237 20.6834 8.29289 20.2929C8.68342 19.9024 9.31659 19.9024 9.70712 20.2929L14.7071 25.2929Z" fill="white"/>
+        <path fill-rule="evenodd" clip-rule="evenodd"
+          d="M14.7071 25.2929C15.0976 25.6834 15.0976 26.3166 14.7071 26.7071L9.70712 31.7071C9.31659 32.0976 8.68342 32.0976 8.29289 31.7071C7.90237 31.3166 7.90237 30.6834 8.29289 30.2929L12.5858 26L8.29289 21.7071C7.90237 21.3166 7.90237 20.6834 8.29289 20.2929C8.68342 19.9024 9.31659 19.9024 9.70712 20.2929L14.7071 25.2929Z"
+          fill="white" />
       </svg>
     </button>
   </div>
@@ -113,39 +170,32 @@
       const slide = document.createElement('div');
       slide.classList.add('slide');
       slide.dataset.index = index + 1;
-      if (index === 0) {
-        const iframe = document.createElement('iframe');
-        iframe.src = url;
-        slide.appendChild(iframe);
-        slide.classList.add('loaded');
-      } else {
-        slide.dataset.src = url;
-      }
+      const iframe = document.createElement('iframe');
+      iframe.src = url;
+      iframe.allow = "fullscreen";
+      slide.appendChild(iframe);
+      slide.classList.add('loaded');
       originalSlides.push(slide);
     });
     originalSlides.forEach(slide => sliderTrack.appendChild(slide));
     let currentIndex = 0;
     let isTransitioning = false;
-    let touchStartX = 0;
-    let touchEndX = 0;
-    let touchThrottle = false;
     function updateSliderPosition() {
-      sliderTrack.style.transform = `translateX(-${currentIndex * 100}%)`;
+      container.scrollTo({
+        left: currentIndex * container.clientWidth,
+        behavior: 'smooth'
+      });
     }
     updateSliderPosition();
-    function loadSlide(index) {
-      const slide = sliderTrack.children[index];
-      if (!slide.classList.contains('loaded') && slide.dataset.src) {
-        const iframe = document.createElement('iframe');
-        iframe.src = slide.dataset.src;
-        iframe.allow = "fullscreen";
-        slide.appendChild(iframe);
-        slide.classList.add('loaded');
-      }
-    }
     function isSlideLoaded(index) {
-      const slide = sliderTrack.children[index];
-      return slide && slide.classList.contains('loaded');
+      return originalSlides[index].classList.contains('loaded');
+    }
+    function loadSlide(index) {
+      if (!isSlideLoaded(index)) {
+        const iframe = originalSlides[index].querySelector('iframe');
+        iframe.src = urls[index];
+        originalSlides[index].classList.add('loaded');
+      }
     }
     let autoTimeout1, autoTimeout2;
     function scheduleAutoSlide() {
@@ -166,12 +216,15 @@
         }, 8000);
       }
     }
-    sliderTrack.addEventListener('transitionstart', () => {
+    container.addEventListener('scroll', () => {
       isTransitioning = true;
-    });
-    sliderTrack.addEventListener('transitionend', () => {
-      isTransitioning = false;
-      scheduleAutoSlide();
+      clearTimeout(autoTimeout1);
+      clearTimeout(autoTimeout2);
+      autoTimeout2 = setTimeout(() => {
+        isTransitioning = false;
+        currentIndex = Math.round(container.scrollLeft / container.clientWidth);
+        scheduleAutoSlide();
+      }, 300);
     });
     scheduleAutoSlide();
     const prevBtn = document.querySelector('.nav-button.prev');
@@ -222,35 +275,10 @@
       }
       updateSliderPosition();
     }, { passive: false });
-    container.addEventListener('touchstart', (e) => {
-      touchStartX = e.touches[0].clientX;
-    });
-    container.addEventListener('touchmove', (e) => {
-      touchEndX = e.touches[0].clientX;
-    }, { passive: true });
-    container.addEventListener('touchend', () => {
-      if (touchThrottle || isTransitioning) return;
-      touchThrottle = true;
-      setTimeout(() => touchThrottle = false, 600);
-      resetAutoTimer();
-      let deltaX = touchStartX - touchEndX;
-      if (deltaX > 50) {
-        let targetIndex = currentIndex === originalSlides.length - 1 ? 0 : currentIndex + 1;
-        if (!isSlideLoaded(targetIndex)) {
-          loadSlide(targetIndex);
-        }
-        currentIndex = targetIndex;
-      } else if (deltaX < -50) {
-        let targetIndex = currentIndex === 0 ? originalSlides.length - 1 : currentIndex - 1;
-        if (!isSlideLoaded(targetIndex)) {
-          loadSlide(targetIndex);
-        }
-        currentIndex = targetIndex;
-      }
-      updateSliderPosition();
-    });
     window.addEventListener('load', () => {
       container.focus();
     });
   </script>
 </body>
+
+</html>

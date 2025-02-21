@@ -62,7 +62,7 @@ body {
 } */
 
 #com-egt-jackpot-html-jackpotBanner {
-	margin-top: 12.5vw;
+	margin-top: 10vw;
 	position: relative;
 	object-fit: cover;
 	color: #FFF;
@@ -189,11 +189,14 @@ body {
 	position: absolute;
 	left: 50%;
 	top: 4.5vw;
-    transform: translate(-50%);
-		white-space: nowrap;
-		height: 6.9vw;
-    right: auto;
+	transform: translate(-50%);
+	white-space: nowrap;
+	height: 6vw;
+	right: auto;
 	justify-content: center;
+	width: 100%; /* Ensure it takes full width */
+	display: flex; /* Use flexbox for centering */
+	align-items: center; /* Center vertically */
 }
 
 #com-egt-jackpot-html-jackpotBanner .com-egt-jackpot-html-box .com-egt-jackpot-html-numbers {
@@ -389,25 +392,25 @@ body {
 .com-egt-jackpot-html-I {
 	background: url('./img/bgI.webp') no-repeat center;
 	width: 100%;
-	height: 12vw;
+	height:  11.2vw;
 }
 
 .com-egt-jackpot-html-II {
 	background: url('./img/bgII.webp') no-repeat center;
 	width: 100%;
-	height: 12vw;
+	height:  11.2vw;
 }
 
 .com-egt-jackpot-html-III {
 	background: url('./img/bgIII.webp') no-repeat center;
 	width: 100%;
-	height: 12vw;
+	height:  11.2vw;
 }
 
 .com-egt-jackpot-html-IV {
 	background: url('./img/bgIV.webp') no-repeat center;
 	width: 100%;
-	height: 12vw;
+	height: 11.2vw;
 }
 
 
@@ -485,26 +488,26 @@ body {
 /* SMALL screens - phones - landscape, tablets - portrait */
 #com-egt-jackpot-html-jackpotBanner.com-egt-jackpot-html-md .com-egt-jackpot-html-box.com-egt-jackpot-html-I {
 	width: 46%;
-	float: left;
-	margin-left: 2%;
+	float: right;
+	margin-right: 2%;
 }
 
 #com-egt-jackpot-html-jackpotBanner.com-egt-jackpot-html-md .com-egt-jackpot-html-box.com-egt-jackpot-html-II {
 	width: 46%;
-	float: right;
-	margin-right: 2%;
-}
-
-#com-egt-jackpot-html-jackpotBanner.com-egt-jackpot-html-md .com-egt-jackpot-html-box.com-egt-jackpot-html-III {
-	width: 46%;
 	float: left;
 	margin-left: 2%;
 }
 
-#com-egt-jackpot-html-jackpotBanner.com-egt-jackpot-html-md .com-egt-jackpot-html-box.com-egt-jackpot-html-IV {
+#com-egt-jackpot-html-jackpotBanner.com-egt-jackpot-html-md .com-egt-jackpot-html-box.com-egt-jackpot-html-III {
 	width: 46%;
 	float: right;
 	margin-right: 2%;
+}
+
+#com-egt-jackpot-html-jackpotBanner.com-egt-jackpot-html-md .com-egt-jackpot-html-box.com-egt-jackpot-html-IV {
+	width: 46%;
+	float: left;
+	margin-left: 2%;
 }
 
 
@@ -881,9 +884,9 @@ body {
 		height: 60%;
 		width: auto;
 		right: auto;
-		display: flex; /* Добавляем flex для выравнивания содержимого */
-		align-items: center; /* Центрируем по вертикали */
-		justify-content: center; /* Центрируем по горизонтали */
+		display: flex;
+		align-items: center;
+		justify-content: center;
 	}
 	
 	.imgI{

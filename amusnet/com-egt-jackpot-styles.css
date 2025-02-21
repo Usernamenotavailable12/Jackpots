@@ -44,7 +44,7 @@ body {
 } */
 
 #com-egt-jackpot-html-jackpotBanner {
-	margin-top: 14vw;
+	margin-top: 12vw;
 	position: relative;
 	object-fit: cover;
 	color: #FFF;
@@ -426,26 +426,26 @@ body {
 /* SMALL screens - phones - landscape, tablets - portrait */
 #com-egt-jackpot-html-jackpotBanner.com-egt-jackpot-html-md .com-egt-jackpot-html-box.com-egt-jackpot-html-I {
 	width: 40%;
-	float: left;
-	margin-left: 9%;
+	float: right;
+	margin-right: 9%;
 }
 
 #com-egt-jackpot-html-jackpotBanner.com-egt-jackpot-html-md .com-egt-jackpot-html-box.com-egt-jackpot-html-II {
 	width: 40%;
-	float: right;
-	margin-right: 9%;
-}
-
-#com-egt-jackpot-html-jackpotBanner.com-egt-jackpot-html-md .com-egt-jackpot-html-box.com-egt-jackpot-html-III {
-	width: 40%;
 	float: left;
 	margin-left: 9%;
 }
 
-#com-egt-jackpot-html-jackpotBanner.com-egt-jackpot-html-md .com-egt-jackpot-html-box.com-egt-jackpot-html-IV {
+#com-egt-jackpot-html-jackpotBanner.com-egt-jackpot-html-md .com-egt-jackpot-html-box.com-egt-jackpot-html-III {
 	width: 40%;
 	float: right;
 	margin-right: 9%;
+}
+
+#com-egt-jackpot-html-jackpotBanner.com-egt-jackpot-html-md .com-egt-jackpot-html-box.com-egt-jackpot-html-IV {
+	width: 40%;
+	float: left;
+	margin-left: 9%;
 }
 
 
