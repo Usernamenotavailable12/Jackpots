@@ -11,9 +11,8 @@
     }
 
     .container {
-      position: relative;
-      width: 239px;
-      height: 320px;
+      width: 100%;
+      height: 100%;
       overflow-x: scroll;
       /* Enable horizontal scrolling */
       overflow-y: hidden;
@@ -69,6 +68,8 @@
     }
 
     .nav-button {
+      /* display: none !important; */
+      cursor: pointer;
       position: absolute;
       top: 50%;
       transform: translateY(-50%);
@@ -81,19 +82,19 @@
       display: flex;
       align-items: center;
       justify-content: center;
-
+      background: rgba(0, 0, 0);
+      opacity: 0;
+      transition: opacity 0.3s ease;
     }
 
     .prev {
       left: 0;
       transform: translateY(-50%) scaleX(-1);
-      background: rgba(0, 0, 0, 0.5);
       border-radius: 25px 0 0 25px;
     }
 
     .next {
       right: 0;
-      background: rgba(0, 0, 0, 0.5);
       border-radius: 25px 0 0 25px;
     }
     .big-boss {
@@ -103,15 +104,24 @@
       margin: 0 auto;
     }
 
-    @media screen and (max-height: 260px) {
-      .container {
-        width: 380px !important;
-        height: 160px !important;
+    @media (hover:hover) {
+      .container:hover .nav-button {
+        opacity: 0.4;
       }
+    }
+    @media (hover:none) {
+      .container .nav-button {
+        opacity: 0.4;
+      }
+    }
+
+    
+
+    @media screen and (max-height: 260px) {
       .big-boss {
       position: relative;
-      width: 380px;
-      height: 160px;
+      width: 380px !important;
+      height: 140px !important;
       margin: 0 auto;
     }
 
@@ -136,23 +146,25 @@
 
 <body>
   <div class="big-boss">
-    <button style="cursor: pointer;" class="nav-button prev">
-      <svg xmlns="http://www.w3.org/2000/svg" width="25" height="51" viewBox="0 0 16 51" fill="none">
-        <path fill-rule="evenodd" clip-rule="evenodd"
-          d="M14.7071 25.2929C15.0976 25.6834 15.0976 26.3166 14.7071 26.7071L9.70712 31.7071C9.31659 32.0976 8.68342 32.0976 8.29289 31.7071C7.90237 31.3166 7.90237 30.6834 8.29289 30.2929L12.5858 26L8.29289 21.7071C7.90237 21.3166 7.90237 20.6834 8.29289 20.2929C8.68342 19.9024 9.31659 19.9024 9.70712 20.2929L14.7071 25.2929Z"
-          fill="white" />
-      </svg>
-    </button>
-    <div class="container" tabindex="0">
 
+    <div class="container" tabindex="0">
+      <button class="nav-button prev">
+        <svg xmlns="http://www.w3.org/2000/svg" width="25" height="51" viewBox="0 0 16 51" fill="none">
+          <path fill-rule="evenodd" clip-rule="evenodd"
+            d="M14.7071 25.2929C15.0976 25.6834 15.0976 26.3166 14.7071 26.7071L9.70712 31.7071C9.31659 32.0976 8.68342 32.0976 8.29289 31.7071C7.90237 31.3166 7.90237 30.6834 8.29289 30.2929L12.5858 26L8.29289 21.7071C7.90237 21.3166 7.90237 20.6834 8.29289 20.2929C8.68342 19.9024 9.31659 19.9024 9.70712 20.2929L14.7071 25.2929Z"
+            fill="white" />
+        </svg>
+      </button>
+
+      <button class="nav-button next">
+        <svg xmlns="http://www.w3.org/2000/svg" width="25" height="51" viewBox="0 0 16 51" fill="none">
+          <path fill-rule="evenodd" clip-rule="evenodd"
+            d="M14.7071 25.2929C15.0976 25.6834 15.0976 26.3166 14.7071 26.7071L9.70712 31.7071C9.31659 32.0976 8.68342 32.0976 8.29289 31.7071C7.90237 31.3166 7.90237 30.6834 8.29289 30.2929L12.5858 26L8.29289 21.7071C7.90237 21.3166 7.90237 20.6834 8.29289 20.2929C8.68342 19.9024 9.31659 19.9024 9.70712 20.2929L14.7071 25.2929Z"
+            fill="white" />
+        </svg>
+      </button>
     </div>
-    <button style="cursor: pointer;" class="nav-button next">
-      <svg xmlns="http://www.w3.org/2000/svg" width="25" height="51" viewBox="0 0 16 51" fill="none">
-        <path fill-rule="evenodd" clip-rule="evenodd"
-          d="M14.7071 25.2929C15.0976 25.6834 15.0976 26.3166 14.7071 26.7071L9.70712 31.7071C9.31659 32.0976 8.68342 32.0976 8.29289 31.7071C7.90237 31.3166 7.90237 30.6834 8.29289 30.2929L12.5858 26L8.29289 21.7071C7.90237 21.3166 7.90237 20.6834 8.29289 20.2929C8.68342 19.9024 9.31659 19.9024 9.70712 20.2929L14.7071 25.2929Z"
-          fill="white" />
-      </svg>
-    </button>
+
   </div>
   <script>
     const urls = [
@@ -224,7 +236,7 @@
         isTransitioning = false;
         currentIndex = Math.round(container.scrollLeft / container.clientWidth);
         scheduleAutoSlide();
-      }, 300);
+      }, 20);
     });
     scheduleAutoSlide();
     const prevBtn = document.querySelector('.nav-button.prev');
@@ -244,21 +256,23 @@
       updateSliderPosition();
     });
     nextBtn.addEventListener('click', () => {
-      if (isTransitioning) return;
-      resetAutoTimer();
-      let targetIndex = currentIndex === originalSlides.length - 1 ? 0 : currentIndex + 1;
-      if (!isSlideLoaded(targetIndex)) {
-        loadSlide(targetIndex);
-      }
-      currentIndex = targetIndex;
-      updateSliderPosition();
+        if (isTransitioning) return;
+        resetAutoTimer();
+        let targetIndex = currentIndex === originalSlides.length - 1 ? 0 : currentIndex + 1;
+        if (!isSlideLoaded(targetIndex)) {
+          loadSlide(targetIndex);
+        }
+        currentIndex = targetIndex;
+        updateSliderPosition();
     });
     let wheelThrottle = false;
+    const throttleDelay = 600; // Adjust this value to change the delay between button presses
+
     container.addEventListener('wheel', (e) => {
       e.preventDefault();
       if (wheelThrottle || isTransitioning) return;
       wheelThrottle = true;
-      setTimeout(() => wheelThrottle = false, 600);
+      setTimeout(() => wheelThrottle = false, throttleDelay);
       resetAutoTimer();
       if (e.deltaY > 0) {
         let targetIndex = currentIndex === originalSlides.length - 1 ? 0 : currentIndex + 1;
