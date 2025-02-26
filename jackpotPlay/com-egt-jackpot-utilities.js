@@ -569,10 +569,6 @@ function RollingComponent(h, w, d, b) {
 			let small = e.data.jackpots[0].results[1];
 			let big = e.data.jackpots[0].results[2];
 			let biggest = e.data.jackpots[0].results[3];
-			smallest.value = parseInt(smallest.value.toString().replace('.', ''));
-			small.value = parseInt(small.value.toString().replace('.', ''));
-			big.value = parseInt(big.value.toString().replace('.', ''));
-			biggest.value = parseInt(biggest.value.toString().replace('.', ''));
 			u.push(smallest.value);
 			u.push(small.value);
 			u.push(big.value);
@@ -601,10 +597,6 @@ function RollingComponent(h, w, d, b) {
 			let small = a.data.jackpots[0].results[1];
 			let big = a.data.jackpots[0].results[2];
 			let biggest = a.data.jackpots[0].results[3];
-			smallest.value = parseInt(smallest.value.toString().replace('.', ''));
-			small.value = parseInt(small.value.toString().replace('.', ''));
-			big.value = parseInt(big.value.toString().replace('.', ''));
-			biggest.value = parseInt(biggest.value.toString().replace('.', ''));
 
 			u[0] = smallest.value;
 			u[1] = small.value;
