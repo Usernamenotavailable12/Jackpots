@@ -158,9 +158,10 @@ body {
 }
 
 #com-egt-jackpot-html-jackpotBanner .com-egt-jackpot-html-box .com-egt-jackpot-html-currency {
-	width: 4.6vw !important;
+	width: 5vw !important;
 	height: 100%;
 	padding: 0;
+	margin-left: 1vw;
 	align-content: center;
 	font-size: 12px;
 	font-style: normal;
@@ -187,16 +188,10 @@ body {
 
 #com-egt-jackpot-html-jackpotBanner .com-egt-jackpot-html-box .com-egt-jackpot-html-value {
 	position: absolute;
-	left: 50%;
-	top: 0.4vw;
-	transform: translate(-50%);
-	white-space: nowrap;
-	height: 7vw;
-	right: auto;
-	justify-content: center;
-	width: 100%; /* Ensure it takes full width */
-	display: flex; /* Use flexbox for centering */
-	align-items: center; /* Center vertically */
+	right: 7vw;
+	height: 95%;
+	margin-top:	 1px;
+	width: auto;
 }
 
 #com-egt-jackpot-html-jackpotBanner .com-egt-jackpot-html-box .com-egt-jackpot-html-numbers {
@@ -520,21 +515,22 @@ body {
 }
 
 #com-egt-jackpot-html-jackpotBanner.com-egt-jackpot-html-md .com-egt-jackpot-html-box.com-egt-jackpot-html-I .com-egt-jackpot-html-numbers {
-	line-height: 9vw !important;
+	line-height: 10.5vw !important;
 	width: 2vw;
 }
 
 #com-egt-jackpot-html-jackpotBanner.com-egt-jackpot-html-md .com-egt-jackpot-html-box.com-egt-jackpot-html-II .com-egt-jackpot-html-numbers {
-	line-height: 9vw !important;
+	line-height: 10.5vw !important;
 	width: 2vw;}
 
 #com-egt-jackpot-html-jackpotBanner.com-egt-jackpot-html-md .com-egt-jackpot-html-box.com-egt-jackpot-html-III .com-egt-jackpot-html-numbers {
-	line-height: 9vw !important;
+	line-height: 10.5vw !important;
 	width: 2vw;}
 
 #com-egt-jackpot-html-jackpotBanner.com-egt-jackpot-html-md .com-egt-jackpot-html-box.com-egt-jackpot-html-IV .com-egt-jackpot-html-numbers {
-	line-height: 9vw !important;
-	width: 2vw;}
+	line-height: 10.5vw !important;
+	width: 2vw;
+}
 
 #com-egt-jackpot-html-jackpotBanner.com-egt-jackpot-html-md .com-egt-jackpot-html-logo {
 	display: none;
@@ -879,14 +875,10 @@ body {
 	}
 	#com-egt-jackpot-html-jackpotBanner .com-egt-jackpot-html-box .com-egt-jackpot-html-value {
 		position: absolute;
-		left: 50%;
-		top: 2vw;
-		height: 78%;
+		right: 18px;
+		height: 75%;
+		margin-top: 6px;
 		width: auto;
-		right: auto;
-		display: flex;
-		align-items: center;
-		justify-content: center;
 	}
 	
 	.imgI{
