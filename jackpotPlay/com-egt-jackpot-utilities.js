@@ -14,7 +14,19 @@ function maskUsername(username) {
 	// Return masked string with exactly 5 asterisks between first and last char
 	return firstChar + '*****' + lastChar;
   }
-  
+
+function formatData(value) {
+	let parts = value.split('.');
+	if (parts[1].length === 1) {
+		value = parts[0] + parts[1] + '0';
+	} else {
+		value = parts[0] + parts[1];
+	}
+
+	return value
+}
+
+
 function PopUp(h, w, d) {
 	var b = this;
 	CENTER = "com-egt-jackpot-html-center";
@@ -569,6 +581,12 @@ function RollingComponent(h, w, d, b) {
 			let small = e.data.jackpots[0].results[1];
 			let big = e.data.jackpots[0].results[2];
 			let biggest = e.data.jackpots[0].results[3];
+
+			smallest.value = formatData(smallest.value);
+			small.value = formatData(small.value);
+			big.value = formatData(big.value);
+			biggest.value = formatData(biggest.value);
+
 			u.push(smallest.value);
 			u.push(small.value);
 			u.push(big.value);
@@ -597,6 +615,11 @@ function RollingComponent(h, w, d, b) {
 			let small = a.data.jackpots[0].results[1];
 			let big = a.data.jackpots[0].results[2];
 			let biggest = a.data.jackpots[0].results[3];
+
+			smallest.value = formatData(smallest.value);
+			small.value = formatData(small.value);
+			big.value = formatData(big.value);
+			biggest.value = formatData(biggest.value);
 
 			u[0] = smallest.value;
 			u[1] = small.value;

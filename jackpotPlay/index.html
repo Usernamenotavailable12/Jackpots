@@ -22,7 +22,7 @@
   $(document).ready(function() {
     new EgtJackpotComponent(
       {
-        URL: 'https://api-tma1-prd.themill.tech/gql?query=query%20Jackpots(%24brandId%3A%20ID!%2C%20%24gameIds%3A%20%5BID!%5D!%2C%20%24jurisdiction%3A%20Jurisdiction!)%20%7B%0A%20%20jackpots(%20brandId%3A%20%24brandId%2C%20gameIds%3A%20%24gameIds%2C%20jurisdiction%3A%20%24jurisdiction)%20%7B%0A%20%20%20%20results%20%7B%0A%20%20%20%20%20%20value%0A%20%20%20%20%7D%0A%20%20%7D%0A%7D&variables=%7B%22brandId%22%3A%22ab%22%2C%22gameIds%22%3A%5B%22vip-zodiac-wheel-bell-link%22%5D%2C%22jurisdiction%22%3A%22GE%22%7D&operationName=Jackpots',
+        URL: 'https://api-tma1-prd.themill.tech/gql?query=query%20Jackpots(%24brandId%3A%20ID!%2C%20%24gameIds%3A%20%5BID!%5D!%2C%20%24jurisdiction%3A%20Jurisdiction!)%20%7B%0A%20%20jackpots(%20brandId%3A%20%24brandId%2C%20gameIds%3A%20%24gameIds%2C%20jurisdiction%3A%20%24jurisdiction)%20%7B%0A%20%20%20%20results%20%7B%0A%20%20%20%20%20%20value%0A%20%20%20%20%7D%0A%20%20%7D%0A%7D&variables=%7B%22brandId%22%3A%22ab%22%2C%22gameIds%22%3A%5B%22hot-to-burn-jackpot-play%22%5D%2C%22jurisdiction%22%3A%22GE%22%7D&operationName=Jackpots',
         lang: 'en',// specified the language of the jackpotComponent described in Languages XML. If document is not loaded by default
         resourceURL: '', //'/gui/web/css/',// If resources is located in different place the path to folders "css , img , js" must me specified for example "../egtbanner" or 'http://somelinck.com/egtbanner
         redirectURL: '',//'http://someurl.com/%27,//the url wich redirects after you clicked on banner
