@@ -173,12 +173,12 @@ function findJackpotById(jackpots, targetId) {
 
     for(let jackpot of jackpotsArray) {
         if(jackpot.JackpotId === targetId) {
-            if(typeof jackpot.BaseAmount === 'number') {
-                let amountStr = jackpot.BaseAmount.toString();
-                if(amountStr.includes('.')) {
-                    jackpot.BaseAmount = Number(amountStr.replace('.', ''));
-                }
-            }
+			if(typeof jackpot.BaseAmount === 'number') {
+				let amountStr = jackpot.BaseAmount.toFixed(2).toString();
+				if(amountStr.includes('.')) {
+					jackpot.BaseAmount = Number(amountStr.replace('.', ''));
+				}
+			}
             return jackpot;
         }
     }
@@ -607,6 +607,9 @@ function RollingComponent(h, w, d, b) {
 			u.push(small.BaseAmount);
 			u.push(big.BaseAmount);
 			u.push(biggest.BaseAmount);
+
+
+
 			for (var D = 0; 4 > D; D++)r[D].setCurrency(a), r[D].jackpotBox.setValue(u[D], !1), J[D] = u[D];
 			B.visible(!0);
 			this.setPopUpInformation(y, smallest?.maxWinValue?.[0]?.value || 0, smallest?.maxWinDate || "", smallest?.totalWins || 0, null, smallest?.lastWinDate || "", smallest?.lastWinValue?.[0]?.value || 0, "GEL");
