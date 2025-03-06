@@ -16,7 +16,8 @@ function maskUsername(username) {
   }
 
 function formatData(value) {
-	let parts = value.split('.');
+	if (value.includes('.')) {
+		let parts = value.split('.');
 	if (parts[1].length === 1) {
 		value = parts[0] + parts[1] + '0';
 	} else {
@@ -24,6 +25,10 @@ function formatData(value) {
 	}
 
 	return value
+	}
+	else {
+		return value + '00';
+	}
 }
 
 
