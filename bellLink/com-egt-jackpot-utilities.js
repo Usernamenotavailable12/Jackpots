@@ -575,8 +575,8 @@ function RollingComponent(h, w, d, b) {
 			var n = this;
 			n.first = !1;
 			a = "GEL";
-			let smallest = e.jackpotInstancesStats.instanceStats[indexOfGame].levelStats[3];
-			let small = e.jackpotInstancesStats.instanceStats[indexOfGame].levelStats[2];
+			let smallest = e.jackpotInstancesStats.instanceStats[indexOfGame].levelStats[2];
+			let small = e.jackpotInstancesStats.instanceStats[indexOfGame].levelStats[3];
 			let big = e.jackpotInstancesStats.instanceStats[indexOfGame].levelStats[1];
 			let biggest = e.jackpotInstancesStats.instanceStats[indexOfGame].levelStats[0];
 			u.push(smallest.currentValue[0].value);
@@ -603,8 +603,8 @@ function RollingComponent(h, w, d, b) {
 			}, f[Y], 1)
 		};
 		H.prototype.processRequestFromServer = function (a) {
-			let smallest = a.jackpotInstancesStats.instanceStats[indexOfGame].levelStats[3];
-			let small = a.jackpotInstancesStats.instanceStats[indexOfGame].levelStats[2];
+			let smallest = a.jackpotInstancesStats.instanceStats[indexOfGame].levelStats[2];
+			let small = a.jackpotInstancesStats.instanceStats[indexOfGame].levelStats[3];
 			let big = a.jackpotInstancesStats.instanceStats[indexOfGame].levelStats[1];
 			let biggest = a.jackpotInstancesStats.instanceStats[indexOfGame].levelStats[0];
 
