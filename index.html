@@ -189,6 +189,7 @@
       const iframe = document.createElement('iframe');
       iframe.src = url;
       iframe.allow = "fullscreen";
+      iframe.loading = "lazy";
       slide.appendChild(iframe);
       slide.classList.add('loaded');
       originalSlides.push(slide);
