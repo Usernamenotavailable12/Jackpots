@@ -42,6 +42,12 @@ body {
 		#com-egt-jackpot-html-jackpotBanner.com-egt-jackpot-html-md .com-egt-jackpot-html-box.com-egt-jackpot-html-IV{
 			margin-bottom: 1vw;
 		}
+		#com-egt-jackpot-html-jackpotBanner.com-egt-jackpot-html-md .com-egt-jackpot-html-box.com-egt-jackpot-html-I .com-egt-jackpot-html-numbers,
+		#com-egt-jackpot-html-jackpotBanner.com-egt-jackpot-html-md .com-egt-jackpot-html-box.com-egt-jackpot-html-II .com-egt-jackpot-html-numbers,
+		#com-egt-jackpot-html-jackpotBanner.com-egt-jackpot-html-md .com-egt-jackpot-html-box.com-egt-jackpot-html-III .com-egt-jackpot-html-numbers,
+		#com-egt-jackpot-html-jackpotBanner.com-egt-jackpot-html-md .com-egt-jackpot-html-box.com-egt-jackpot-html-IV .com-egt-jackpot-html-numbers{
+			line-height: 40px !important;
+		}
 	}
 }
 
