@@ -8,7 +8,7 @@
   <meta http-equiv="Permissions-Policy" content="interest-cohort=()">
   <meta name="referrer" content="no-referrer-when-downgrade">
 
-  <title>EGT Jackpot</title>
+  <title>EGT Digital</title>
 
   <script src='https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js'></script>
   <script defer='defer' src='./com-egt-jackpot-utilities.js'></script>
@@ -16,18 +16,15 @@
 </head>
 <body>
 
-
-  <div id='EgtFlashBannerHolder' style='flex: 1'>
-    <div id='com-egt-jackpot-html-jackpotBanner'></div>
-  </div>
-
-
+<div id='EgtFlashBannerHolder' style='flex: 1'>
+  <div id='com-egt-jackpot-html-jackpotBanner'></div>
+</div>
 
 <script>
   $(document).ready(function() {
     new EgtJackpotComponent(
       {
-        URL: 'https://tmage.games.amusnet.io/jackpot-stats/statistics/682205733511133654',
+        URL: 'https://st8-widgets.dev.pateplay.io/jackpots',
         lang: 'en',// specified the language of the jackpotComponent described in Languages XML. If document is not loaded by default
         resourceURL: '', //'/gui/web/css/',// If resources is located in different place the path to folders "css , img , js" must me specified for example "../egtbanner" or 'http://somelinck.com/egtbanner
         redirectURL: '',//'http://someurl.com/%27,//the url wich redirects after you clicked on banner
@@ -42,6 +39,7 @@
         large: 1400 // Breakpoint width for large devices - for laptops and big monitors
       }
     );
+    
   });
 </script>
 </body>
