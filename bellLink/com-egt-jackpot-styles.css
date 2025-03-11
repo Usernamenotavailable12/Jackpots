@@ -25,8 +25,8 @@ body {
 }
 
 #EgtFlashBannerHolder {
-    background: url('./img/logo-md.png') no-repeat center top;
-    background-size: cover;
+    background: url('./img/logo-md.webp') no-repeat center top;
+	background-size: cover;
     width: 100%;
     height: 100%;
     position: relative;
@@ -37,6 +37,26 @@ body {
     flex-direction: column;
     align-items: center;
     justify-content: center;
+
+	background-position: top;
+
+	@media (min-width: 381px) {
+		background-size: cover;
+		background-repeat: repeat;
+		background-position: center 10%;
+		#com-egt-jackpot-html-jackpotBanner.com-egt-jackpot-html-md .com-egt-jackpot-html-box.com-egt-jackpot-html-I,
+		#com-egt-jackpot-html-jackpotBanner.com-egt-jackpot-html-md .com-egt-jackpot-html-box.com-egt-jackpot-html-II,
+		#com-egt-jackpot-html-jackpotBanner.com-egt-jackpot-html-md .com-egt-jackpot-html-box.com-egt-jackpot-html-III,
+		#com-egt-jackpot-html-jackpotBanner.com-egt-jackpot-html-md .com-egt-jackpot-html-box.com-egt-jackpot-html-IV{
+			margin-bottom: 1vw;
+		}
+		#com-egt-jackpot-html-jackpotBanner.com-egt-jackpot-html-md .com-egt-jackpot-html-box.com-egt-jackpot-html-I .com-egt-jackpot-html-numbers,
+		#com-egt-jackpot-html-jackpotBanner.com-egt-jackpot-html-md .com-egt-jackpot-html-box.com-egt-jackpot-html-II .com-egt-jackpot-html-numbers,
+		#com-egt-jackpot-html-jackpotBanner.com-egt-jackpot-html-md .com-egt-jackpot-html-box.com-egt-jackpot-html-III .com-egt-jackpot-html-numbers,
+		#com-egt-jackpot-html-jackpotBanner.com-egt-jackpot-html-md .com-egt-jackpot-html-box.com-egt-jackpot-html-IV .com-egt-jackpot-html-numbers{
+			line-height: 40px !important;
+		}
+	}
 }
 /* 
 @media screen and (max-width: 768px) {
@@ -52,7 +72,7 @@ body {
 } */
 
 #com-egt-jackpot-html-jackpotBanner {
-	margin-top: 12.5vw;
+	margin-top: 38vh;
 	position: relative;
 	object-fit: cover;
 	color: #FFF;
@@ -62,6 +82,20 @@ body {
 	font-style: normal;
 	font-weight: 400;
 	line-height: 6px;
+
+	@media (min-width: 381px) {
+		.com-egt-jackpot-html-I,
+		.com-egt-jackpot-html-II,
+		.com-egt-jackpot-html-III,
+		.com-egt-jackpot-html-IV{
+			height: 44px;
+		}
+		#com-egt-jackpot-html-jackpotBanner.com-egt-jackpot-html-md .com-egt-jackpot-html-box.com-egt-jackpot-html-IV .com-egt-jackpot-html-numbers{
+			width: 1vw;
+		}
+		scale: 0.7;
+		margin-top: 44px;
+	}
 }
 
 #com-egt-jackpot-html-jackpotBanner .com-egt-jackpot-html-clear-fix {
@@ -96,8 +130,8 @@ body {
 	-moz-background-size: contain;
 	-o-background-size: contain;
 	background-size: contain;
-	filter: progid:DXImageTransform.Microsoft.AlphaImageLoader(src='./img/bg.jpg', sizingMethod='scale');
-	-ms-filter: "progid:DXImageTransform.Microsoft.AlphaImageLoader(src='./img/bg.jpg', sizingMethod='scale')";
+	filter: progid:DXImageTransform.Microsoft.AlphaImageLoader(src='./img/bg.webp', sizingMethod='scale');
+	-ms-filter: "progid:DXImageTransform.Microsoft.AlphaImageLoader(src='./img/bg.webp', sizingMethod='scale')";
 }
 
 #com-egt-jackpot-html-jackpotBanner .com-egt-jackpot-html-box .com-egt-jackpot-html-level {
@@ -121,8 +155,8 @@ body {
 	-moz-background-size: contain;
 	-o-background-size: contain;
 	background-size: contain;
-	filter: progid:DXImageTransform.Microsoft.AlphaImageLoader(src='./img/logo.jpg', sizingMethod='scale');
-	-ms-filter: "progid:DXImageTransform.Microsoft.AlphaImageLoader(src='./img/logo.jpg', sizingMethod='scale')";
+	filter: progid:DXImageTransform.Microsoft.AlphaImageLoader(src='./img/logo.webp', sizingMethod='scale');
+	-ms-filter: "progid:DXImageTransform.Microsoft.AlphaImageLoader(src='./img/logo.webp', sizingMethod='scale')";
 	overflow: hidden;
 	visibility: visible;
 }
@@ -191,18 +225,18 @@ body {
 	height: 100%;
 }
 .com-egt-jackpot-html-I {
-	background: url('./img/bgI.jpg') repeat-x;
+	background: url('./img/bgI.webp') repeat-x;
 }
 .com-egt-jackpot-html-II {
-	background: url('./img/bgII.jpg') repeat-x;
+	background: url('./img/bgII.webp') repeat-x;
 
 }
 .com-egt-jackpot-html-III {
-	background: url('./img/bgIII.jpg') repeat-x;
+	background: url('./img/bgIII.webp') repeat-x;
 
 }
 .com-egt-jackpot-html-IV {
-	background: url('./img/bgIV.jpg') repeat-x;
+	background: url('./img/bgIV.webp') repeat-x;
 
 }
 
@@ -341,13 +375,13 @@ body {
 	display: inline-block;
 	width: 100%;
 	margin: 5px auto 10px auto;
-	background: url('./img/logoPopup.png') no-repeat center center;
+	background: url('./img/logoPopup.webp') no-repeat center center;
 	-webkit-background-size: contain;
 	-moz-background-size: contain;
 	-o-background-size: contain;
 	background-size: contain;
-	filter: progid:DXImageTransform.Microsoft.AlphaImageLoader(src='./img/logoPopup.png', sizingMethod='scale');
-	-ms-filter: "progid:DXImageTransform.Microsoft.AlphaImageLoader(src='./img/logoPopup.png', sizingMethod='scale')";
+	filter: progid:DXImageTransform.Microsoft.AlphaImageLoader(src='./img/logoPopup.webp', sizingMethod='scale');
+	-ms-filter: "progid:DXImageTransform.Microsoft.AlphaImageLoader(src='./img/logoPopup.webp', sizingMethod='scale')";
 }
 
 #com-egt-jackpot-html-jackpotBanner .com-egt-jackpot-html-popUp .com-egt-jackpot-html-div .com-egt-jackpot-html-right {
@@ -694,7 +728,7 @@ body {
 
 @media screen and (min-height: 161px) {
     #EgtFlashBannerHolder {
-		background: url('./img/logo.jpg') no-repeat center top;
+		background: url('./img/logo.webp') no-repeat center top;
 		background-size: cover;
 		width: 100%;
 		height: 100%;

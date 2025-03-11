@@ -101,9 +101,7 @@
     }
     .big-boss {
       position: relative;
-      width: 239px;
-      height: 320px;
-      margin: 0 auto;
+      width: 100%;
     }
 
     @media (hover:hover) {
@@ -122,7 +120,9 @@
     @media screen and (max-height: 260px) {
       .big-boss {
       position: relative;
-      width: 380px !important;
+      width: 100%;
+      max-width: 550px;
+      /* width: 380px !important; */
       height: 140px !important;
       margin: 0 auto;
     }
@@ -169,6 +169,14 @@
 
   </div>
   <script>
+/*     const urls = [
+      "/amusnet/",
+      "/cloverChance/",
+      "/bellLink/",
+      "/vipBellLink/",
+      "/playnGo/",
+      "/jackpotPlay/"
+    ]; */
     const urls = [
       "https://usernamenotavailable12.github.io/Jackpots/amusnet/",
       "https://usernamenotavailable12.github.io/Jackpots/cloverChance/",
@@ -241,7 +249,7 @@
         isTransitioning = false;
         currentIndex = Math.round(container.scrollLeft / container.clientWidth);
         scheduleAutoSlide();
-      }, 20);
+      }, 15);
     });
     scheduleAutoSlide();
     const prevBtn = document.querySelector('.nav-button.prev');

@@ -156,7 +156,7 @@ function RollingComponent(h, w, d, b) {
 	void 0 !== d.resourceURL && d.resourceURL && 0 < d.resourceURL.length && (f.resourceURL = d.resourceURL + "/");
 	f.resourceURL = f.resourceURL.replace(/\/+$/img, "/");
 	BOX_HTML = '<div class="com-egt-jackpot-html-box"></div>';
-	DUMMY_IMG_HTML = '<img src="' + f.resourceURL + 'img/dummy.png" class="com-egt-jackpot-html-dummyImg" usemap="#' + w + '">';
+	DUMMY_IMG_HTML = '<img src="' + f.resourceURL + 'img/dummy.webp" class="com-egt-jackpot-html-dummyImg" usemap="#' + w + '">';
 	MAP_HTML = '<map name="' + w + '"></map>';
 	AREA_HTML = '<area shape="poly" href="javascript: void(0);">';
 	LEVEL_HTML = '<div class="com-egt-jackpot-html-level"></div>';
