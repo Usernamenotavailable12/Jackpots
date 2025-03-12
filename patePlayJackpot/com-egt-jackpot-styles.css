@@ -319,6 +319,8 @@ body {
 	font-size: 11px;
 	padding: 0 5px;
 	width: 180px !important;
+	margin-top: 25px;
+	scale: .75;
 }
 
 #com-egt-jackpot-html-jackpotBanner .com-egt-jackpot-html-popUp .com-egt-jackpot-html-divider {
@@ -781,7 +783,7 @@ body {
 	}
 
 	#com-egt-jackpot-html-jackpotBanner {
-		margin-top: 48vw;
+		margin-top: 40vw;
 		position: relative;
 		object-fit: cover;
 		color: #FFF;

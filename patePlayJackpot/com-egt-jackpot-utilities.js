@@ -607,18 +607,20 @@ function RollingComponent(h, w, d, b) {
 			u.push(biggest.amount);
 			for (var D = 0; 4 > D; D++)r[D].setCurrency(a), r[D].jackpotBox.setValue(u[D], !1), J[D] = u[D];
 			B.visible(!0);
-			this.setPopUpInformation(y, smallest?.maxWinValue?.[0]?.value || 0, smallest?.maxWinDate || "", smallest?.totalWins || 0, null, smallest?.lastWinDate || "", smallest?.lastWinValue?.[0]?.value || 0, "GEL");
-			this.setPopUpInformation(N, small?.maxWinValue?.[0]?.value || 0, small?.maxWinDate || "", small?.totalWins || 0, null, small?.lastWinDate || "", small?.lastWinValue?.[0]?.value || 0, "GEL");
-			this.setPopUpInformation(F, big?.maxWinValue?.[0]?.value || 0, big?.maxWinDate || "", big?.totalWins || 0, null, big?.lastWinDate || "", big?.lastWinValue?.[0]?.value || 0, "GEL");
-			this.setPopUpInformation(C, biggest?.maxWinValue?.[0]?.value || 0, biggest?.maxWinDate || "", biggest?.totalWins || 0, null, biggest?.lastWinDate || "", biggest?.lastWinValue?.[0]?.value || 0, "GEL");
+			this.setPopUpInformation(y, formatData(smallest?.highWinAmount) || 0, smallest?.highWinTime || maskUsername(smallest?.highWinPlayer), smallest?.countWins || 0, maskUsername(smallest?.highWinPlayer), smallest?.lastWinTime, formatData(smallest?.lastWinAmount) || 0, "GEL");
+
+			this.setPopUpInformation(N, formatData(small?.highWinAmount) || 0, small?.highWinTime || maskUsername(small?.highWinPlayer), small?.countWins || 0, maskUsername(small?.highWinPlayer), small?.lastWinTime, formatData(small?.lastWinAmount) || 0, "GEL");
 			
+			this.setPopUpInformation(F, formatData(big?.highWinAmount) || 0, big?.highWinTime || maskUsername(big?.highWinPlayer), big?.countWins || 0, maskUsername(big?.highWinPlayer), big?.lastWinTime, formatData(big?.lastWinAmount) || 0, "GEL");
+			
+			this.setPopUpInformation(C, formatData(biggest?.highWinAmount) || 0, biggest?.highWinTime || maskUsername(biggest?.highWinPlayer), biggest?.countWins || 0, maskUsername(biggest?.highWinPlayer), biggest?.lastWinTime, formatData(biggest?.lastWinAmount) || 0, "GEL");
 			q && setTimeout(function () {
 				n.sendRequestToServer()
 			}, f[Y], 1)
 		};
 		H.prototype.sendRequestToServer = function () {
 			var a = this, e = a.getISODate(), n = w.split("?");
-			1 == n.length ? a.getJackpot(w + "?" + e, !1) : "" == n[1] ? a.getJackpot(w + e, !1) : a.getJackpot(w + "&" + e, !1);
+			1 == n.length ? a.getJackpot(w + "?" + "", !1) : "" == n[1] ? a.getJackpot(w + e, !1) : a.getJackpot(w + "&" + e, !1);
 			Y != f.length - 1 && Y++;
 			q && setTimeout(function () {
 				a.sendRequestToServer()
@@ -641,10 +643,14 @@ function RollingComponent(h, w, d, b) {
 			u[2] = big.amount;
 			u[3] = biggest.amount;
 
-			this.setPopUpInformation(y, smallest?.maxWinValue?.[0]?.value || 0, smallest?.maxWinDate || "", smallest?.totalWins || 0, null, smallest?.lastWinDate || "", smallest?.lastWinValue?.[0]?.value || 0, "GEL");
-			this.setPopUpInformation(N, small?.maxWinValue?.[0]?.value || 0, small?.maxWinDate || "", small?.totalWins || 0, null, small?.lastWinDate || "", small?.lastWinValue?.[0]?.value || 0, "GEL");
-			this.setPopUpInformation(F, big?.maxWinValue?.[0]?.value || 0, big?.maxWinDate || "", big?.totalWins || 0, null, big?.lastWinDate || "", big?.lastWinValue?.[0]?.value || 0, "GEL");
-			this.setPopUpInformation(C, biggest?.maxWinValue?.[0]?.value || 0, biggest?.maxWinDate || "", biggest?.totalWins || 0, null, biggest?.lastWinDate || "", biggest?.lastWinValue?.[0]?.value || 0, "GEL");
+			this.setPopUpInformation(y, formatData(smallest?.highWinAmount) || 0, smallest?.highWinTime || maskUsername(smallest?.highWinPlayer), smallest?.countWins || 0, maskUsername(smallest?.highWinPlayer), smallest?.lastWinTime, formatData(smallest?.lastWinAmount) || 0, "GEL");
+
+			this.setPopUpInformation(N, formatData(small?.highWinAmount) || 0, small?.highWinTime || maskUsername(small?.highWinPlayer), small?.countWins || 0, maskUsername(small?.highWinPlayer), small?.lastWinTime, formatData(small?.lastWinAmount) || 0, "GEL");
+			
+			this.setPopUpInformation(F, formatData(big?.highWinAmount) || 0, big?.highWinTime || maskUsername(big?.highWinPlayer), big?.countWins || 0, maskUsername(big?.highWinPlayer), big?.lastWinTime, formatData(big?.lastWinAmount) || 0, "GEL");
+			
+			this.setPopUpInformation(C, formatData(biggest?.highWinAmount) || 0, biggest?.highWinTime || maskUsername(biggest?.highWinPlayer), biggest?.countWins || 0, maskUsername(biggest?.highWinPlayer), biggest?.lastWinTime, formatData(biggest?.lastWinAmount) || 0, "GEL");
+
 			for (a = 0; 4 > a; a++) {
 				// Check if popup is open for current jackpot level
 				if (r[a].isPopUpOpen) {
@@ -676,7 +682,7 @@ function RollingComponent(h, w, d, b) {
 			a.NumberOfWinners = D;
 			a.LastWinner = g;
 			dateTmp = new Date(Date.parse(b));
-			// a.DateOfLastWinner = this.dateToMMDDYYYY(dateTmp); // Last winner Date
+			a.DateOfLastWinner = this.dateToMMDDYYYY(dateTmp); // Last winner Date
 			dateTmp = null;
 			a.LastWinnerAmount = this.convertCoinsToMoney(c, u).money
 		};
@@ -688,6 +694,7 @@ function RollingComponent(h, w, d, b) {
 			B.countWinsNumber.html(a.NumberOfWinners);
 			B.lastWinDate.html(a.DateOfLastWinner);
 			B.lastPrice.html(a.LastWinnerAmount)
+			B.lastWinner.html(this.checkUserNameLength(a.LastWinner));
 		};
 		H.prototype.getDifference = function (a, e, n) {
 			a = e - a;
@@ -825,6 +832,9 @@ function RollingComponent(h, w, d, b) {
 			})
 		};
 		
+		H.prototype.checkUserNameLength = function (a) {
+			return 17 < a.length ? a.slice(0, 17) + "..." : a
+		};
 		H.prototype.convertCoinsToMoney = function (a, e) {
 			var n;
 			switch (e) {
