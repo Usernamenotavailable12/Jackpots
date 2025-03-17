@@ -569,8 +569,8 @@ function RollingComponent(h, w, d, b) {
 					cache: false,
 					dataType: "json",
 					data: {
-						"siteCode": "st8",
-						"widgetCode": "jackpot-st8",
+						"siteCode": "ambassadoribet",
+						"widgetCode": "jackpot-ambassadoribet",
 						"currency": "GEL"
 					},
 					headers: null,
