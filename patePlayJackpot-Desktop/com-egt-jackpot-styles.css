@@ -999,3 +999,26 @@ body {
 	width: 90px !important;
 	display: block;
 }
+@media (max-width: 1400px) {
+	#com-egt-jackpot-html-jackpotBanner.com-egt-jackpot-html-md .com-egt-jackpot-html-box.com-egt-jackpot-html-IV,
+	#com-egt-jackpot-html-jackpotBanner.com-egt-jackpot-html-md .com-egt-jackpot-html-box.com-egt-jackpot-html-III,
+	#com-egt-jackpot-html-jackpotBanner.com-egt-jackpot-html-md .com-egt-jackpot-html-box.com-egt-jackpot-html-II,
+	#com-egt-jackpot-html-jackpotBanner.com-egt-jackpot-html-md .com-egt-jackpot-html-box.com-egt-jackpot-html-I {
+		width: 70%;
+		margin-left: 0% !important;
+	}
+	#com-egt-jackpot-html-jackpotBanner {
+		scale: 1;
+		margin-left: 5%;
+	}
+}
+@media (max-width: 800px) {
+	#com-egt-jackpot-html-jackpotBanner {
+		display: grid !important;
+		grid-template-columns: repeat(2, 1fr);
+		grid-template-rows: repeat(2, 1fr);
+		gap: 20px;
+		margin: 0px 80px;
+		margin-left: 130px;
+}
+}
