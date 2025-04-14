@@ -583,9 +583,9 @@ function RollingComponent(h, w, d, b) {
 			n.first = !1;
 			a = "GEL";
 			let smallest = e.data.jackpots[0].results[3];
-			let small = e.data.jackpots[0].results[0];
+			let small = e.data.jackpots[0].results[2];
 			let big = e.data.jackpots[0].results[1];
-			let biggest = e.data.jackpots[0].results[2];
+			let biggest = e.data.jackpots[0].results[0];
 
 			smallest.value = formatData(smallest.value);
 			small.value = formatData(small.value);
@@ -617,9 +617,9 @@ function RollingComponent(h, w, d, b) {
 		};
 		H.prototype.processRequestFromServer = function (a) {
 			let smallest = a.data.jackpots[0].results[3];
-			let small = a.data.jackpots[0].results[0];
+			let small = a.data.jackpots[0].results[2];
 			let big = a.data.jackpots[0].results[1];
-			let biggest = a.data.jackpots[0].results[2];
+			let biggest = a.data.jackpots[0].results[0];
 
 			smallest.value = formatData(smallest.value);
 			small.value = formatData(small.value);
