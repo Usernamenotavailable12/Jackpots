@@ -582,11 +582,20 @@ function RollingComponent(h, w, d, b) {
 			var n = this;
 			n.first = !1;
 			a = "GEL";
-			let smallest = e.data.jackpots[0].results[3];
-			let small = e.data.jackpots[0].results[2];
-			let big = e.data.jackpots[0].results[1];
-			let biggest = e.data.jackpots[0].results[0];
-
+	
+			// Extract the results array
+			let results = e.data.jackpots[0].results;
+	
+			// Sort the array in descending order (largest to smallest)
+			let sortedResults = [...results].sort((x, y) => y.value - x.value);
+	
+			// Assign variables based on sorted order
+			let biggest = sortedResults[0];   // Largest value
+			let big = sortedResults[1];       // Second largest
+			let small = sortedResults[2];     // Third largest
+			let smallest = sortedResults[3];  // Smallest value
+	
+			// Format the values
 			smallest.value = formatData(smallest.value);
 			small.value = formatData(small.value);
 			big.value = formatData(big.value);
@@ -616,21 +625,29 @@ function RollingComponent(h, w, d, b) {
 			}, f[Y], 1)
 		};
 		H.prototype.processRequestFromServer = function (a) {
-			let smallest = a.data.jackpots[0].results[3];
-			let small = a.data.jackpots[0].results[2];
-			let big = a.data.jackpots[0].results[1];
-			let biggest = a.data.jackpots[0].results[0];
-
+			// Extract the results array
+			let results = a.data.jackpots[0].results;
+	
+			// Sort the array in descending order (largest to smallest)
+			let sortedResults = [...results].sort((x, y) => y.value - x.value);
+	
+			// Assign variables based on sorted order
+			let biggest = sortedResults[0];   // Largest value
+			let big = sortedResults[1];       // Second largest
+			let small = sortedResults[2];     // Third largest
+			let smallest = sortedResults[3];  // Smallest value
+	
+			// Format the values
 			smallest.value = formatData(smallest.value);
 			small.value = formatData(small.value);
 			big.value = formatData(big.value);
 			biggest.value = formatData(biggest.value);
-
+	
+			// Assign to array u
 			u[0] = smallest.value;
 			u[1] = small.value;
 			u[2] = big.value;
 			u[3] = biggest.value;
-
 			this.setPopUpInformation(y, smallest?.maxWinValue?.[0]?.value || 0, smallest?.maxWinDate || "", smallest?.totalWins || 0, null, smallest?.lastWinDate || "", smallest?.lastWinValue?.[0]?.value || 0, "GEL");
 			this.setPopUpInformation(N, small?.maxWinValue?.[0]?.value || 0, small?.maxWinDate || "", small?.totalWins || 0, null, small?.lastWinDate || "", small?.lastWinValue?.[0]?.value || 0, "GEL");
 			this.setPopUpInformation(F, big?.maxWinValue?.[0]?.value || 0, big?.maxWinDate || "", big?.totalWins || 0, null, big?.lastWinDate || "", big?.lastWinValue?.[0]?.value || 0, "GEL");
