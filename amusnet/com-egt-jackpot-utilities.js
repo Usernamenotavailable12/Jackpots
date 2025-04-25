@@ -161,7 +161,7 @@ function PopUp(h, w, d) {
 	CURRENCY_TEXT = '<span class="com-egt-jackpot-html-currencyText"></span>';
 	sadasdlas = '<div class="com-egt-jackpot-html-currency">' + CURRENCY_TEXT + "</div>";
 	f.generateLevels = function (b, c) {
-		$(this.level).css({ width: c, height: c, backgroundImage: 'url("' + this.resourceURL + "img/" + b + '.svg")' })
+		$(this.level).css({ width: c, height: c, backgroundImage: 'url("' + this.resourceURL + "img/" + b + '.png")' })
 	};
 	f.box = $(BOX_HTML);
 	$(h).css({ padding: d.boxPadding + "px 0", position: "relative" });
