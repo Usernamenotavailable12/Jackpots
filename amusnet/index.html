@@ -21,19 +21,15 @@
   <script>
     function sendNavigateMessage(payload) {
       if (!payload || typeof payload !== 'string') {
-        console.error('Invalid payload: Payload must be a non-empty string');
         return;
       }
-
       const targetWindow = window.parent; 
-
       const message = {
         type: 'TMA_NAVIGATE',
         payload: payload
       };
       try {
-        targetWindow.postMessage(message, 'https://usernamenotavailable12.github.io');
-        console.log('Post message sent:', message);
+        targetWindow.postMessage(message, '*');
       } catch (error) {
         console.error('Failed to send post message:', error);
       }
