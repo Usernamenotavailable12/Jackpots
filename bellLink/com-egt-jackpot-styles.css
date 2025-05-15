@@ -308,6 +308,8 @@ body {
 	font-size: 11px;
 	padding: 0 5px;
 	width: 180px !important;
+	scale: 0.85;
+	transform: translateY(28px);
 }
 
 #com-egt-jackpot-html-jackpotBanner .com-egt-jackpot-html-popUp .com-egt-jackpot-html-divider {
