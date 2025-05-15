@@ -20,7 +20,7 @@
   </div>
   <script>
         function sendNavigateMessage(variable) {
-          window.parent.postMessage({ type: 'TMA_NAVIGATE', payload: variable }, '*');
+          window.top.postMessage({ type: 'TMA_NAVIGATE', payload: variable }, '*');
         }
   </script>
 <script>
