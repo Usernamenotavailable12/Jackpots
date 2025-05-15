@@ -19,21 +19,10 @@
     <div id='com-egt-jackpot-html-jackpotBanner'></div>
   </div>
   <script>
-    function sendNavigateMessage(payload) {
-      if (!payload || typeof payload !== 'string') {
-        return;
-      }
-      const targetWindow = window.parent; 
-      const message = {
-        type: 'TMA_NAVIGATE',
-        payload: payload
-      };
-      try {
-        targetWindow.postMessage(message, '*');
-      } catch (error) {
-        console.error('Failed to send post message:', error);
-      }
-    }
+        function sendNavigateMessage(variable) {
+          window.parent.postMessage({ type: 'TMA_NAVIGATE', payload: variable }, '*');
+          console.log('sendNavigateMessage', variable);
+        }
   </script>
 <script>
   $(document).ready(function() {
