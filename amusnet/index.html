@@ -21,7 +21,6 @@
   <script>
         function sendNavigateMessage(variable) {
           window.parent.postMessage({ type: 'TMA_NAVIGATE', payload: variable }, '*');
-          console.log('sendNavigateMessage', variable);
         }
   </script>
 <script>
