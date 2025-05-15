@@ -16,10 +16,14 @@
 </head>
 <body>
 
-<div id='EgtFlashBannerHolder' style='flex: 1'>
+<div onclick="sendNavigateMessage('PROVIDERS_EGTDG')" id='EgtFlashBannerHolder' style='flex: 1'>
   <div id='com-egt-jackpot-html-jackpotBanner'></div>
 </div>
-
+<script>
+  function sendNavigateMessage(variable) {
+    window.top.postMessage({ type: 'TMA_NAVIGATE', payload: variable }, '*');
+  }
+</script>
 <script>
   $(document).ready(function() {
     new EgtJackpotComponent(
