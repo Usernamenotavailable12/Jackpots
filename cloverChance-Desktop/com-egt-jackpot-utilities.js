@@ -564,7 +564,7 @@ function RollingComponent(h, w, d, b) {
 		H.prototype.onRequestComplete = function (e) {
 			var n = this;
 			n.first = !1;
-			a = "GEL";
+			a = "₾";
 			let smallest = e.jackpotInstancesStats.instanceStats[indexOfGame].levelStats[3];
 			let small = e.jackpotInstancesStats.instanceStats[indexOfGame].levelStats[2];
 			let big = e.jackpotInstancesStats.instanceStats[indexOfGame].levelStats[1];

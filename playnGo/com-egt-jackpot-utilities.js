@@ -17,7 +17,7 @@ function maskUsername(username) {
   
   function getWidth(id) {
 	switch (id) {
-		case "I": return 52; //MINI
+		case "159fb625-90b9-4ade-973a-75b069d8175c 1.png": return 52; //MINI
 		case "II": return 73; //MINOR
 		case "III": return 78; //MAJOR
 		case "IV": return 74; //GRAND
@@ -26,7 +26,7 @@ function maskUsername(username) {
 
 function getHeight(id) {
 	switch (id) {
-		case "I": return 18; //MINI
+		case "159fb625-90b9-4ade-973a-75b069d8175c 1.png": return 18; //MINI
 		case "II": return 18; //MINOR
 		case "III": return 24; //MAJOR
 		case "IV": return 18; //GRAND
@@ -199,7 +199,7 @@ function RollingComponent(h, w, d, b) {
 	sadasdlas = '<div class="com-egt-jackpot-html-currency">' + CURRENCY_TEXT + "</div>";
 	f.generateLevels = function (b, c) {
 		this.level[0].className += ' ' + "img" + b
-		$(this.level).css({ backgroundImage: 'url("' + this.resourceURL + "img/" + b + '.svg")' })
+		$(this.level).css({ backgroundImage: 'url("' + this.resourceURL + "img/" + b + '.png")' })
 	};
 	f.box = $(BOX_HTML);
 	$(h).css({ padding: d.boxPadding + "px 0", position: "relative" });
@@ -300,14 +300,14 @@ function RollingComponent(h, w, d, b) {
 		b._numbers[h].digits.oldNum = w;
 		b._numbers[h].digits.oldNum.text(0);
 		b._numbers[h].digits.newNum = d;
-		h == b.maxDigits - 3 && (w = $('<div class="com-egt-jackpot-html-numbers"></div>').addClass("com-egt-jackpot-html-dot").append($("<span>.</span>")).css({ display: "none" }), w.css({ lineHeight: height + "px" }), b.value.append(w), b._numbers.dot = w)
+		h == b.maxDigits - 3 && (w = $('<div class="com-egt-jackpot-html-numbers"></div>').addClass("com-egt-jackpot-html-dot").append($("<span>.</span>")).css({ display: "none" }), b.value.append(w), b._numbers.dot = w)
 		
 		for (let i = 6, index = 0; i < b.maxDigits; i += 3, index++) {
 			if (h === b.maxDigits - i) {
 				let w = $('<div class="com-egt-jackpot-html-numbers"></div>')
 					.addClass("com-egt-jackpot-html-dot")
 					.append($("<span>,</span>"))
-					.css({ display: "none", lineHeight: height + "px" });
+					.css({ display: "none"});
 		
 				b.value.append(w);
 				b._numbers.comma[index] = w;
@@ -336,12 +336,12 @@ function RollingComponent(h, w, d, b) {
 			for (var d = c.length, f = 0; f < b; f++)f >= b - d ? (this._numbers[f].css({ display: "block" }).digits.oldNum.html(c[f - (b - c.length)]), this._numbers[f].visible = !0) : (this._numbers[f].css({ display: "none" }), this._numbers[f].visible = !1);
 			this._digitTweens.alpha = 1;
 
-			this._numbers.dot.css({ display: "block" })
+			this._numbers.dot.css({ display: "flex" })
 			let thresholds = [100000, 100000000, 100000000000, 100000000000000, 100000000000000000];
 
 			thresholds.forEach((threshold, index) => {
 				if (this._finalValue >= threshold) {
-					this._numbers.comma[index].css({ display: "block" });
+					this._numbers.comma[index].css({ display: "flex" });
 				}
 			});
 		};
@@ -457,7 +457,7 @@ function RollingComponent(h, w, d, b) {
 			a.boxWidthEqual = !1;
 			a.levelSize = 32;
 			a.boxHeight = 48;
-			a.boxPadding = 10;
+			a.boxPadding = 0;
 			a.borderWidth = 5;
 			a.borderRadius = 6;
 			a.borderColor = "#B28649";

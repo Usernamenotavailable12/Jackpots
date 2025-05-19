@@ -157,14 +157,14 @@ function PopUp(h, w, d) {
 	DUMMY_IMG_HTML = '<img src="' + f.resourceURL + 'img/dummy.webp" class="com-egt-jackpot-html-dummyImg" usemap="#' + w + '">';
 	MAP_HTML = '<map name="' + w + '"></map>';
 	AREA_HTML = '<area shape="poly" href="javascript: void(0);">';
-	LEVEL_HTML = '<div class="com-egt-jackpot-html-level"></div>';
+	LEVEL_HTML = '';
 	CURRENCY_TEXT = '<span class="com-egt-jackpot-html-currencyText"></span>';
 	sadasdlas = '<div class="com-egt-jackpot-html-currency">' + CURRENCY_TEXT + "</div>";
 	f.generateLevels = function (b, c) {
 		$(this.level).css({ width: c, height: c, backgroundImage: 'url("' + this.resourceURL + "img/" + b + '.svg")' })
 	};
 	f.box = $(BOX_HTML);
-	$(h).css({ padding: d.boxPadding + "px 0", position: "relative" });
+	$(h).css({ padding: "px 0", position: "relative" });
 	h.append(f.box.addClass("class-md com-egt-jackpot-html-" + w));
 	d.logo || f.box.addClass("com-egt-jackpot-html-no-logo");
 	d.boxWidthEqual && f.box.addClass("com-egt-jackpot-html-equal");
@@ -431,7 +431,7 @@ function PopUp(h, w, d) {
 			a.boxPadding = 10;
 			a.borderWidth = 1;
 			a.borderRadius = 6;
-			a.borderColor = "#FC9502";
+			a.borderColor = "#B99263";
 			a.dateColor = "#b2dcea";
 			a.lastWinnerUsernameColor = "#aac1cf";
 			a.popUpBoxPosition = "top";
@@ -442,7 +442,7 @@ function PopUp(h, w, d) {
 			a.buttonWidth = 150;
 			a.buttonHeight = 30;
 			a.buttonBackground = "#ff8000";
-			a.buttonBorderColor = "#ff0000";
+			a.buttonBorderColor = "#B99263";
 			a.buttonColor = "#ffffff";
 			w = a.URL;
 			d = $("#com-egt-jackpot-html-jackpotBanner");
@@ -467,10 +467,10 @@ function PopUp(h, w, d) {
 				this.Spade;
 				this.Spade = new RollingComponent(d, "IV", a, { maxDigits: a.maxDigits[3] });
 				this.Heart = new RollingComponent(d, "III", a, { maxDigits: a.maxDigits[2] });
+				this.createDiv(d).addClass("com-egt-jackpot-html-clear-fix");
 				this.Diamond =
 					new RollingComponent(d, "II", a, { maxDigits: a.maxDigits[1] });
 				this.Club = new RollingComponent(d, "I", a, { maxDigits: a.maxDigits[0] });
-				this.createDiv(d).addClass("com-egt-jackpot-html-clear-fix");
 				a.buttonURL && d.append($("<a></a>").attr({
 					href: a.buttonURL,
 					alt: a.buttonText

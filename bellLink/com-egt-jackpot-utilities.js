@@ -172,7 +172,7 @@ function RollingComponent(h, w, d, b) {
 	sadasdlas = '<div class="com-egt-jackpot-html-currency">' + CURRENCY_TEXT + "</div>";
 	f.generateLevels = function (b, c) {
 		this.level[0].className += ' ' + "img" + b
-		$(this.level).css({backgroundImage: 'url("' + this.resourceURL + "img/" + b + '.svg")' })
+		$(this.level).css({backgroundImage: 'url("' + this.resourceURL + "img/" + b + '.png")' })
 	};
 	f.box = $(BOX_HTML);
 	$(h).css({ padding: d.boxPadding + "px 0", position: "relative" });
@@ -180,10 +180,8 @@ function RollingComponent(h, w, d, b) {
 	d.logo || f.box.addClass("com-egt-jackpot-html-no-logo");
 	d.boxWidthEqual && f.box.addClass("com-egt-jackpot-html-equal");
 	f.box.css({
-		borderWidth: "2px",
 		borderRadius: d.borderRadius,
 		borderStyle: "solid",
-		borderColor: getBorderColor(f.id),
 	});
 	f.dummyImg = $(DUMMY_IMG_HTML);
 	f.dummyImg.map = $(MAP_HTML);
@@ -433,7 +431,7 @@ function RollingComponent(h, w, d, b) {
 			a.boxWidthEqual = !1;
 			a.levelSize = 32;
 			a.boxHeight = 48;
-			a.boxPadding = 10;
+			a.boxPadding = 0;
 			a.borderWidth = 2;
 			a.borderRadius = 6;
 			a.borderColor = "#FC9502";
@@ -574,7 +572,7 @@ function RollingComponent(h, w, d, b) {
 		H.prototype.onRequestComplete = function (e) {
 			var n = this;
 			n.first = !1;
-			a = "GEL";
+			a = "₾";
 			let smallest = e.jackpotInstancesStats.instanceStats[indexOfGame].levelStats[2];
 			let small = e.jackpotInstancesStats.instanceStats[indexOfGame].levelStats[3];
 			let big = e.jackpotInstancesStats.instanceStats[indexOfGame].levelStats[1];

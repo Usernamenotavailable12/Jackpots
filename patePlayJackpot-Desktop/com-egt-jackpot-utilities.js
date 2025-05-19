@@ -182,7 +182,7 @@ function RollingComponent(h, w, d, b) {
 	AREA_HTML = '<area shape="poly" href="javascript: void(0);">';
 	LEVEL_HTML = '<div class="com-egt-jackpot-html-level"></div>';
 	CURRENCY_TEXT = '<span class="com-egt-jackpot-html-currencyText"></span>';
-	sadasdlas = '<div class="com-egt-jackpot-html-currency com-egt-jackpot-html-numbers">' + CURRENCY_TEXT + "</div>";
+	sadasdlas = '<div class="com-egt-jackpot-html-numbers com-egt-jackpot-html-currency">' + CURRENCY_TEXT + "</div>";
 	f.generateLevels = function (b, c) {
 		this.level[0].className += ' ' + "img" + b
 	};
@@ -444,7 +444,7 @@ function RollingComponent(h, w, d, b) {
 			a.boxWidthEqual = !1;
 			a.levelSize = 32;
 			a.boxHeight = 68;
-			a.boxPadding = 10;
+			a.boxPadding = 0;
 			a.borderWidth = 2;
 			a.borderRadius = 6;
 			a.borderColor = "#FC9502";
@@ -590,7 +590,7 @@ function RollingComponent(h, w, d, b) {
 		H.prototype.onRequestComplete = function (e) {
 			var n = this;
 			n.first = !1;
-			a = "GEL";
+			a = "₾";
 			let smallest = e.result.pools[3];
 			let small = e.result.pools[2]
 			let big = e.result.pools[1]

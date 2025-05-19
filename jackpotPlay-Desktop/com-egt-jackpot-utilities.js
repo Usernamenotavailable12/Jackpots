@@ -44,7 +44,7 @@ function PopUp(h, w, d) {
 	b.mask = $(MASK_HTML);
 	h.append(b.mask);
 	b.box = $('<div class="com-egt-jackpot-html-popUp"></div>').css({
-		opacity: 0, width: d, borderWidth: w.borderWidth,
+		opacity: 0, width: d,
 		borderStyle: "solid", borderColor: w.borderColor
 	});
 	b.mask.append(b.box);
@@ -440,8 +440,8 @@ function RollingComponent(h, w, d, b) {
 			a.boxWidthEqual = !1;
 			a.levelSize = 32;
 			a.boxHeight = 68;
-			a.boxPadding = 10;
-			a.borderWidth = 2;
+			a.boxPadding = 0;
+			a.borderWidth = 0;
 			a.borderRadius = 6;
 			a.borderColor = "#FC9502";
 			a.dateColor = "#b2dcea";
@@ -581,7 +581,7 @@ function RollingComponent(h, w, d, b) {
 		H.prototype.onRequestComplete = function (e) {
 			var n = this;
 			n.first = !1;
-			a = "GEL";
+			a = "₾";
 	
 			// Extract the results array
 			let results = e.data.jackpots[0].results;

@@ -15,7 +15,7 @@
   <link rel='stylesheet' href='com-egt-jackpot-styles.css' />
 </head>
 <body>
-
+  
 <div style="cursor: pointer;" onclick="sendNavigateMessage('PROVIDERS_PATEPLAY')" id='EgtFlashBannerHolder' style='flex: 1'>
   <div id='com-egt-jackpot-html-jackpotBanner'></div>
 </div>
@@ -24,6 +24,7 @@
     window.top.postMessage({ type: 'TMA_NAVIGATE', payload: variable }, '*');
   }
 </script>
+
 <script>
   $(document).ready(function() {
     new EgtJackpotComponent(

@@ -16,10 +16,22 @@ body {
 	align-items: flex-end;
 	margin: 0;
 }
+.com-egt-jackpot-html-md::before {
+	content: "";
+    background: url('./img/Vector.svg') no-repeat center center;
+	width: 24px;
+	height: 17px;
+	left: 50%;
+	top: 50%;
+	transform: translateX(-50%) translateY(-50%);
+	background-size: cover;
+	position: absolute;
+}
 
 #EgtFlashBannerHolder {
-    background: url('./img/logo-md.webp') no-repeat center center;
+    background: url('./img/jackpot-content.png') no-repeat center center;
     background-size: cover;
+	position: relative;
     width: 100%;
     height: 100%;
     position: relative;
@@ -39,13 +51,13 @@ body {
 		#com-egt-jackpot-html-jackpotBanner.com-egt-jackpot-html-md .com-egt-jackpot-html-box.com-egt-jackpot-html-I,
 		#com-egt-jackpot-html-jackpotBanner.com-egt-jackpot-html-md .com-egt-jackpot-html-box.com-egt-jackpot-html-II,
 		#com-egt-jackpot-html-jackpotBanner.com-egt-jackpot-html-md .com-egt-jackpot-html-box.com-egt-jackpot-html-III,
-		#com-egt-jackpot-html-jackpotBanner.com-egt-jackpot-html-md .com-egt-jackpot-html-box.com-egt-jackpot-html-IV{
+		#com-egt-jackpot-html-jackpotBanner.com-egt-jackpot-html-md .com-egt-jackpot-html-box.com-egt-jackpot-html-IV {
 			margin-bottom: 1vw;
 		}
 		#com-egt-jackpot-html-jackpotBanner.com-egt-jackpot-html-md .com-egt-jackpot-html-box.com-egt-jackpot-html-I .com-egt-jackpot-html-numbers,
 		#com-egt-jackpot-html-jackpotBanner.com-egt-jackpot-html-md .com-egt-jackpot-html-box.com-egt-jackpot-html-II .com-egt-jackpot-html-numbers,
 		#com-egt-jackpot-html-jackpotBanner.com-egt-jackpot-html-md .com-egt-jackpot-html-box.com-egt-jackpot-html-III .com-egt-jackpot-html-numbers,
-		#com-egt-jackpot-html-jackpotBanner.com-egt-jackpot-html-md .com-egt-jackpot-html-box.com-egt-jackpot-html-IV .com-egt-jackpot-html-numbers{
+		#com-egt-jackpot-html-jackpotBanner.com-egt-jackpot-html-md .com-egt-jackpot-html-box.com-egt-jackpot-html-IV .com-egt-jackpot-html-numbers {
 			line-height: 40px !important;
 		}
 	}
@@ -84,8 +96,7 @@ body {
 		#com-egt-jackpot-html-jackpotBanner.com-egt-jackpot-html-md .com-egt-jackpot-html-box.com-egt-jackpot-html-IV .com-egt-jackpot-html-numbers{
 			width: 1vw;
 		}
-		scale: 0.7;
-		margin-top: 44px;
+		margin-top: 0px;
 	}
 }
 
@@ -115,8 +126,13 @@ body {
 	position: relative;
 	text-align: center;
 	z-index: 1;
+	
+	border-radius: 4px 12px 12px 4px;
+	border: 1px solid #B99263;
+	background: var(--jeck, linear-gradient(180deg, #3A383B 0%, #1E1F21 36%, #1E1F21 68%, #39373A 100%));
+	box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25) inset;
 
-	background: url('./img/bg.webp') repeat-x;
+
 	-webkit-background-size: contain;
 	-moz-background-size: contain;
 	-o-background-size: contain;
@@ -715,6 +731,9 @@ body {
 	display: none;
 }
 
+:root{
+
+}
 
 
 @media screen and (min-height: 161px) {
@@ -746,7 +765,6 @@ body {
 		font-size: 14px;
 		font-style: normal;
 		font-weight: 400;
-		line-height: 6px;
 	}
 
 	#com-egt-jackpot-html-jackpotBanner.com-egt-jackpot-html-md .com-egt-jackpot-html-box.com-egt-jackpot-html-I {
@@ -866,4 +884,148 @@ body {
 	height: 100%;
 	width: auto;
 }
+}
+
+
+
+@media screen and (max-height: 160px) {
+	#com-egt-jackpot-html-jackpotBanner{
+		display: flex !important;
+		justify-content: space-around !important;
+		align-items: center !important;
+	}
+
+	.class-md.com-egt-jackpot-html-II,
+	.class-md.com-egt-jackpot-html-I {
+		display: none !important;
+	}
+	.com-egt-jackpot-html-clear-fix {
+
+	}
+	#com-egt-jackpot-html-jackpotBanner {
+		--before-width: 40px;
+		display: grid !important;
+		grid-template-columns: 6fr 0fr 6fr;
+		grid-template-rows: 1fr;
+		grid-column-gap: 20px;
+		grid-row-gap: 0px;
+		margin-top: 0 !important;
+		padding-top: 0 !important;
+		height: 100% !important;
+		align-content: center !important;
+		justify-content: space-between !important;
+	}
+	.com-egt-jackpot-html-box {
+		margin: 0 !important;
+	}
+	.com-egt-jackpot-html-IV{
+		position: relative;
+		grid-area: 1 / 1 / 2 / 2;
+	}
+
+	.com-egt-jackpot-html-level{
+		display: none !important;
+	}
+	.com-egt-jackpot-html-III {
+		margin-right: 12px !important;
+		grid-area: 1 / 3 / 2 / 3;
+	}
+	.com-egt-jackpot-html-IV {
+		margin-left: calc( 12px + var(--before-width) / 2 ) !important;
+		justify-self: center;
+
+	}
+	.com-egt-jackpot-html-III {
+		margin-left: calc(var(--before-width) / 2 ) !important;
+		justify-self: center;
+	}
+
+	.com-egt-jackpot-html-box {
+		border-radius: 4px 12px 12px 4px !important;
+		border: 1px solid #B99263 !important;
+		background: linear-gradient(180deg, #3A383B 0%, #1E1F21 36%, #1E1F21 68%, #39373A 100%) !important;
+		box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25) inset !important;
+		display: flex !important;
+		width: 128px !important;
+		height: 34px !important;
+		padding: 0px 5px 0px calc(var(--before-width) / 2) !important;
+		gap: 0px !important;
+		width: auto !important;
+		max-width: 200px !important;
+	}
+	.com-egt-jackpot-html-currency{
+		margin-right: 5px;
+		position: static !important;
+	}
+	.com-egt-jackpot-html-currency .com-egt-jackpot-html-currencyText{
+		color: #FFF;
+		font-family: "Noto Sans Ambassadori";
+		font-size: 12px;
+		font-style: normal;
+		font-weight: 400;
+		line-height: normal;
+		width: 12px !important;
+	}
+	.com-egt-jackpot-html-numbers{
+		color: #FFF;
+		text-align: center;
+		font-family: "Noto Sans Ambassadori";
+		font-size: 14px !important;
+		font-style: normal;
+		font-weight: 400;
+		line-height: 2000px !important;
+		width: 8px !important;
+
+	}
+	.com-egt-jackpot-html-clear-fix{
+		grid-area: 1 / 2 / 2 / 4;
+
+	}
+	
+	.com-egt-jackpot-html-IV::before,
+	.com-egt-jackpot-html-III::before {
+		content: " ";
+		box-sizing: border-box;
+		position: absolute;
+		left: 0;
+		top: 50%;
+		transform: translateY(-50%) translateX(-50%);
+		display: flex;
+		width: var(--before-width);
+		height: var(--before-width);
+		padding: 4px;
+		justify-content: center;
+		align-items: center;
+		aspect-ratio: 1/1;
+		border-radius: 64px;
+		border: 1px solid #D9BE8E;
+		background: linear-gradient(180deg, #3A383B 0%, #1E1F21 36%, #1E1F21 68%, #39373A 100%);
+	}
+	#com-egt-jackpot-html-jackpotBanner .com-egt-jackpot-html-box .com-egt-jackpot-html-value {
+		position: static;
+		width: 100%;
+		height: 100%;
+		display: flex;
+		align-items: center;
+		justify-content: flex-end;
+		line-height: 10000px !important;
+	}
+
+	#EgtFlashBannerHolder {
+		#com-egt-jackpot-html-jackpotBanner.com-egt-jackpot-html-md .com-egt-jackpot-html-box.com-egt-jackpot-html-I .com-egt-jackpot-html-numbers,
+		#com-egt-jackpot-html-jackpotBanner.com-egt-jackpot-html-md .com-egt-jackpot-html-box.com-egt-jackpot-html-II .com-egt-jackpot-html-numbers,
+		#com-egt-jackpot-html-jackpotBanner.com-egt-jackpot-html-md .com-egt-jackpot-html-box.com-egt-jackpot-html-III .com-egt-jackpot-html-numbers,
+		#com-egt-jackpot-html-jackpotBanner.com-egt-jackpot-html-md .com-egt-jackpot-html-box.com-egt-jackpot-html-IV .com-egt-jackpot-html-numbers {
+			line-height: 33px !important;
+		}
+	}
+
+	.com-egt-jackpot-html-IV::before {
+		content: url('./img/IV.png');
+		background-size: cover;
+	}
+	.com-egt-jackpot-html-III::before {
+		content: url('./img/III.png');
+		background-size: cover;
+	}
 }
