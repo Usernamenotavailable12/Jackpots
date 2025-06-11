@@ -44,7 +44,7 @@ body {
 
 	background-position: top;
 
-	@media (min-width: 381px) {
+	@media (min-width: 900px) {
 		background-size: cover;
 		background-repeat: repeat;
 		background-position: center 20%;
@@ -86,7 +86,7 @@ body {
 	font-style: normal;
 	font-weight: 400;
 	line-height: 6px;
-	@media (min-width: 381px) {
+	@media (min-width: 900px) {
 		.com-egt-jackpot-html-I,
 		.com-egt-jackpot-html-II,
 		.com-egt-jackpot-html-III,
@@ -234,19 +234,19 @@ body {
 }
 
 #com-egt-jackpot-html-jackpotBanner .com-egt-jackpot-html-box.com-egt-jackpot-html-I .com-egt-jackpot-html-numbers {
-	font-size: 4vw;
+	font-size: 14px;
 }
 
 #com-egt-jackpot-html-jackpotBanner .com-egt-jackpot-html-box.com-egt-jackpot-html-II .com-egt-jackpot-html-numbers {
-	font-size: 4vw;
+	font-size: 14px;
 }
 
 #com-egt-jackpot-html-jackpotBanner .com-egt-jackpot-html-box.com-egt-jackpot-html-III .com-egt-jackpot-html-numbers {
-	font-size: 4vw;
+	font-size: 14px;
 }
 
 #com-egt-jackpot-html-jackpotBanner .com-egt-jackpot-html-box.com-egt-jackpot-html-IV .com-egt-jackpot-html-numbers {
-	font-size: 4vw;
+	font-size: 14px;
 }
 
 #com-egt-jackpot-html-jackpotBanner .com-egt-jackpot-html-box .com-egt-jackpot-html-numbers .com-egt-jackpot-html-digit .com-egt-jackpot-html-old,
@@ -516,22 +516,22 @@ body {
 }
 
 #com-egt-jackpot-html-jackpotBanner.com-egt-jackpot-html-md .com-egt-jackpot-html-box.com-egt-jackpot-html-I .com-egt-jackpot-html-numbers {
-	line-height: 8vw !important;
+	line-height: 34px !important;
 	width: 2.3vw;
 }
 
 #com-egt-jackpot-html-jackpotBanner.com-egt-jackpot-html-md .com-egt-jackpot-html-box.com-egt-jackpot-html-II .com-egt-jackpot-html-numbers {
-	line-height: 8vw !important;
+	line-height: 34px !important;
 	width: 2.3vw;
 }
 
 #com-egt-jackpot-html-jackpotBanner.com-egt-jackpot-html-md .com-egt-jackpot-html-box.com-egt-jackpot-html-III .com-egt-jackpot-html-numbers {
-	line-height: 8vw !important;
+	line-height: 34px !important;
 	width: 2.3vw;
 }
 
 #com-egt-jackpot-html-jackpotBanner.com-egt-jackpot-html-md .com-egt-jackpot-html-box.com-egt-jackpot-html-IV .com-egt-jackpot-html-numbers {
-	line-height: 8vw !important;
+	line-height: 34px !important;
 	width: 2.3vw;
 }
 

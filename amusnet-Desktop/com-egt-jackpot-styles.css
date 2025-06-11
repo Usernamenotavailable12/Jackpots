@@ -51,7 +51,7 @@ body {
 
   background-position: top;
 
-  @media (min-width: 381px) {
+  @media (min-width: 900px) {
     background-size: cover;
     background-repeat: repeat;
     background-position: center 20%;
@@ -109,7 +109,7 @@ body {
   display: flex !important;
   justify-content: space-around !important;
 
-  @media (min-width: 381px) {
+  @media (min-width: 900px) {
     .com-egt-jackpot-html-I,
     .com-egt-jackpot-html-II,
     .com-egt-jackpot-html-III,
@@ -1152,7 +1152,7 @@ body {
 	color: #FFF;
 	text-align: center;
 	font-family: "Noto Sans Ambassadori";
-	font-size: 4vw;
+	font-size: 14px;
 	font-style: normal;
 	font-weight: 700;
 	line-height: normal;

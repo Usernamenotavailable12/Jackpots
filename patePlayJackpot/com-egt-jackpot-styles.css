@@ -41,7 +41,7 @@ body {
 
 	background-position: top;
 
-	@media (min-width: 381px) {
+	@media (min-width: 900px) {
 		background-size: cover;
 		background-repeat: repeat;
 		background-position: center 20%;
@@ -88,7 +88,7 @@ body {
 	line-height: 6px;
 	height: 100%;
 
-	@media (min-width: 381px) {
+	@media (min-width: 900px) {
 
 		.com-egt-jackpot-html-I,
 		.com-egt-jackpot-html-II,
@@ -247,19 +247,19 @@ body {
 }
 
 #com-egt-jackpot-html-jackpotBanner .com-egt-jackpot-html-box.com-egt-jackpot-html-I .com-egt-jackpot-html-numbers {
-	font-size: 4vw;
+	font-size: 14px;
 }
 
 #com-egt-jackpot-html-jackpotBanner .com-egt-jackpot-html-box.com-egt-jackpot-html-II .com-egt-jackpot-html-numbers {
-	font-size: 4vw;
+	font-size: 14px;
 }
 
 #com-egt-jackpot-html-jackpotBanner .com-egt-jackpot-html-box.com-egt-jackpot-html-III .com-egt-jackpot-html-numbers {
-	font-size: 4vw;
+	font-size: 14px;
 }
 
 #com-egt-jackpot-html-jackpotBanner .com-egt-jackpot-html-box.com-egt-jackpot-html-IV .com-egt-jackpot-html-numbers {
-	font-size: 4vw;
+	font-size: 14px;
 }
 
 #com-egt-jackpot-html-jackpotBanner .com-egt-jackpot-html-box .com-egt-jackpot-html-numbers .com-egt-jackpot-html-digit .com-egt-jackpot-html-old,
@@ -525,22 +525,22 @@ body {
 }
 
 #com-egt-jackpot-html-jackpotBanner.com-egt-jackpot-html-md .com-egt-jackpot-html-box.com-egt-jackpot-html-I .com-egt-jackpot-html-numbers {
-	line-height: 8vw !important;
+	line-height: 34px !important;
 	width: 2.3vw;
 }
 
 #com-egt-jackpot-html-jackpotBanner.com-egt-jackpot-html-md .com-egt-jackpot-html-box.com-egt-jackpot-html-II .com-egt-jackpot-html-numbers {
-	line-height: 8vw !important;
+	line-height: 34px !important;
 	width: 2.3vw;
 }
 
 #com-egt-jackpot-html-jackpotBanner.com-egt-jackpot-html-md .com-egt-jackpot-html-box.com-egt-jackpot-html-III .com-egt-jackpot-html-numbers {
-	line-height: 8vw !important;
+	line-height: 34px !important;
 	width: 2.3vw;
 }
 
 #com-egt-jackpot-html-jackpotBanner.com-egt-jackpot-html-md .com-egt-jackpot-html-box.com-egt-jackpot-html-IV .com-egt-jackpot-html-numbers {
-	line-height: 8vw !important;
+	line-height: 34px !important;
 	width: 2.3vw;
 }
 
@@ -1022,12 +1022,12 @@ body {
 	}
 
 	.com-egt-jackpot-html-box {
-		max-width: 128px !important;
+		max-width: 80% !important;
 		border-width: 1px !important;
 	}
 
 	.com-egt-jackpot-html-numbers {
-		width: 2.1vw !important;
+		width: 8px !important;
 	}
 }
 
@@ -1119,14 +1119,4 @@ body {
 
 .com-egt-jackpot-html-currencyText {
 	width: auto !important;
-}
-@media (min-width: 470px) and (max-height: 161px) {
-  #com-egt-jackpot-html-jackpotBanner .com-egt-jackpot-html-box {
-    height: 50px !important;
-    min-width: 200px !important; 
-    font-size: 10px !important;
-    span {
-      font-size: 15px !important;
-    }
-  }
 }
