@@ -1,0 +1,104 @@
+:root {
+  --level-icon-size: 3.333vw;
+  --level-icon-top-offset: -1.25vw;
+
+  --border-color-gold: #b28649;
+
+  --gradient-banner: linear-gradient(
+    180deg,
+    rgba(13, 97, 137, 0.6) 0%,
+    rgba(59, 25, 61, 0.6) 95.1%
+  );
+  --gradient-default: linear-gradient(
+    180deg,
+    #380606 0%,
+    #6f0c0b 36%,
+    #6f0c0b 68%,
+    #440606 100%
+  );
+
+  --gradient-level-i: linear-gradient(
+    90deg,
+    #1f072a 0%,
+    #680c91 65.38%,
+    #1f072a 100%
+  );
+  --gradient-level-i-icon: linear-gradient(
+    180deg,
+    #1f072a 0%,
+    #680c91 51.92%,
+    #1f072a 100%
+  );
+  --border-color-level-i: #5d087d;
+
+  --gradient-level-ii: linear-gradient(
+    270deg,
+    #071025 0%,
+    #172a84 30.16%,
+    #071025 86.84%
+  );
+  --gradient-level-ii-icon: linear-gradient(
+    180deg,
+    #071025 0%,
+    #172a84 48.75%,
+    #071025 100%
+  );
+  --border-color-level-ii: #01368e;
+
+  --gradient-level-iii: linear-gradient(
+    90deg,
+    #2d3d0f 13.82%,
+    #1f5906 59.05%,
+    #2d3d0f 99.34%
+  );
+  --gradient-level-iii-icon: linear-gradient(
+    0deg,
+    #2d3d0f 0%,
+    #1f5906 48.55%,
+    #2d3d0f 87.5%
+  );
+  --border-color-level-iii: #38c303;
+
+  --gradient-level-iv: linear-gradient(
+    90deg,
+    #370606 13.49%,
+    #830909 56.9%,
+    #310a0a 98.68%
+  );
+  --gradient-level-iv-icon: linear-gradient(
+    0deg,
+    #500808 0%,
+    #7a0b0b 48.55%,
+    #4c0a0a 87.5%
+  );
+  --border-color-level-iv: #a80a0c;
+
+
+
+  --bg-image: url(/jackpotPlay-dynamic/img/jackpot-content.jpg);
+  --logo-image: url(/jackpotPlay-dynamic/img/logo.png);
+  --minilogo-image: url(/jackpotPlay-dynamic/img/minilogo.png);
+  --level-i-image: url(/jackpotPlay-dynamic/img/I.png);
+  --level-i-mini-image: url(/jackpotPlay-dynamic/img/I-min.png);
+  --level-ii-image: url(/jackpotPlay-dynamic/img/II.png);
+  --level-ii-mini-image: url(/jackpotPlay-dynamic/img/II-min.png);
+  --level-iii-image: url(/jackpotPlay-dynamic/img/III.png);
+  --level-iii-mini-image: url(/jackpotPlay-dynamic/img/III-min.png);
+  --level-iv-image: url(/jackpotPlay-dynamic/img/IV.png);
+  --level-iv-mini-image: url(/jackpotPlay-dynamic/img/IV-min.png);
+
+
+  
+
+  
+}
+
+
+
+@media screen and (max-width: 768px) {
+  :root {
+  --logo-image: url(/jackpotPlay-dynamic/img/logo-mob.png);
+  --logo-width: 8.649vw;
+  }
+
+}

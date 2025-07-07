@@ -1,0 +1,59 @@
+:root {
+  --level-icon-size: 3.698vw;
+  --level-icon-top-offset: -1.615vw;
+
+  --border-color-gold: #b28649;
+
+  --gradient-banner: linear-gradient(180deg, rgba(92, 4, 224, 0.60) 0%, rgba(64, 3, 159, 0.60) 95.1%);
+  --gradient-default: linear-gradient(
+    180deg,
+    #380606 0%,
+    #6f0c0b 36%,
+    #6f0c0b 68%,
+    #440606 100%
+  );
+
+  --gradient-level-i: linear-gradient(180deg, #341354 0%, #8B46C5 38%, #2E164E 100%);
+  --gradient-level-i-icon: linear-gradient(180deg, #341354 0%, #8B46C5 38%, #2E164E 100%);
+  --border-color-level-i: #C09D05;
+
+  --gradient-level-ii: linear-gradient(180deg, rgba(18, 71, 18, 0.60) 0%, #2E962E 38%, rgba(20, 77, 19, 0.60) 100%);
+  --gradient-level-ii-icon: linear-gradient(180deg, #0C2C0C 0%, #2E962E 38%, #0C2C0C 100%);
+  --border-color-level-ii: #C09D05;
+
+  --gradient-level-iii: linear-gradient(180deg, rgba(13, 29, 73, 0.60) 0%, #2E4BA5 38%, #0D1D49 100%);
+  --gradient-level-iii-icon: linear-gradient(180deg, rgba(12, 36, 98, 0.60) 0%, #2E4BA5 38%, rgba(19, 45, 118, 0.60) 100%);
+  --border-color-level-iii: #C09D05;
+
+  --gradient-level-iv: linear-gradient(180deg, #531716 0%, #B91818 38%, #531716 100%);
+  --gradient-level-iv-icon: linear-gradient(180deg, rgba(119, 1, 0, 0.60) 0%, #B91818 38%, rgba(128, 0, 0, 0.60) 100%);
+  --border-color-level-iv: #C09D05;
+
+
+
+  --bg-image: url(/patePlayJackpot-dynamic/img/jackpot-content.jpg);
+  --logo-image: url(/patePlayJackpot-dynamic/img/logo.png);
+  --minilogo-image: url(/patePlayJackpot-dynamic/img/logo.png);
+  --level-i-image: url("");
+  --level-i-mini-image: url(/patePlayJackpot-dynamic/img/I-min.png);
+  --level-ii-image: url("");
+  --level-ii-mini-image: url(/patePlayJackpot-dynamic/img/II-min.png);
+  --level-iii-image: url("");
+  --level-iii-mini-image: url(/patePlayJackpot-dynamic/img/III-min.png);
+  --level-iv-image: url("");
+  --level-iv-mini-image: url(/patePlayJackpot-dynamic/img/IV-min.png);
+
+  
+
+  
+}
+
+
+
+@media screen and (max-width: 768px) {
+  :root {
+  --logo-image: url(/patePlayJackpot-dynamic/img/logo-mob.png);
+  --logo-width: 11.351vw;
+  }
+
+}

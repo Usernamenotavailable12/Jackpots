@@ -1,0 +1,67 @@
+:root {
+  --level-icon-size: 3.698vw;
+  --level-icon-top-offset: -1.615vw;
+
+  --border-color-gold: #b28649;
+
+  --box-shadow: 0vw 0.208vw .208vw 0vw rgba(0, 0, 0, 0.25) inset;
+
+  --gradient-banner: linear-gradient(
+    180deg,
+    rgba(4, 130, 69, 0.6) 0%,
+    rgba(124, 92, 80, 0.36) 95.1%
+  );
+  --gradient-default: linear-gradient(
+    180deg,
+    #380606 0%,
+    #6f0c0b 36%,
+    #6f0c0b 68%,
+    #440606 100%
+  );
+
+  --gradient-level-i: url(/cloverChance-dynamic/img/I-bg.png);
+  --gradient-level-i-icon: url(/cloverChance-dynamic/img/I-bg-min.jpg);
+  --border-color-level-i: #5D087D;
+
+  --gradient-level-ii: url(/cloverChance-dynamic/img/II-bg.png);
+  --gradient-level-ii-icon: url(/cloverChance-dynamic/img/II-bg-min.jpg);
+  --border-color-level-ii: #01368E;
+
+  --gradient-level-iii: url(/cloverChance-dynamic/img/III-bg.png);
+  --gradient-level-iii-icon: url(/cloverChance-dynamic/img/III-bg-min.jpg);
+  --border-color-level-iii: #38C303;
+
+  --gradient-level-iv: url(/cloverChance-dynamic/img/IV-bg.png);
+  --gradient-level-iv-icon: url(/cloverChance-dynamic/img/IV-bg-min.jpg);
+  --border-color-level-iv: #480B0B;
+
+
+
+  --bg-image: url(/cloverChance-dynamic/img/jackpot-content.jpg);
+  --logo-image: url(/cloverChance-dynamic/img/logo.svg);
+  --minilogo-image: url(/cloverChance-dynamic/img/minilogo.png);
+  --level-i-image: url(/cloverChance-dynamic/img/I.png);
+  --level-i-mini-image: url(/cloverChance-dynamic/img/minilogo.png);
+  --level-ii-image: url(/cloverChance-dynamic/img/II.png);
+  --level-ii-mini-image: url(/cloverChance-dynamic/img/minilogo.png);
+  --level-iii-image: url(/cloverChance-dynamic/img/III.png);
+  --level-iii-mini-image: url(/cloverChance-dynamic/img/minilogo.png);
+  --level-iv-image: url(/cloverChance-dynamic/img/IV.png);
+  --level-iv-mini-image: url(/cloverChance-dynamic/img/minilogo.png);
+
+  
+
+  
+}
+
+
+
+
+
+@media screen and (max-width: 768px) {
+  :root {
+  --logo-image: url(/cloverChance-dynamic/img/logo-mob.svg);
+  --logo-width: 6.486vw;
+  }
+
+}

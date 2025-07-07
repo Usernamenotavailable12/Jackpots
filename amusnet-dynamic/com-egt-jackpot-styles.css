@@ -1,0 +1,109 @@
+:root {
+  --level-icon-size: 3.333vw;
+  --level-icon-top-offset: -1.25vw;
+
+  --border-color-gold: #b99263;
+
+  --gradient-banner: linear-gradient(
+    180deg,
+    rgba(207, 22, 125, 0.60) 0%,
+    rgba(168, 132, 90, 0.60) 95.1%
+  );
+  --gradient-default: linear-gradient(
+    180deg,
+    #3a383b 0%,
+    #1e1f21 36%,
+    #1e1f21 68%,
+    #39373a 100%
+  );
+
+  --gradient-level-i: linear-gradient(
+    180deg,
+    #3a383b 0%,
+    #1e1f21 36%,
+    #1e1f21 68%,
+    #39373a 100%
+  );
+  --gradient-level-i-icon: linear-gradient(
+    180deg,
+    #3a383b 0%,
+    #1e1f21 36%,
+    #1e1f21 68%,
+    #39373a 100%
+  );
+  --border-color-level-i: #b99263;
+
+  --gradient-level-ii: linear-gradient(
+    180deg,
+    #3a383b 0%,
+    #1e1f21 36%,
+    #1e1f21 68%,
+    #39373a 100%
+  );
+  --gradient-level-ii-icon: linear-gradient(
+    180deg,
+    #3a383b 0%,
+    #1e1f21 36%,
+    #1e1f21 68%,
+    #39373a 100%
+  );
+  --border-color-level-ii: #b99263;
+
+  --gradient-level-iii: linear-gradient(
+    180deg,
+    #3a383b 0%,
+    #1e1f21 36%,
+    #1e1f21 68%,
+    #39373a 100%
+  );
+  --gradient-level-iii-icon: linear-gradient(
+    180deg,
+    #3a383b 0%,
+    #1e1f21 36%,
+    #1e1f21 68%,
+    #39373a 100%
+  );
+  --border-color-level-iii: #b99263;
+
+  --gradient-level-iv: linear-gradient(
+    180deg,
+    #3a383b 0%,
+    #1e1f21 36%,
+    #1e1f21 68%,
+    #39373a 100%
+  );
+  --gradient-level-iv-icon: linear-gradient(
+    180deg,
+    #3a383b 0%,
+    #1e1f21 36%,
+    #1e1f21 68%,
+    #39373a 100%
+  );
+  --border-color-level-iv: #b99263;
+
+
+
+  --bg-image: url(/amusnet-dynamic/img/jackpot-content.jpg);
+  --logo-image: url(/amusnet-dynamic/img/logo.svg);
+  --minilogo-image: url(/amusnet-dynamic/img/logo-mob.svg);
+  --level-i-image: url("");
+  --level-i-mini-image: url(/amusnet-dynamic/img/I.png);
+  --level-ii-image: url("");
+  --level-ii-mini-image: url(/amusnet-dynamic/img/II.png);
+  --level-iii-image: url("");
+  --level-iii-mini-image: url(/amusnet-dynamic/img/III.png);
+  --level-iv-image: url("");
+  --level-iv-mini-image: url(/amusnet-dynamic/img/IV.png);
+
+  
+
+  
+}
+
+@media screen and (max-width: 768px) {
+  :root {
+  --logo-image: url(/amusnet-dynamic/img/logo-mob.svg);
+  --logo-width: 6.486vw;
+  }
+
+}

@@ -1,0 +1,111 @@
+:root {
+  --level-icon-size: 3.698vw;
+  --level-icon-top-offset: -1.615vw;
+  --minilogo-size: 3.333vw 3.333vw;
+
+  --border-color-gold: #b28649;
+
+  --gradient-banner: linear-gradient(
+    180deg,
+    rgba(0, 131, 195, 0.6) 0%,
+    rgba(4, 51, 74, 0.6) 95.1%
+  );
+  --gradient-default: linear-gradient(
+    180deg,
+    #380606 0%,
+    #6f0c0b 36%,
+    #6f0c0b 68%,
+    #440606 100%
+  );
+
+  --gradient-level-i: linear-gradient(
+    180deg,
+    #380606 0%,
+    #6f0c0b 36%,
+    #6f0c0b 68%,
+    #440606 100%
+  );
+  --gradient-level-i-icon: linear-gradient(
+    180deg,
+    #380606 0%,
+    #6f0c0b 36%,
+    #6f0c0b 68%,
+    #440606 100%
+  );
+  --border-color-level-i: #b28649;
+
+  --gradient-level-ii: linear-gradient(
+    180deg,
+    #380606 0%,
+    #6f0c0b 36%,
+    #6f0c0b 68%,
+    #440606 100%
+  );
+  --gradient-level-ii-icon: linear-gradient(
+    180deg,
+    #380606 0%,
+    #6f0c0b 36%,
+    #6f0c0b 68%,
+    #440606 100%
+  );
+  --border-color-level-ii: #b28649;
+
+  --gradient-level-iii: linear-gradient(
+    180deg,
+    #380606 0%,
+    #6f0c0b 36%,
+    #6f0c0b 68%,
+    #440606 100%
+  );
+  --gradient-level-iii-icon: linear-gradient(
+    180deg,
+    #380606 0%,
+    #6f0c0b 36%,
+    #6f0c0b 68%,
+    #440606 100%
+  );
+  --border-color-level-iii: #b28649;
+
+  --gradient-level-iv: linear-gradient(
+    180deg,
+    #380606 0%,
+    #6f0c0b 36%,
+    #6f0c0b 68%,
+    #440606 100%
+  );
+  --gradient-level-iv-icon: linear-gradient(
+    180deg,
+    #380606 0%,
+    #6f0c0b 36%,
+    #6f0c0b 68%,
+    #440606 100%
+  );
+  --border-color-level-iv: #b28649;
+
+
+
+  --bg-image: url(/playnGo-dynamic/img/jackpot-content.png);
+  --logo-image: url(/playnGo-dynamic/img/logo.png);
+  --minilogo-image: url(/playnGo-dynamic/img/minilogo.png);
+  --level-i-image: url(/playnGo-dynamic/img/I.png);
+  --level-i-mini-image: url(/playnGo-dynamic/img/minilogo.png);
+  --level-ii-image: url(/playnGo-dynamic/img/II.png);
+  --level-ii-mini-image: url(/playnGo-dynamic/img/minilogo.png);
+  --level-iii-image: url(/playnGo-dynamic/img/III.png);
+  --level-iii-mini-image: url(/playnGo-dynamic/img/minilogo.png);
+  --level-iv-image: url(/playnGo-dynamic/img/IV.png);
+  --level-iv-mini-image: url(/playnGo-dynamic/img/minilogo.png);
+
+  
+  
+}
+
+
+
+@media screen and (max-width: 768px) {
+  :root {
+  --logo-width: 8.5vw;
+  --level-icon-size: 10.811vw;
+  }
+
+}

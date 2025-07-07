@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang='en'>
+<head>
+  <meta charset='UTF-8'>
+  <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+  <meta http-equiv="Content-Security-Policy" content="upgrade-insecure-requests">
+  <meta name='viewport' content='width=device-width, initial-scale=1.0'>
+  <meta http-equiv="Permissions-Policy" content="interest-cohort=()">
+  <meta name="referrer" content="no-referrer-when-downgrade">
+
+  <title>EGT Jackpot</title>
+
+  <script src='https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js'></script>
+  <script defer='defer' src='./com-egt-jackpot-utilities.js'></script>
+  <link rel='stylesheet' href='com-egt-jackpot-styles.css' />
+  <link rel='stylesheet' href='../styles/desktop.css' />
+</head>
+<body>
+
+  <div onload="console.log('asdasdasd');" style="cursor: pointer;" onclick="sendNavigateMessage('PROVIDERS_EGT')" id='EgtFlashBannerHolder' style='flex: 1'>
+    <div id='com-egt-jackpot-html-jackpotBanner'></div>
+  </div>
+
+  <script>
+    function sendNavigateMessage(variable) {
+      window.top.postMessage({ type: 'TMA_NAVIGATE', payload: variable }, '*');
+    }
+</script>
+
+
+
+<script>
+  $(document).ready(function() {
+    new EgtJackpotComponent(
+      {
+        URL: 'https://tmage.games.amusnet.io/jackpot-stats/statistics/682205733511133654',
+        lang: 'en',// specified the language of the jackpotComponent described in Languages XML. If document is not loaded by default
+        resourceURL: '', //'/gui/web/css/',// If resources is located in different place the path to folders "css , img , js" must me specified for example "../egtbanner" or 'http://somelinck.com/egtbanner
+        redirectURL: '',//'http://someurl.com/%27,//the url wich redirects after you clicked on banner
+        maxDigits: [6, 7, 8, 9],// the maximun amount of didits that will be shown on each box for example : Clubs will show only 6 digits , Diamands Will show 7 digits et..
+        requestInterval:[5000,5000,15000,30000,60000,180000], // Requests in MS  after 1880000 is reached each request will be send in that time
+        // requestInterval: [6000, 7000, 8000, 9000, 10000, 11000], // Requests in MS  after 1880000 is reached each request will be send in that time
+        //NB!: Values Must be 5 !
+        //This is values for responsive version if container that contain banner is responsive this values must be set (Bootstrap's)
+
+      }
+    );
+  });
+</script>
+</body>
+</html>
