@@ -15,21 +15,15 @@
     #440606 100%
   );
 
-  --gradient-level-i: linear-gradient(180deg, #1B0031 0%, #31064F 38%, #13001F 100%);
-  --gradient-level-i-icon: linear-gradient(180deg, #1B0031 0%, #31064F 38%, #13001F 100%);
-  --border-color-level-i: #5D087D;
 
-  --gradient-level-ii: linear-gradient(180deg, #000B1D 0%, #012E43 38%, #01112B 100%);
-  --gradient-level-ii-icon: linear-gradient(180deg, #000B1D 0%, #012E43 38%, #01112B 100%);
-  --border-color-level-ii: #01368E;
 
-  --gradient-level-iii: linear-gradient(180deg, #0C0D00 0%, #113001 38%, #0C0C00 100%);
+  --gradient-level-ii: linear-gradient(180deg, #4c064d 0%, #50033d 36%, #320126 68%, #4c064d 100%);
+  --border-color-level-ii: #8e7401;
+
+  --gradient-level-iii: linear-gradient(180deg, #4c064d 0%, #50033d 36%, #320126 68%, #4c064d 100%);
   --gradient-level-iii-icon: linear-gradient(180deg, #0C0D00 0%, #113001 38%, #0C0C00 100%);
-  --border-color-level-iii: #38C303;
+  --border-color-level-iii: #8e7401;
 
-  --gradient-level-iv: linear-gradient(180deg, #2A0001 0%, #900003 38%, #2A0001 100%);
-  --gradient-level-iv-icon: linear-gradient(180deg, #2A0001 0%, #900003 38%, #2A0001 100%);
-  --border-color-level-iv: #A80A0C;
 
 
 
@@ -49,8 +43,7 @@
 
 @media screen and (max-width: 768px) {
   :root {
-  --logo-image: url(/Unibo-dynamic/img/logo.png);
-  --logo-width: 6.486vw;
+  --logo-image: url(/Unibo-dynamic/img/logo-small.png);
   }
 
 }
