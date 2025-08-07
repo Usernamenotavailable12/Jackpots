@@ -330,7 +330,7 @@ function PopUp(h, w, d) {
 			if (-1 == b._direction && 9 == g || 1 == b._direction && 0 == g) b._numbers[c - 1].visible || (b._numbers[c - 1].css({ display: "block" }), b._numbers[c - 1].visible = !0), b.animateDigit(c - 1);
 
 			b._digitTweens[c] = TweenMax.to(d, b._timePerCent, {
-				top: (100 * b._direction) + '%',
+				top: (80 * b._direction) + '%',
 				ease: Linear.easeNone,
 				onComplete: b.onCentAnimationComplete,
 				onCompleteParams: [c]
