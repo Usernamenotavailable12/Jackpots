@@ -33,17 +33,11 @@
 
 
 
-  --bg-image: url(/vipBellLink-dynamic/img/jackpot-content.jpg);
-  --logo-image: url(/vipBellLink-dynamic/img/logo.svg);
-  --minilogo-image: url(/vipBellLink-dynamic/img/minilogo.png);
-  --level-i-image: url(/vipBellLink-dynamic/img/I.png);
-  --level-i-mini-image: url(/vipBellLink-dynamic/img/minilogo.png);
-  --level-ii-image: url(/vipBellLink-dynamic/img/II.png);
-  --level-ii-mini-image: url(/vipBellLink-dynamic/img/minilogo.png);
-  --level-iii-image: url(/vipBellLink-dynamic/img/III.png);
-  --level-iii-mini-image: url(/vipBellLink-dynamic/img/minilogo.png);
-  --level-iv-image: url(/vipBellLink-dynamic/img/IV.png);
-  --level-iv-mini-image: url(/vipBellLink-dynamic/img/minilogo.png);
+  --bg-image: url(/Unibo-dynamic/img/jackpot-content.jpg);
+  --logo-image: url(/Unibo-dynamic/img/logo.svg);
+  --minilogo-image: url(/Unibo-dynamic/img/minilogo.png);
+  --level-ii-mini-image: url(/Unibo-dynamic/img/I.png);
+  --level-iii-mini-image: url(/Unibo-dynamic/img/II.png);
 
   
 
@@ -55,7 +49,7 @@
 
 @media screen and (max-width: 768px) {
   :root {
-  --logo-image: url(/vipBellLink-dynamic/img/logo-mob.svg);
+  --logo-image: url(/Unibo-dynamic/img/logo-mob.svg);
   --logo-width: 6.486vw;
   }
 

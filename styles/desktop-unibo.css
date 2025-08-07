@@ -150,7 +150,7 @@
     background-repeat: no-repeat;
     background-size: contain !important;
     background-position: center;
-    background: var(--minilogo-image), var(--gradient-default);
+
   }
 
   &::after {
@@ -231,58 +231,35 @@ map {
   position: absolute;
 }
 
-.com-egt-jackpot-html-I {
-  order: var(--order-I);
-  background: var(--gradient-level-i);
-  border-color: var(--border-color-level-i) !important;
-  &::after {
-    background: var(--level-i-image);
-  }
-  &::before {
-    border-color: var(--border-color-level-i);
-    background: var(--level-i-mini-image), var(--gradient-level-i-icon);
-    backdrop-filter: var(--backdrop-filter);
-  }
-}
+
 .com-egt-jackpot-html-II {
   order: var(--order-II);
   background: var(--gradient-level-ii);
   border-color: var(--border-color-level-ii) !important;
-  &::after {
-    background: var(--level-ii-image);
-  }
   &::before {
     border-color: var(--border-color-level-ii);
-    background: var(--level-ii-mini-image), var(--gradient-level-ii-icon);
+    background: var(--level-ii-mini-image);
     backdrop-filter: var(--backdrop-filter);
+    background-size: 80% !important;
+    background-position: center;
+    background-repeat: no-repeat;
   }
 }
 .com-egt-jackpot-html-III {
   order: var(--order-III);
   background: var(--gradient-level-iii);
   border-color: var(--border-color-level-iii) !important;
-  &::after {
-    background: var(--level-iii-image);
-  }
+
   &::before {
     border-color: var(--border-color-level-iii);
-    background: var(--level-iii-mini-image), var(--gradient-level-iii-icon);
+    background: var(--level-iii-mini-image);
     backdrop-filter: var(--backdrop-filter);
+    background-size: 80% !important;
+    background-position: center;
+    background-repeat: no-repeat;
   }
 }
-.com-egt-jackpot-html-IV {
-  order: var(--order-IV);
-  background: var(--gradient-level-iv);
-  border-color: var(--border-color-level-iv) !important;
-  &::after {
-    background: var(--level-iv-image);
-  }
-  &::before {
-    border-color: var(--border-color-level-iv);
-    background: var(--level-iv-mini-image), var(--gradient-level-iv-icon);
-    backdrop-filter: var(--backdrop-filter);
-  }
-}
+
 
 
 
