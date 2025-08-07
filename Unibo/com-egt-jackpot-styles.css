@@ -123,7 +123,7 @@ body {
 	
 	border-radius: 4px 12px 12px 4px;
 	border: 1px solid #B99263;
-	background: var(--jeck, linear-gradient(180deg, #3A383B 0%, #1E1F21 36%, #1E1F21 68%, #39373A 100%));
+	background: var(--jeck, linear-gradient(180deg, #4c064d 0%, #320126 36%, #320126 68%, #4c064d 100%));
 	box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25) inset;
 
 
@@ -386,7 +386,7 @@ body {
 	display: block;
 	width: 80%;
 	border-color: #D9BE8E !important;
-	margin: 0 auto 11px;
+	margin: 0 auto 22px;
 }
 
 #com-egt-jackpot-html-jackpotBanner.com-egt-jackpot-html-xsm .com-egt-jackpot-html-box.com-egt-jackpot-html-I {
@@ -411,11 +411,11 @@ body {
 
 
 #com-egt-jackpot-html-jackpotBanner.com-egt-jackpot-html-xsm .com-egt-jackpot-html-box .com-egt-jackpot-html-level {
-	background-color: #242424;
+	background-color: rgb(37, 0, 0);
 	background-size: 80%;
 	background-position: center;
 	border-radius: 100%;
-	scale:1.65;
+	scale:2;
   transform: translatey(-1px);
 	z-index: 2;
 	border: solid #D9BE8E 1px;
