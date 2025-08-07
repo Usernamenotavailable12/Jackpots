@@ -17,10 +17,8 @@ function maskUsername(username) {
   
   function getBorderColor(id) {
 	switch (id) {
-		case "I": return "#8917CC";
-		case "II": return "#0279D3";
-		case "III": return "#1DB409";
-		case "IV": return "#A80A0C";
+		case "II": return "#8917CC";
+		case "III": return "#0279D3";
 	  }
   }
 function PopUp(h, w, d) {
@@ -468,14 +466,9 @@ function RollingComponent(h, w, d, b) {
 				h();
 				this.Club;
 				this.Diamond;
-				this.Heart;
-				this.Spade;
-				this.Spade = new RollingComponent(d, "IV", a, { maxDigits: a.maxDigits[3] });
-				this.Heart = new RollingComponent(d, "III", a, { maxDigits: a.maxDigits[2] });
-				this.createDiv(d).addClass("com-egt-jackpot-html-clear-fix");
 				this.Diamond =
-					new RollingComponent(d, "II", a, { maxDigits: a.maxDigits[1] });
-				this.Club = new RollingComponent(d, "I", a, { maxDigits: a.maxDigits[0] });
+					new RollingComponent(d, "III", a, { maxDigits: a.maxDigits[1] });
+				this.Club = new RollingComponent(d, "II", a, { maxDigits: a.maxDigits[0] });
 				a.buttonURL && d.append($("<a></a>").attr({
 					href: a.buttonURL,
 					alt: a.buttonText
@@ -487,6 +480,7 @@ function RollingComponent(h, w, d, b) {
 					height: a.buttonHeight,
 					lineHeight: a.buttonHeight + "px"
 				}).html(a.buttonText));
+				this.createDiv(d).addClass("com-egt-jackpot-html-clear-fix");
 				B = "undefined" != typeof m || this.Club.box.outerWidth() > m ? new PopUp(d, a, this.Club.box.outerWidth() - 20) : new PopUp(d, a, m);
 				B.visible(!1);
 				P = B.generateArrow(10, a.popUpBoxBackground, a.popUpBoxPosition, "50%", a.borderWidth, a.borderColor);
@@ -494,9 +488,7 @@ function RollingComponent(h, w, d, b) {
 				borderWidth = a.borderWidth;
 				r.push(this.Club);
 				r.push(this.Diamond);
-				r.push(this.Heart);
-				r.push(this.Spade);
-				for (a = 0; 4 > a; a++)if (r[a].visible(!0), r[a].isPopUpOpen = !1, r[a].append(), A && r[a].level.css({ left: 0 }), "ontouchstart" in window) r[a].box.on("touchstart",
+				for (a = 0; 2 > a; a++)if (r[a].visible(!0), r[a].isPopUpOpen = !1, r[a].append(), A && r[a].level.css({ left: 0 }), "ontouchstart" in window) r[a].box.on("touchstart",
 					{
 						self: this,
 						target: r[a]
@@ -575,18 +567,12 @@ function RollingComponent(h, w, d, b) {
 			var n = this;
 			n.first = !1;
 			a = "₾";
-			let smallest = e.jackpotInstancesStats.instanceStats[indexOfGame].levelStats[2];
-			let small = e.jackpotInstancesStats.instanceStats[indexOfGame].levelStats[3];
 			let big = e.jackpotInstancesStats.instanceStats[indexOfGame].levelStats[1];
 			let biggest = e.jackpotInstancesStats.instanceStats[indexOfGame].levelStats[0];
-			u.push(smallest.currentValue[0].value);
-			u.push(small.currentValue[0].value);
 			u.push(big.currentValue[0].value);
 			u.push(biggest.currentValue[0].value);
-			for (var D = 0; 4 > D; D++)r[D].setCurrency(a), r[D].jackpotBox.setValue(u[D], !1), J[D] = u[D];
+			for (var D = 0; 2 > D; D++)r[D].setCurrency(a), r[D].jackpotBox.setValue(u[D], !1), J[D] = u[D];
 			B.visible(!0);
-			this.setPopUpInformation(y, smallest?.maxWinValue?.[0]?.value || 0, smallest?.maxWinDate || "", smallest?.totalWins || 0, null, smallest?.lastWinDate || "", smallest?.lastWinValue?.[0]?.value || 0, "GEL");
-			this.setPopUpInformation(N, small?.maxWinValue?.[0]?.value || 0, small?.maxWinDate || "", small?.totalWins || 0, null, small?.lastWinDate || "", small?.lastWinValue?.[0]?.value || 0, "GEL");
 			this.setPopUpInformation(F, big?.maxWinValue?.[0]?.value || 0, big?.maxWinDate || "", big?.totalWins || 0, null, big?.lastWinDate || "", big?.lastWinValue?.[0]?.value || 0, "GEL");
 			this.setPopUpInformation(C, biggest?.maxWinValue?.[0]?.value || 0, biggest?.maxWinDate || "", biggest?.totalWins || 0, null, biggest?.lastWinDate || "", biggest?.lastWinValue?.[0]?.value || 0, "GEL");
 			
@@ -603,34 +589,22 @@ function RollingComponent(h, w, d, b) {
 			}, f[Y], 1)
 		};
 		H.prototype.processRequestFromServer = function (a) {
-			let smallest = a.jackpotInstancesStats.instanceStats[indexOfGame].levelStats[2];
-			let small = a.jackpotInstancesStats.instanceStats[indexOfGame].levelStats[3];
 			let big = a.jackpotInstancesStats.instanceStats[indexOfGame].levelStats[1];
 			let biggest = a.jackpotInstancesStats.instanceStats[indexOfGame].levelStats[0];
 
-			u[0] = smallest.currentValue[0].value;
-			u[1] = small.currentValue[0].value;
-			u[2] = big.currentValue[0].value;
-			u[3] = biggest.currentValue[0].value;
+			u[0] = big.currentValue[0].value;
+			u[1] = biggest.currentValue[0].value;
 
-			this.setPopUpInformation(y, smallest?.maxWinValue?.[0]?.value || 0, smallest?.maxWinDate || "", smallest?.totalWins || 0, null, smallest?.lastWinDate || "", smallest?.lastWinValue?.[0]?.value || 0, "GEL");
-			this.setPopUpInformation(N, small?.maxWinValue?.[0]?.value || 0, small?.maxWinDate || "", small?.totalWins || 0, null, small?.lastWinDate || "", small?.lastWinValue?.[0]?.value || 0, "GEL");
 			this.setPopUpInformation(F, big?.maxWinValue?.[0]?.value || 0, big?.maxWinDate || "", big?.totalWins || 0, null, big?.lastWinDate || "", big?.lastWinValue?.[0]?.value || 0, "GEL");
 			this.setPopUpInformation(C, biggest?.maxWinValue?.[0]?.value || 0, biggest?.maxWinDate || "", biggest?.totalWins || 0, null, biggest?.lastWinDate || "", biggest?.lastWinValue?.[0]?.value || 0, "GEL");
-			for (a = 0; 4 > a; a++) {
+			for (a = 0; 2 > a; a++) {
 				// Check if popup is open for current jackpot level
 				if (r[a].isPopUpOpen) {
 					// Update popup information based on jackpot level
-					if ("I" == r[a].id) {
-						this.updateInformationInPopUp(y);  // Update smallest jackpot popup
-					}
 					if ("II" == r[a].id) {
-						this.updateInformationInPopUp(N);  // Update small jackpot popup  
-					}
-					if ("III" == r[a].id) {
 						this.updateInformationInPopUp(F);  // Update big jackpot popup
 					}
-					if ("IV" == r[a].id) {
+					if ("III" == r[a].id) {
 						this.updateInformationInPopUp(C);  // Update biggest jackpot popup
 					}
 				}
@@ -668,11 +642,8 @@ function RollingComponent(h, w, d, b) {
 		};
 		H.prototype.showPopUp = function (a) {
 			var e = a.data.self, n = a.data.target, D = n.dummyImg, g = n.box, b = B.box;
-			if ("I" == n.id) if (0 !==
-				y.NumberOfWinners && void 0 !== y.LastWinner) e.updateInformationInPopUp(y); else return;
 			if ("II" == n.id) if (0 !== N.NumberOfWinners && void 0 !== N.LastWinner) e.updateInformationInPopUp(N); else return;
 			if ("III" == n.id) if (0 !== F.NumberOfWinners && void 0 !== F.LastWinner) e.updateInformationInPopUp(F); else return;
-			if ("IV" == n.id) if (0 !== C.NumberOfWinners && void 0 !== C.LastWinner) e.updateInformationInPopUp(C); else return;
 			b.height = b.outerHeight();
 			b.width = b.outerWidth();
 			n.updateProps();
