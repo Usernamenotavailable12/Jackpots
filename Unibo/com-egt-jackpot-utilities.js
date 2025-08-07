@@ -23,13 +23,10 @@ function PopUp(h, w, d) {
 	DIV_HTML = '<div class="com-egt-jackpot-html-div"></div>';
 	MASK_HTML = '<div class="com-egt-jackpot-html-popUpMask"></div>';
 	LAST_PRICE_HTML = '<span id="com-egt-jackpot-html-lastPrice"></span>';
-	b.mask = $(MASK_HTML);
-	h.append(b.mask);
 	b.box = $('<div class="com-egt-jackpot-html-popUp"></div>').css({
 		opacity: 0, width: d, borderWidth: w.borderWidth,
 		borderStyle: "solid", borderColor: w.borderColor
 	});
-	b.mask.append(b.box);
 	b.topWinText = $('<span id="com-egt-jackpot-html-topWin"></span>');
 	b.topWinDate = $('<span id="com-egt-jackpot-html-topWinDate"></span>').addClass("com-egt-jackpot-html-date").addClass("com-egt-jackpot-html-right").css({ color: w.dateColor });
 	b.box.append($(DIV_HTML).append(b.topWinText).append(b.topWinDate));
@@ -675,12 +672,6 @@ function PopUp(h, w, d) {
 				n.hidePopUpTween && (n.hidePopUpTween.complete(), n.hidePopUpTween = null);
 				g.css("z-index", 30003);
 				b.css("opacity", 0).css("z-index", 30002);
-				B.mask.css({
-					width: maskProps.width,
-					height: maskProps.height,
-					left: maskProps.left,
-					top: maskProps.top
-				});
 				b.css({ left: popUpProps.leftStart, top: popUpProps.topStart });
 				TweenMax.to(b, .25, { opacity: 1, ease: Linear.easeNone });
 				n.showPopUpTween = TweenMax.to(b, .5, {
@@ -704,10 +695,6 @@ function PopUp(h, w, d) {
 				n.isPopUpOpen = !1;
 				g.css("z-index", 30001);
 				b.css("z-index", 3E4);
-				B.mask.css({
-					width: 0,
-					height: 0
-				});
 				D.css({ top: 0, left: 0, width: "100%", height: "100%" });
 				n.setClickableArea();
 				n.hidePopUpTween = TweenMax.to(b, .25, {

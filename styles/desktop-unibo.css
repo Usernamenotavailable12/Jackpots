@@ -238,7 +238,7 @@ map {
   border-color: var(--border-color-level-ii) !important;
   &::before {
     border-color: var(--border-color-level-ii);
-    background: var(--level-ii-mini-image);
+    background: var(--level-ii-mini-image), black;
     backdrop-filter: var(--backdrop-filter);
     background-size: 80% !important;
     background-position: center;
@@ -252,7 +252,7 @@ map {
 
   &::before {
     border-color: var(--border-color-level-iii);
-    background: var(--level-iii-mini-image);
+    background: var(--level-iii-mini-image),  black;
     backdrop-filter: var(--backdrop-filter);
     background-size: 80% !important;
     background-position: center;

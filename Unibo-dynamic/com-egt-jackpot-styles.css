@@ -34,8 +34,8 @@
 
 
   --bg-image: url(/Unibo-dynamic/img/jackpot-content.jpg);
-  --logo-image: url(/Unibo-dynamic/img/logo.svg);
-  --minilogo-image: url(/Unibo-dynamic/img/minilogo.png);
+  --logo-image: url(/Unibo-dynamic/img/logo.png);
+  --minilogo-image: url(/Unibo-dynamic/img/logo.png);
   --level-ii-mini-image: url(/Unibo-dynamic/img/I.png);
   --level-iii-mini-image: url(/Unibo-dynamic/img/II.png);
 
@@ -49,7 +49,7 @@
 
 @media screen and (max-width: 768px) {
   :root {
-  --logo-image: url(/Unibo-dynamic/img/logo-mob.svg);
+  --logo-image: url(/Unibo-dynamic/img/logo.png);
   --logo-width: 6.486vw;
   }
 
