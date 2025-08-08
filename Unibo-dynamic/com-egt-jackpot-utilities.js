@@ -569,10 +569,8 @@ function RollingComponent(h, w, d, b) {
 			var n = this;
 			n.first = !1;
 			a = "₾";
-			let big = e.jackpotInstancesStats.instanceStats[indexOfGame].levelStats[1];
-			let biggest = e.jackpotInstancesStats.instanceStats[indexOfGame].levelStats[0];
-			u.push(big.currentValue[0].value);
-			u.push(biggest.currentValue[0].value);
+			u.push(e.jackpots[0].amount.replace("GEL", "").replace(",", "") + '00');
+			u.push(e.jackpots[1].amount.replace("GEL", "").replace(",", "") + '00');
 			for (var D = 0; 2 > D; D++)r[D].setCurrency(a), r[D].jackpotBox.setValue(u[D], !1), J[D] = u[D];
 			B.visible(!0);
 			this.setPopUpInformation(F, big?.maxWinValue?.[0]?.value || 0, big?.maxWinDate || "", big?.totalWins || 0, null, big?.lastWinDate || "", big?.lastWinValue?.[0]?.value || 0, "GEL");
@@ -591,11 +589,9 @@ function RollingComponent(h, w, d, b) {
 			}, f[Y], 1)
 		};
 		H.prototype.processRequestFromServer = function (a) {
-			let big = a.jackpotInstancesStats.instanceStats[indexOfGame].levelStats[1];
-			let biggest = a.jackpotInstancesStats.instanceStats[indexOfGame].levelStats[0];
 
-			u[0] = big.currentValue[0].value;
-			u[1] = biggest.currentValue[0].value;
+			u[0] = a.jackpots[0].amount.replace("GEL", "").replace(",", "") + '00';
+			u[1] = a.jackpots[1].amount.replace("GEL", "").replace(",", "") + '00';
 
 			this.setPopUpInformation(F, big?.maxWinValue?.[0]?.value || 0, big?.maxWinDate || "", big?.totalWins || 0, null, big?.lastWinDate || "", big?.lastWinValue?.[0]?.value || 0, "GEL");
 			this.setPopUpInformation(C, biggest?.maxWinValue?.[0]?.value || 0, biggest?.maxWinDate || "", biggest?.totalWins || 0, null, biggest?.lastWinDate || "", biggest?.lastWinValue?.[0]?.value || 0, "GEL");
