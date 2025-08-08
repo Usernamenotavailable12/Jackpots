@@ -394,19 +394,19 @@ body {
 }
 
 #com-egt-jackpot-html-jackpotBanner.com-egt-jackpot-html-xsm .com-egt-jackpot-html-box.com-egt-jackpot-html-I .com-egt-jackpot-html-numbers {
-	width: 3.4vw;
+	width: 5.4vw;
 }
 
 #com-egt-jackpot-html-jackpotBanner.com-egt-jackpot-html-xsm .com-egt-jackpot-html-box.com-egt-jackpot-html-II .com-egt-jackpot-html-numbers {
-	width: 3.4vw;
+	width: 5.4vw;
 }
 
 #com-egt-jackpot-html-jackpotBanner.com-egt-jackpot-html-xsm .com-egt-jackpot-html-box.com-egt-jackpot-html-III .com-egt-jackpot-html-numbers {
-	width: 3.4vw;
+	width: 5.4vw;
 }
 
 #com-egt-jackpot-html-jackpotBanner.com-egt-jackpot-html-xsm .com-egt-jackpot-html-box.com-egt-jackpot-html-IV .com-egt-jackpot-html-numbers {
-	width: 3.4vw;
+	width: 5.4vw;
 }
 
 
@@ -415,7 +415,7 @@ body {
 	background-size: 80%;
 	background-position: center;
 	border-radius: 100%;
-	scale:2;
+	scale:1.8;
   transform: translatey(-1px);
 	z-index: 2;
 	border: solid #D9BE8E 1px;
@@ -814,19 +814,19 @@ body {
 
 	
 	#com-egt-jackpot-html-jackpotBanner .com-egt-jackpot-html-box.com-egt-jackpot-html-I .com-egt-jackpot-html-numbers {
-		font-size: 6vw;
+		font-size: 8vw;
 	}
 	
 	#com-egt-jackpot-html-jackpotBanner .com-egt-jackpot-html-box.com-egt-jackpot-html-II .com-egt-jackpot-html-numbers {
-		font-size: 6vw;
+		font-size: 8vw;
 	}
 	
 	#com-egt-jackpot-html-jackpotBanner .com-egt-jackpot-html-box.com-egt-jackpot-html-III .com-egt-jackpot-html-numbers {
-		font-size: 6vw;
+		font-size: 8vw;
 	}
 	
 	#com-egt-jackpot-html-jackpotBanner .com-egt-jackpot-html-box.com-egt-jackpot-html-IV .com-egt-jackpot-html-numbers {
-		font-size: 6vw;
+		font-size: 8vw;
 	}
 
 	

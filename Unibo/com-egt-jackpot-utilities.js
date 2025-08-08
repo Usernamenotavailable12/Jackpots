@@ -545,8 +545,8 @@ function PopUp(h, w, d) {
 			var n = this;
 			n.first = !1;
 			a = "&#8382;";
-			u.push(e.jackpots[0].title === "Test Jackpot" ? e.jackpots[0].amount.replace("GEL", "") : 0);
-			u.push(e.jackpots[1].title === "Test Jackpot" ? e.jackpots[1].amount.replace("GEL", "") : 0);
+			u.push(e.jackpots[0].amount.replace("GEL", "").replace(",", "") + '00');
+			u.push(e.jackpots[1].amount.replace("GEL", "").replace(",", "") + '00');
 			for (var D = 0; 2 > D; D++)r[D].setCurrency(a), r[D].jackpotBox.setValue(u[D], !1), J[D] = u[D];
 			B.visible(!0);
 
@@ -565,8 +565,8 @@ function PopUp(h, w, d) {
 			}, f[Y], 1)
 		};
 		H.prototype.processRequestFromServer = function (a) {
-			u[0] = a.jackpots[0].amount.replace("GEL", "");
-			u[1] = a.jackpots[1].amount.replace("GEL", "");
+			u[0] = a.jackpots[0].amount.replace("GEL", "").replace(",", "") + '00';
+			u[1] = a.jackpots[1].amount.replace("GEL", "").replace(",", "") + '00';
 			this.setPopUpInformation(y, a.largestWinLevelI, a.largestWinDateLevelI, a.winsLevelI, maskUsername(a.lastWinUserLevelI), a.lastWinDateLevelI, a.lastWinLevelI, a.currency);
 			this.setPopUpInformation(N, a.largestWinLevelII, a.largestWinDateLevelII, a.winsLevelII, maskUsername(a.lastWinUserLevelII), a.lastWinDateLevelII, a.lastWinLevelII, a.currency);
 			for (a = 0; 2 > a; a++)r[a].isPopUpOpen && ("I" == r[a].id && this.updateInformationInPopUp(y), "II" == r[a].id && this.updateInformationInPopUp(N)), this.getDifference(J[a], u[a], a)
