@@ -549,7 +549,9 @@ function RollingComponent(h, w, d, b) {
 					type: "GET", 
 					cache: false,
 					dataType: "json",
-					headers: null,
+					headers: {
+						"Authorization": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6ImFtYmFzc2Fkb3JpYmV0Iiwic2NvcGVzIjpbIjg2OlJFQUQiXSwiZXhwIjoyNTI4NTM2NjgzfQ.3JJND62xqSJtEPI2zUg6QCD8xSJyDh2L1bo8a1a3HB8"
+					},
 					crossDomain: true,
 					success: function (a) {
 						if (a) if (e.first) e.onRequestComplete(a); else e.processRequestFromServer(a)
