@@ -545,13 +545,13 @@ function PopUp(h, w, d) {
 			var n = this;
 			n.first = !1;
 			a = "&#8382;";
-			u.push(e.jackpots[0].amount.replace("GEL", "").replace(",", "") + '00');
-			u.push(e.jackpots[1].amount.replace("GEL", "").replace(",", "") + '00');
+			u.push(Math.round(parseFloat(e.jackpots[0].amount.replace("GEL", "").trim()) * 100));
+			u.push(Math.round(parseFloat(e.jackpots[1].amount.replace("GEL", "").trim()) * 100));
 			for (var D = 0; 2 > D; D++)r[D].setCurrency(a), r[D].jackpotBox.setValue(u[D], !1), J[D] = u[D];
 			B.visible(!0);
 
-			this.setPopUpInformation(y, e.largestWinLevelI, e.largestWinDateLevelI, e.winsLevelI, maskUsername(e.lastWinUserLevelI), e.lastWinDateLevelI, e.lastWinLevelI, e.currency);
-			this.setPopUpInformation(N, e.largestWinLevelII, e.largestWinDateLevelII, e.winsLevelII, maskUsername(e.lastWinUserLevelII), e.lastWinDateLevelII, e.lastWinLevelII, e.currency);
+			this.setPopUpInformation(y, 0, "", 0, null, "", 0, "GEL");
+			this.setPopUpInformation(N, 0, "", 0, null, "", 0, "GEL");
 			q && setTimeout(function () {
 				n.sendRequestToServer()
 			}, f[Y], 1)
@@ -565,10 +565,10 @@ function PopUp(h, w, d) {
 			}, f[Y], 1)
 		};
 		H.prototype.processRequestFromServer = function (a) {
-			u[0] = a.jackpots[0].amount.replace("GEL", "").replace(",", "") + '00';
-			u[1] = a.jackpots[1].amount.replace("GEL", "").replace(",", "") + '00';
-			this.setPopUpInformation(y, a.largestWinLevelI, a.largestWinDateLevelI, a.winsLevelI, maskUsername(a.lastWinUserLevelI), a.lastWinDateLevelI, a.lastWinLevelI, a.currency);
-			this.setPopUpInformation(N, a.largestWinLevelII, a.largestWinDateLevelII, a.winsLevelII, maskUsername(a.lastWinUserLevelII), a.lastWinDateLevelII, a.lastWinLevelII, a.currency);
+			u[0] = Math.round(parseFloat(a.jackpots[0].amount.replace("GEL", "").trim()) * 100);
+			u[1] = Math.round(parseFloat(a.jackpots[1].amount.replace("GEL", "").trim()) * 100);
+			this.setPopUpInformation(y, 0, "", 0, null, "", 0, "GEL");
+			this.setPopUpInformation(N, 0, "", 0, null, "", 0, "GEL");
 			for (a = 0; 2 > a; a++)r[a].isPopUpOpen && ("I" == r[a].id && this.updateInformationInPopUp(y), "II" == r[a].id && this.updateInformationInPopUp(N)), this.getDifference(J[a], u[a], a)
 		};
 		H.prototype.setPopUpInformation = function (a, e, n, D, g, b, c, u) {

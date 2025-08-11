@@ -569,12 +569,12 @@ function RollingComponent(h, w, d, b) {
 			var n = this;
 			n.first = !1;
 			a = "₾";
-			u.push(e.jackpots[0].amount.replace("GEL", "").replace(",", "") + '00');
-			u.push(e.jackpots[1].amount.replace("GEL", "").replace(",", "") + '00');
+			u.push(Math.round(parseFloat(e.jackpots[0].amount.replace("GEL", "").trim()) * 100));
+			u.push(Math.round(parseFloat(e.jackpots[1].amount.replace("GEL", "").trim()) * 100));
 			for (var D = 0; 2 > D; D++)r[D].setCurrency(a), r[D].jackpotBox.setValue(u[D], !1), J[D] = u[D];
 			B.visible(!0);
-			this.setPopUpInformation(F, big?.maxWinValue?.[0]?.value || 0, big?.maxWinDate || "", big?.totalWins || 0, null, big?.lastWinDate || "", big?.lastWinValue?.[0]?.value || 0, "GEL");
-			this.setPopUpInformation(C, biggest?.maxWinValue?.[0]?.value || 0, biggest?.maxWinDate || "", biggest?.totalWins || 0, null, biggest?.lastWinDate || "", biggest?.lastWinValue?.[0]?.value || 0, "GEL");
+			this.setPopUpInformation(F, 0, "", 0, null, "", 0, "GEL");
+			this.setPopUpInformation(C, 0, "", 0, null, "", 0, "GEL");
 			
 			q && setTimeout(function () {
 				n.sendRequestToServer()
@@ -590,20 +590,20 @@ function RollingComponent(h, w, d, b) {
 		};
 		H.prototype.processRequestFromServer = function (a) {
 
-			u[0] = a.jackpots[0].amount.replace("GEL", "").replace(",", "") + '00';
-			u[1] = a.jackpots[1].amount.replace("GEL", "").replace(",", "") + '00';
+			u[0] = Math.round(parseFloat(a.jackpots[0].amount.replace("GEL", "").trim()) * 100);
+			u[1] = Math.round(parseFloat(a.jackpots[1].amount.replace("GEL", "").trim()) * 100);
 
-			this.setPopUpInformation(F, big?.maxWinValue?.[0]?.value || 0, big?.maxWinDate || "", big?.totalWins || 0, null, big?.lastWinDate || "", big?.lastWinValue?.[0]?.value || 0, "GEL");
-			this.setPopUpInformation(C, biggest?.maxWinValue?.[0]?.value || 0, biggest?.maxWinDate || "", biggest?.totalWins || 0, null, biggest?.lastWinDate || "", biggest?.lastWinValue?.[0]?.value || 0, "GEL");
+			this.setPopUpInformation(F, 0, "", 0, null, "", 0, "GEL");
+			this.setPopUpInformation(C, 0, "", 0, null, "", 0, "GEL");
 			for (a = 0; 2 > a; a++) {
 				// Check if popup is open for current jackpot level
 				if (r[a].isPopUpOpen) {
 					// Update popup information based on jackpot level
 					if ("II" == r[a].id) {
-						this.updateInformationInPopUp(F);  // Update big jackpot popup
+						this.updateInformationInPopUp(F);  // Update level II jackpot popup
 					}
 					if ("III" == r[a].id) {
-						this.updateInformationInPopUp(C);  // Update biggest jackpot popup
+						this.updateInformationInPopUp(C);  // Update level III jackpot popup
 					}
 				}
 				// Calculate value difference and update display
