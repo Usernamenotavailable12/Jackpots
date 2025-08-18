@@ -4,9 +4,13 @@
 
   --border-color-gold: #b28649;
 
-  --box-shadow: 0vw 0.208vw .208vw 0vw rgba(0, 0, 0, 0.25) inset;
+  --box-shadow: 0vw 0.208vw 0.208vw 0vw rgba(0, 0, 0, 0.25) inset;
 
-  --gradient-banner: linear-gradient(180deg, rgba(43, 48, 43, 0.60) 0%, rgba(37, 37, 36, 0.60) 95.1%);
+  --gradient-banner: linear-gradient(
+    180deg,
+    rgba(43, 48, 43, 0.6) 0%,
+    rgba(37, 37, 36, 0.6) 95.1%
+  );
   --gradient-default: linear-gradient(
     180deg,
     #380606 0%,
@@ -15,35 +19,60 @@
     #440606 100%
   );
 
-
-
-  --gradient-level-ii: linear-gradient(180deg, #4D0000 0%, #4D0000 36%, #4D0000 68%, #4D0000 100%);
+  --gradient-level-ii: linear-gradient(
+    180deg,
+    #4d0000 0%,
+    #4d0000 36%,
+    #4d0000 68%,
+    #4d0000 100%
+  );
   --border-color-level-ii: #f89410;
 
-  --gradient-level-iii: linear-gradient(180deg, #4D0000 0%, #4D0000 36%, #4D0000 68%, #4D0000 100%);
-  --gradient-level-iii-icon: linear-gradient(180deg, #0C0D00 0%, #113001 38%, #0C0C00 100%);
+  --gradient-level-iii: linear-gradient(
+    180deg,
+    #4d0000 0%,
+    #4d0000 36%,
+    #4d0000 68%,
+    #4d0000 100%
+  );
+  --gradient-level-iii-icon: linear-gradient(
+    180deg,
+    #0c0d00 0%,
+    #113001 38%,
+    #0c0c00 100%
+  );
   --border-color-level-iii: #f89410;
-
-
-
 
   --bg-image: url(/Unibo-dynamic/img/jackpot-content.jpg);
   --logo-image: url(/Unibo-dynamic/img/logo.png);
   --minilogo-image: url(/Unibo-dynamic/img/logo.png);
   --level-ii-mini-image: url(/Unibo-dynamic/img/I.png);
   --level-iii-mini-image: url(/Unibo-dynamic/img/II.png);
-
-  
-
-  
 }
-
-
-
 
 @media screen and (max-width: 768px) {
   :root {
-  --logo-image: url(/Unibo-dynamic/img/logo-small.png);
+    --logo-image: url(/Unibo-dynamic/img/logo-small.png);
   }
-
+}
+.com-egt-jackpot-html-box {
+  .range {
+    &:before {
+      position: absolute;
+      top: 0;
+      left: 50%;
+      transform: translateX(-50%) translateY(-7px);
+      background-color: var(--border-color-level-ii);
+      content: var(--range);
+      border-radius: 16px;
+      font-size: 12px;
+      padding: 0.25rem 0.5rem;
+    }
+  }
+  &.com-egt-jackpot-html-II {
+    --range: "0-999999999";
+  }
+  &.com-egt-jackpot-html-III {
+    --range: "0-779999999";
+  }
 }
