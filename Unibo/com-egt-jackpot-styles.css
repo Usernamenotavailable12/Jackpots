@@ -122,9 +122,13 @@ body {
 	z-index: 1;
 	
 	border-radius: 4px 12px 12px 4px;
-	border: 1px solid #f89410;
-	background: var(--jeck, linear-gradient(180deg, #4D0000 0%, #4D0000 36%, #4D0000 68%, #4D0000 100%));
+	border: 2px solid #40FA00 !important;
+	background: #0F3C00;
 	box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25) inset;
+	&.com-egt-jackpot-html-I{
+		border: 2px solid #F39300 !important;
+		background: #B7671A;
+	}
 
 
 	-webkit-background-size: contain;
@@ -384,8 +388,7 @@ body {
 /* Old phones screens */
 #com-egt-jackpot-html-jackpotBanner.com-egt-jackpot-html-xsm .com-egt-jackpot-html-box {
 	display: block;
-	width: 70%;
-	border-color: #D9BE8E !important;
+	width: 75%;
 	margin: 0 auto 15px;
 }
 
@@ -394,33 +397,43 @@ body {
 }
 
 #com-egt-jackpot-html-jackpotBanner.com-egt-jackpot-html-xsm .com-egt-jackpot-html-box.com-egt-jackpot-html-I .com-egt-jackpot-html-numbers {
-	width: 5.4vw;
+	width: 4.4vw;
 }
 
 #com-egt-jackpot-html-jackpotBanner.com-egt-jackpot-html-xsm .com-egt-jackpot-html-box.com-egt-jackpot-html-II .com-egt-jackpot-html-numbers {
-	width: 5.4vw;
+	width: 4.4vw;
 }
 
 #com-egt-jackpot-html-jackpotBanner.com-egt-jackpot-html-xsm .com-egt-jackpot-html-box.com-egt-jackpot-html-III .com-egt-jackpot-html-numbers {
-	width: 5.4vw;
+	width: 4.4vw;
 }
 
 #com-egt-jackpot-html-jackpotBanner.com-egt-jackpot-html-xsm .com-egt-jackpot-html-box.com-egt-jackpot-html-IV .com-egt-jackpot-html-numbers {
-	width: 5.4vw;
+	width: 4.4vw;
+}
+.com-egt-jackpot-html-I {
+	--border-collor-level: #F39300;
+	--bg-collor-level: #B7671A;
+	--text-color: #FFF !important;
+}
+.com-egt-jackpot-html-II {
+	--border-collor-level: #40FA00;
+	--bg-collor-level: #0F3C00;
+	--text-color: #40FA00 !important;
 }
 
-
 #com-egt-jackpot-html-jackpotBanner.com-egt-jackpot-html-xsm .com-egt-jackpot-html-box .com-egt-jackpot-html-level {
-	background-color: #4D0000;
+	background-color: var(--bg-collor-level);
 	background-size: 80%;
 	background-position: center;
 	border-radius: 100%;
 	scale:1.6;
   transform: translatey(-1px);
 	z-index: 2;
-	border: solid #D9BE8E 1px;
+	border: 2px solid var(--border-collor-level) !important;
 	left: 0px !important;
 }
+
 
 /* #com-egt-jackpot-html-jackpotBanner.com-egt-jackpot-html-xsm .com-egt-jackpot-html-logo { display: none; }
 #com-egt-jackpot-html-jackpotBanner.com-egt-jackpot-html-xsm .com-egt-jackpot-html-logo.com-egt-jackpot-html-mobile { display: block; } */
@@ -814,19 +827,19 @@ body {
 
 	
 	#com-egt-jackpot-html-jackpotBanner .com-egt-jackpot-html-box.com-egt-jackpot-html-I .com-egt-jackpot-html-numbers {
-		font-size: 8vw;
+		font-size: 6vw;
 	}
 	
 	#com-egt-jackpot-html-jackpotBanner .com-egt-jackpot-html-box.com-egt-jackpot-html-II .com-egt-jackpot-html-numbers {
-		font-size: 8vw;
+		font-size: 6vw;
 	}
 	
 	#com-egt-jackpot-html-jackpotBanner .com-egt-jackpot-html-box.com-egt-jackpot-html-III .com-egt-jackpot-html-numbers {
-		font-size: 8vw;
+		font-size: 6vw;
 	}
 	
 	#com-egt-jackpot-html-jackpotBanner .com-egt-jackpot-html-box.com-egt-jackpot-html-IV .com-egt-jackpot-html-numbers {
-		font-size: 8vw;
+		font-size: 6vw;
 	}
 
 	
@@ -1017,3 +1030,32 @@ body {
 		background-size: cover;
 	}
 }
+.com-egt-jackpot-html-box {
+  .range::before {
+      content: var(--jp-range);
+      color: var(--text-color);
+      padding: 4px 8px !important;
+      border-radius: 25px;
+      position: absolute;
+      inset: 0;
+      font-size: 12px;
+      font-family: 'Noto Sans Ambassadori';
+      background: var(--bg-collor-level);
+      border: 2px solid var(--border-collor-level);
+      display: flex;
+      width: fit-content;
+      height: fit-content;
+      margin-left: calc(10vw * 1.7);
+      top: -33%;
+			scale: .9;
+  }
+}
+  .com-egt-jackpot-html-I {
+    --jp-range: "3 500₾ - 15 000₾";
+  }
+    .com-egt-jackpot-html-II {
+		--jp-range: "2 500₾ - 7 500₾";
+    --jp-range: "3 500₾ - 15 000₾";
+    --gradient-level-iii-range: var(--gradient-level-iii);
+    --border-color-level-iii-range: var(--border-color-level-iii);
+  }
