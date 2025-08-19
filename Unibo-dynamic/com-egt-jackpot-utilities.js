@@ -159,7 +159,6 @@ function RollingComponent(h, w, d, b) {
 	var sadasdlas, f = this;
 	f.id = w;
 	f.resourceURL = "";
-	let range = b.range || "0-999999999";
 	void 0 !== d.resourceURL && d.resourceURL && 0 < d.resourceURL.length && (f.resourceURL = d.resourceURL + "/");
 	f.resourceURL = f.resourceURL.replace(/\/+$/img, "/");
 	BOX_HTML = `<div class="com-egt-jackpot-html-box"><div class="range"></div></div>`;

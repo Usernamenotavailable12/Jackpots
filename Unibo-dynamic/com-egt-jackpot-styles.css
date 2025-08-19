@@ -19,29 +19,20 @@
     #440606 100%
   );
 
-  --gradient-level-ii: linear-gradient(
-    180deg,
-    #4d0000 0%,
-    #4d0000 36%,
-    #4d0000 68%,
-    #4d0000 100%
-  );
-  --border-color-level-ii: #f89410;
+  --gradient-level-ii: #0F3C00;
+  --border-color-level-ii: #40FA00;
+  --border-width-level-ii: 3px;
+  --border-width-level-ii: 2px;
+  --border-width-level-iii: 2px;
 
-  --gradient-level-iii: linear-gradient(
-    180deg,
-    #4d0000 0%,
-    #4d0000 36%,
-    #4d0000 68%,
-    #4d0000 100%
-  );
+  --gradient-level-iii: #B7671A;
   --gradient-level-iii-icon: linear-gradient(
     180deg,
     #0c0d00 0%,
     #113001 38%,
     #0c0c00 100%
   );
-  --border-color-level-iii: #f89410;
+  --border-color-level-iii: #F39300;
 
   --bg-image: url(/Unibo-dynamic/img/jackpot-content.jpg);
   --logo-image: url(/Unibo-dynamic/img/logo.png);
@@ -56,23 +47,35 @@
   }
 }
 .com-egt-jackpot-html-box {
-  .range {
-    &:before {
+  .range::before {
+      content: var(--jp-range);
+      color: var(--text-color);
+      padding: 3px 6px;
+      border-radius: 25px;
       position: absolute;
-      top: 0;
-      left: 50%;
-      transform: translateX(-50%) translateY(-7px);
-      background-color: var(--border-color-level-ii);
-      content: var(--range);
-      border-radius: 16px;
-      font-size: 12px;
-      padding: 0.25rem 0.5rem;
-    }
+      inset: 0;
+      font-size: .7vw;
+      font-family: 'Noto Sans Ambassadori';
+      background: var(--gradient-level-iii-range, var(--gradient-level-ii));
+      border: var(--border-width-level-ii) solid var(--border-color-level-iii-range, var(--border-color-level-ii));
+      display: flex;
+      width: fit-content;
+      height: fit-content;
+      margin-left: calc(10vw / 3);
+      top: -20%;
+      @media (width < 1500px) {
+        font-size: .55vw;
+
+        
+      }
   }
   &.com-egt-jackpot-html-II {
-    --range: "0-999999999";
+    --jp-range: "2 500₾ - 7 500₾";
+    --text-color: #40FA00;
   }
-  &.com-egt-jackpot-html-III {
-    --range: "0-779999999";
+    &.com-egt-jackpot-html-III {
+    --jp-range: "II";
+    --gradient-level-iii-range: red;
+    --border-color-level-iii-range: blue;
   }
 }

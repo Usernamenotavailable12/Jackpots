@@ -9,7 +9,7 @@
   --jackpot-gap: 0.625vw;
   --jackpot-padding-right: 0.833vw;
   --jackpot-margin-left: 1.302vw;
-  --jackpot-border-radius: 0vw 1.25vw 1.25vw 0vw;
+  --jackpot-border-radius: 10px 1.25vw 1.25vw 10px;
   --jackpot-margin-right: 1.667vw;
   --icon-size: 3.542vw;
   --icon-left-offset: -1.302vw;
@@ -22,7 +22,7 @@
   --font-family-primary: "Noto Sans Ambassadori";
   --font-family-slim: "Noto Sans Ambassadori Slim";
   --font-family-bold: "Noto Sans Ambassadori Bold";
-  --font-size-primary: 1.25vw;
+  --font-size-primary: 1vw;
   --letter-spacing: 0.125vw;
   --font-url-regular: url(https://usernamenotavailable12.github.io/Font-Repository/NotoSansAmbassadori-Regular.ttf);
   --font-url-bold: url(https://usernamenotavailable12.github.io/Font-Repository/NotoSansAmbassadori-Bold.ttf);
@@ -189,6 +189,8 @@ map {
   background-repeat: no-repeat;
   background-size: contain;
   background-position: center;
+  scale: 1.7;
+  pointer-events: none;
 }
 
 .com-egt-jackpot-html-popUpMask {
@@ -232,14 +234,15 @@ map {
 }
 
 
-.com-egt-jackpot-html-II {
-  order: var(--order-II);
+.com-egt-jackpot-html-II  {
   background: var(--gradient-level-ii);
   border-color: var(--border-color-level-ii) !important;
+  border-width: var(--border-width-level-ii, 2px) !important;
   &::before {
     border-color: var(--border-color-level-ii);
-    background: var(--level-ii-mini-image), rgb(46, 0, 19);
+    background: var(--level-ii-mini-image), #185703;
     backdrop-filter: var(--backdrop-filter);
+    border-width: var(--border-width-level-ii, 2px) !important;
     background-size: 80% !important;
     background-position: center;
     background-repeat: no-repeat;
@@ -249,11 +252,13 @@ map {
   order: var(--order-III);
   background: var(--gradient-level-iii);
   border-color: var(--border-color-level-iii) !important;
+  border-width: var(--border-width-level-iii, 2px) !important;
 
   &::before {
     border-color: var(--border-color-level-iii);
-    background: var(--level-iii-mini-image),  rgb(46, 0, 19);
+    background: var(--level-iii-mini-image),  #B7671A;
     backdrop-filter: var(--backdrop-filter);
+    border-width: var(--border-width-level-iii, 2px) !important;
     background-size: 80% !important;
     background-position: center;
     background-repeat: no-repeat;
