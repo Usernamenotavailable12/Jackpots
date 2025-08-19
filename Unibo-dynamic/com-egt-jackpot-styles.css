@@ -41,11 +41,6 @@
   --level-iii-mini-image: url(/Unibo-dynamic/img/II.png);
 }
 
-@media screen and (max-width: 768px) {
-  :root {
-    --logo-image: url(/Unibo-dynamic/img/logo-small.png);
-  }
-}
 .com-egt-jackpot-html-box {
   .range::before {
       content: var(--jp-range);
@@ -64,9 +59,8 @@
       margin-left: calc(10vw / 3);
       top: -20%;
       @media (width < 1500px) {
-        font-size: .55vw;
-
-        
+        font-size: .65vw;
+        margin-left: calc(10vw / 4);
       }
   }
   &.com-egt-jackpot-html-II {
@@ -74,8 +68,33 @@
     --text-color: #40FA00;
   }
     &.com-egt-jackpot-html-III {
-    --jp-range: "II";
-    --gradient-level-iii-range: red;
-    --border-color-level-iii-range: blue;
+    --jp-range: "3 500₾ - 15 000₾";
+    --gradient-level-iii-range: var(--gradient-level-iii);
+    --border-color-level-iii-range: var(--border-color-level-iii);
+  }
+}
+@media screen and (max-width: 768px) {
+  :root {
+    --logo-image: url(/Unibo-dynamic/img/logo-small.png);
+    .com-egt-jackpot-html-clear-fix {
+    --logo-width: 20vw !important;
+    scale: 1 !important;
+  }
+  --jackpot-width: 30vw !important;
+  --font-size-primary: 2.784vw !important;
+}
+  .com-egt-jackpot-html-md {
+  .range::before {
+    font-size: 1.6vw;
+    padding: 5px 10px;
+    margin-left: calc(10vw / 1.5);
+    top: -20%;
+    padding: 2px 4px;
+  }
+}
+}
+@media (min-width: 769px) and (max-width: 1199px) {
+  .range {
+    display: none;
   }
 }
