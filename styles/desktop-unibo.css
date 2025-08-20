@@ -189,7 +189,7 @@ map {
   background-repeat: no-repeat;
   background-size: contain;
   background-position: center;
-  scale: 1.7;
+  scale: 1;
   pointer-events: none;
 }
 
@@ -256,7 +256,7 @@ map {
 
   &::before {
     border-color: var(--border-color-level-iii);
-    background: var(--level-iii-mini-image),  #B7671A;
+    background: var(--level-iii-mini-image),  #0055aa;
     backdrop-filter: var(--backdrop-filter);
     border-width: var(--border-width-level-iii, 2px) !important;
     background-size: 80% !important;

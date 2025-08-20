@@ -25,14 +25,14 @@
   --border-width-level-ii: 2px;
   --border-width-level-iii: 2px;
 
-  --gradient-level-iii: #B7671A;
+  --gradient-level-iii: #033e7a;
   --gradient-level-iii-icon: linear-gradient(
     180deg,
     #0c0d00 0%,
     #113001 38%,
     #0c0c00 100%
   );
-  --border-color-level-iii: #F39300;
+  --border-color-level-iii: #0069d1;
 
   --bg-image: url(/Unibo-dynamic/img/jackpot-content.jpg);
   --logo-image: url(/Unibo-dynamic/img/logo.png);
@@ -49,7 +49,7 @@
       border-radius: 25px;
       position: absolute;
       inset: 0;
-      font-size: .7vw;
+      font-size: .75vw;
       font-family: 'Noto Sans Ambassadori';
       background: var(--gradient-level-iii-range, var(--gradient-level-ii));
       border: var(--border-width-level-ii) solid var(--border-color-level-iii-range, var(--border-color-level-ii));
@@ -59,7 +59,7 @@
       margin-left: calc(10vw / 3);
       top: -20%;
       @media (width < 1500px) {
-        font-size: .65vw;
+        font-size: .75vw;
         margin-left: calc(10vw / 4);
       }
   }
@@ -77,7 +77,7 @@
   :root {
     --logo-image: url(/Unibo-dynamic/img/logo-small.png);
     .com-egt-jackpot-html-clear-fix {
-    --logo-width: 20vw !important;
+    --logo-width: 18vw !important;
     scale: 1 !important;
   }
   --jackpot-width: 30vw !important;
@@ -85,10 +85,10 @@
 }
   .com-egt-jackpot-html-md {
   .range::before {
-    font-size: 1.6vw;
-    padding: 5px 10px;
-    margin-left: calc(10vw / 1.5);
-    top: -20%;
+    font-size: 2.1vw;
+    padding: 2px 8px !important;
+    margin-left: calc(10vw / 1.7);
+    top: -25%;
     padding: 2px 4px;
   }
 }

@@ -27,6 +27,22 @@ body {
 	background-size: cover;
 	position: absolute;
 }
+#off-com-egt-jackpot-html-jackpotBanner::after {
+	content: "FIXED";
+	color: #ffe235;
+	text-shadow: 1px 1px 2px #c65822,
+							 0px 0px 2px #aa430f,
+							 -1px 0px 2px #d46a35;
+	font-size: 20px;
+	width: fit-content;
+	height: 20px;
+	left: 50%;
+	bottom: -25px;
+	transform: translateX(-50%);
+	background-size: contain;
+	position: absolute;
+	font-family: 'Noto Sans Ambassadori';
+}
 
 #EgtFlashBannerHolder {
     background: url('./img/jackpot-content.png') no-repeat center center;
@@ -126,8 +142,8 @@ body {
 	background: #0F3C00;
 	box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25) inset;
 	&.com-egt-jackpot-html-I{
-		border: 2px solid #F39300 !important;
-		background: #B7671A;
+		border: 2px solid #0069d1 !important;
+		background: #033e7a;
 	}
 
 
@@ -389,7 +405,7 @@ body {
 #com-egt-jackpot-html-jackpotBanner.com-egt-jackpot-html-xsm .com-egt-jackpot-html-box {
 	display: block;
 	width: 75%;
-	margin: 0 auto 15px;
+	margin: 0 auto 20px;
 }
 
 #com-egt-jackpot-html-jackpotBanner.com-egt-jackpot-html-xsm .com-egt-jackpot-html-box.com-egt-jackpot-html-I {
@@ -412,8 +428,8 @@ body {
 	width: 4.4vw;
 }
 .com-egt-jackpot-html-I {
-	--border-collor-level: #F39300;
-	--bg-collor-level: #B7671A;
+	--border-collor-level: #0069d1;
+	--bg-collor-level: #033e7a;
 	--text-color: #FFF !important;
 }
 .com-egt-jackpot-html-II {
@@ -430,7 +446,7 @@ body {
 	scale:1.6;
   transform: translatey(-1px);
 	z-index: 2;
-	border: 2px solid var(--border-collor-level) !important;
+	border: 1px solid var(--border-collor-level) !important;
 	left: 0px !important;
 }
 
@@ -1034,20 +1050,20 @@ body {
   .range::before {
       content: var(--jp-range);
       color: var(--text-color);
-      padding: 4px 8px !important;
+      padding: 6px 8px !important;
       border-radius: 25px;
       position: absolute;
       inset: 0;
-      font-size: 12px;
+      font-size: 13px;
       font-family: 'Noto Sans Ambassadori';
       background: var(--bg-collor-level);
-      border: 2px solid var(--border-collor-level);
+      border: 1.5px solid var(--border-collor-level);
       display: flex;
       width: fit-content;
       height: fit-content;
-      margin-left: calc(10vw * 1.7);
-      top: -33%;
-			scale: .9;
+      margin-left: calc(10vw * 1.4);
+      top: -47%;
+			scale: 0.9;
   }
 }
   .com-egt-jackpot-html-I {
