@@ -568,7 +568,7 @@ function RollingComponent(h, w, d, b) {
 		H.prototype.onRequestComplete = function (e) {
 			var n = this;
 			n.first = !1;
-			a = "₾";
+			a = "&#8382;";
 			u.push(Math.round(parseFloat(e.jackpots[0].amount.replace("GEL", "").trim()) * 100));
 			u.push(Math.round(parseFloat(e.jackpots[1].amount.replace("GEL", "").trim()) * 100));
 			for (var D = 0; 2 > D; D++)r[D].setCurrency(a), r[D].jackpotBox.setValue(u[D], !1), J[D] = u[D];

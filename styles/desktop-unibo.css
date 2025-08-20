@@ -19,61 +19,20 @@
   --border-color-light-gold: #d9be8e;
   --text-color: #fff;
   --backdrop-filter: blur(9.449999809265137px);
-  --font-family-primary: "Noto Sans Ambassadori";
-  --font-family-slim: "Noto Sans Ambassadori Slim";
-  --font-family-bold: "Noto Sans Ambassadori Bold";
   --font-size-primary: 1vw;
   --letter-spacing: 0.125vw;
-  --font-url-regular: url(https://usernamenotavailable12.github.io/Font-Repository/NotoSansAmbassadori-Regular.ttf);
-  --font-url-bold: url(https://usernamenotavailable12.github.io/Font-Repository/NotoSansAmbassadori-Bold.ttf);
   --order-III: 3;
   --order-logo: 2;
   --order-II: 1;
 }
 
-
 @font-face {
-  font-family: var(--font-family-primary);
-  font-style: normal;
-  font-weight: 700;
-  font-display: swap;
-  src: var(--font-url-regular);
-}
-@font-face {
-  font-family: var(--font-family-primary);
-  font-style: normal;
-  font-weight: 400;
-  font-display: swap;
-  src: var(--font-url-regular);
-}
-@font-face {
-  font-family: var(--font-family-slim);
-  font-style: normal;
-  font-weight: 700;
-  font-display: swap;
-  src: var(--font-url-regular);
-}
-@font-face {
-  font-family: var(--font-family-slim);
-  font-style: normal;
-  font-weight: 400;
-  font-display: swap;
-  src: var(--font-url-regular);
-}
-@font-face {
-  font-family: var(--font-family-bold);
-  font-style: normal;
-  font-weight: 700;
-  font-display: swap;
-  src: var(--font-url-bold);
-}
-@font-face {
-  font-family: var(--font-family-bold);
-  font-style: normal;
-  font-weight: 400;
-  font-display: swap;
-  src: var(--font-url-bold);
-}
+	font-family: "Noto Sans Ambassadori";
+	font-style: normal;
+	font-weight: 400;
+	font-display: swap;
+	src: url(https://usernamenotavailable12.github.io/Font-Repository/NotoSansAmbassadori-Regular.ttf);
+  }
 
 #EgtFlashBannerHolder {
   display: flex;
@@ -202,14 +161,11 @@ map {
   justify-content: flex-end;
   overflow: hidden;
   transform: translateY(5%);
+  font-family: 'Noto Sans Ambassadori';
   @media (max-width: 768px) {
-    height: 85%;
-    transform: translateY(15%);
+    height: 80%;
+    transform: translateY(20%);
   }
-}
-.com-egt-jackpot-html-currencyText {
-    display: inline-block;
-    transform: translateY(30%);
 }
 
 .com-egt-jackpot-html-digit {
@@ -306,4 +262,11 @@ map {
 
 
 
+}
+.com-egt-jackpot-html-currencyText {
+  transform: translateY(20%) !important;
+    display: inline-block;
+@media (max-width: 768px) {
+    transform: translateY(1.5vw) !important;
+}
 }

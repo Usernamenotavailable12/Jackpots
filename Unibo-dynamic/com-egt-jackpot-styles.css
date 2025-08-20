@@ -1,10 +1,4 @@
-@font-face {
-	font-family: "Noto Sans Ambassadori";
-	font-style: normal;
-	font-weight: 400;
-	font-display: swap;
-	src: url(https://usernamenotavailable12.github.io/Font-Repository/NotoSansAmbassadori-Regular.ttf);
-  }
+
 :root {
   --level-icon-size: 3.698vw;
   --level-icon-top-offset: -1.615vw;
