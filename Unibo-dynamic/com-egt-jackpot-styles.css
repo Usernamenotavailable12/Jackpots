@@ -58,6 +58,7 @@
       height: fit-content;
       margin-left: calc(10vw / 3);
       top: -20%;
+      z-index: 1;
       @media (width < 1500px) {
         font-size: .75vw;
         margin-left: calc(10vw / 4);

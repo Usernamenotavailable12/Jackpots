@@ -1064,6 +1064,7 @@ body {
       margin-left: calc(10vw * 1.4);
       top: -47%;
 			scale: 0.9;
+			z-index: 1;
   }
 }
   .com-egt-jackpot-html-I {
