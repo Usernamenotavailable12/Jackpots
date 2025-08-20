@@ -224,6 +224,7 @@ body {
 	display: block;
 	width: 8vw;
 	margin-left: 2px;
+	transform: translateY(2px);
 }
 
 #com-egt-jackpot-html-jackpotBanner .com-egt-jackpot-html-box .com-egt-jackpot-html-value {
@@ -436,6 +437,10 @@ body {
 	--border-collor-level: #40FA00;
 	--bg-collor-level: #0F3C00;
 	--text-color: #40FA00 !important;
+	color: var(--text-color);
+	.com-egt-jackpot-html-currencyText {
+		color: var(--text-color);
+	}
 }
 
 #com-egt-jackpot-html-jackpotBanner.com-egt-jackpot-html-xsm .com-egt-jackpot-html-box .com-egt-jackpot-html-level {
