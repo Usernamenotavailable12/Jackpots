@@ -1076,8 +1076,7 @@ body {
     --jp-range: "3 500₾ - 15 000₾";
   }
     .com-egt-jackpot-html-II {
-		--jp-range: "2 500₾ - 7 500₾";
-    --jp-range: "3 500₾ - 15 000₾";
+	--jp-range: "2 500₾ - 7 500₾";
     --gradient-level-iii-range: var(--gradient-level-iii);
     --border-color-level-iii-range: var(--border-color-level-iii);
   }
