@@ -545,8 +545,8 @@ function PopUp(h, w, d) {
 			var n = this;
 			n.first = !1;
 			a = "&#8382;";
-			u.push(Math.round(parseFloat(e.jackpots[1].amount.replace("GEL", "").replace(",", "").trim()) * 100));
 			u.push(Math.round(parseFloat(e.jackpots[0].amount.replace("GEL", "").replace(",", "").trim()) * 100));
+			u.push(Math.round(parseFloat(e.jackpots[1].amount.replace("GEL", "").replace(",", "").trim()) * 100));
 			for (var D = 0; 2 > D; D++)r[D].setCurrency(a), r[D].jackpotBox.setValue(u[D], !1), J[D] = u[D];
 			B.visible(!0);
 
@@ -565,8 +565,8 @@ function PopUp(h, w, d) {
 			}, f[Y], 1)
 		};
 		H.prototype.processRequestFromServer = function (a) {
-			u[0] = Math.round(parseFloat(a.jackpots[1].amount.replace("GEL", "").replace(",", "").trim()) * 100);
-			u[1] = Math.round(parseFloat(a.jackpots[0].amount.replace("GEL", "").replace(",", "").trim()) * 100);
+			u[0] = Math.round(parseFloat(a.jackpots[0].amount.replace("GEL", "").replace(",", "").trim()) * 100);
+			u[1] = Math.round(parseFloat(a.jackpots[1].amount.replace("GEL", "").replace(",", "").trim()) * 100);
 			this.setPopUpInformation(y, 0, "", 0, null, "", 0, "GEL");
 			this.setPopUpInformation(N, 0, "", 0, null, "", 0, "GEL");
 			for (a = 0; 2 > a; a++)r[a].isPopUpOpen && ("I" == r[a].id && this.updateInformationInPopUp(y), "II" == r[a].id && this.updateInformationInPopUp(N)), this.getDifference(J[a], u[a], a)
