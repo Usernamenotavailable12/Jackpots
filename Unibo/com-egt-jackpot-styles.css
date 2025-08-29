@@ -18,7 +18,6 @@ body {
 }
 .com-egt-jackpot-html-md::before {
 	content: "";
-    background: url('./img/Vector.svg') no-repeat center center;
 	width: 24px;
 	height: 17px;
 	left: 50%;
@@ -138,12 +137,12 @@ body {
 	z-index: 1;
 	
 	border-radius: 4px 12px 12px 4px;
-	border: 2px solid #40FA00 !important;
-	background: #0F3C00;
+	border: 2px solid transparent !important;
+  background: linear-gradient(33deg, #3E1300 0%, #A43201 45.47%, #3E1300 85.21%) padding-box, linear-gradient(33deg, #A23101 0%, #FFA67F 45.47%, #A23101 85.21%) border-box;
 	box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25) inset;
 	&.com-egt-jackpot-html-I{
-		border: 2px solid #0069d1 !important;
-		background: #033e7a;
+		border: 2px solid transparent !important;
+    background: linear-gradient(33deg, #401EA8 0%, #30167D 45.47%, #401EA8 85.21%) padding-box, linear-gradient(18deg, #4A23C3 40%, #CDBDFF 48.47%, #4A23C3 85.21%) border-box;
 	}
 
 
@@ -431,29 +430,57 @@ body {
 .com-egt-jackpot-html-I {
 	--border-collor-level: #0069d1;
 	--bg-collor-level: #033e7a;
-	--text-color: #FFF !important;
+	--text-color: #5CF5A5  !important;
 }
 .com-egt-jackpot-html-II {
 	--border-collor-level: #40FA00;
 	--bg-collor-level: #0F3C00;
-	--text-color: #40FA00 !important;
+	--text-color: #FCFA87 !important;
 	color: var(--text-color);
 	.com-egt-jackpot-html-currencyText {
 		color: var(--text-color);
 	}
 }
 
-#com-egt-jackpot-html-jackpotBanner.com-egt-jackpot-html-xsm .com-egt-jackpot-html-box .com-egt-jackpot-html-level {
-	background-color: var(--bg-collor-level);
-	background-size: 80%;
-	background-position: center;
-	border-radius: 100%;
-	scale:1.6;
-  transform: translatey(-1px);
-	z-index: 2;
-	border: 1px solid var(--border-collor-level) !important;
-	left: 0px !important;
+#com-egt-jackpot-html-jackpotBanner.com-egt-jackpot-html-xsm 
+  .com-egt-jackpot-html-box 
+  .com-egt-jackpot-html-level {
+    position: relative; 
+    display: block;
+    border-radius: 50%;
+    scale: 1.6;
+    left: 0 !important;
+    overflow: hidden;
 }
+
+.com-egt-jackpot-html-I .com-egt-jackpot-html-level {
+	display: flex;
+	background: linear-gradient(33deg, #401EA8 0%, #30167D 45.47%, #401EA8 85.21%) !important;
+	background-image: url("./img/II.png"), linear-gradient(33deg, #401EA8 0%, #30167D 45.47%, #401EA8 85.21%) !important;
+	background-repeat: no-repeat !important;
+	background-position: center center !important;
+	background-size: contain, cover !important;
+    border: 1px solid #643CDC !important;
+
+	* {
+		color: #5CF5A5 !important;
+	}
+}
+
+.com-egt-jackpot-html-II .com-egt-jackpot-html-level {
+	display: flex;
+	background: linear-gradient(33deg, #3E1300 0%, #A43201 45.47%, #3E1300 85.21%) !important;
+	background-image: url("./img/I.png"), linear-gradient(33deg, #3E1300 0%, #A43201 45.47%, #3E1300 85.21%) !important;
+	background-repeat: no-repeat !important;
+	background-position: center center !important;
+	background-size: contain, cover !important;
+    border: 1px solid #A23101  !important;
+
+	* {
+		color: #FCFA87 !important;
+	}
+}
+
 
 
 /* #com-egt-jackpot-html-jackpotBanner.com-egt-jackpot-html-xsm .com-egt-jackpot-html-logo { display: none; }
@@ -473,7 +500,7 @@ body {
 }
 
 #com-egt-jackpot-html-jackpotBanner.com-egt-jackpot-html-sm .com-egt-jackpot-html-box.com-egt-jackpot-html-III {
-	width: 80%;
+	width: cover;
 }
 
 #com-egt-jackpot-html-jackpotBanner.com-egt-jackpot-html-sm .com-egt-jackpot-html-box.com-egt-jackpot-html-IV {
@@ -781,7 +808,6 @@ body {
 		margin-top: 70% !important;
 		position: relative;
 		object-fit: cover;
-		color: #FFF;
 		text-align: center;
 		font-family: "Noto Sans Ambassadori";
 		font-size: 14px;
@@ -899,6 +925,7 @@ body {
 	font-style: normal;
 	font-weight: 400;
 	line-height: normal;
+	top: -2px;
 }
 #com-egt-jackpot-html-jackpotBanner .com-egt-jackpot-html-box .com-egt-jackpot-html-value {
 	position: absolute;
@@ -1070,6 +1097,32 @@ body {
       top: -47%;
 			scale: 0.9;
 			z-index: 1;
+  }
+
+  
+  &.com-egt-jackpot-html-II {
+    --jp-range: "2 500₾ - 7 500₾";
+    --text-color: #FCFA87;
+    
+    .range::before { 
+      --text-color: #FFFB47;
+      background: linear-gradient(180deg, #5E117F 0%, #C40B81 100%) padding-box,
+        linear-gradient(340deg, #F59400 30%, #FFE7C2 47%, #F59400 70%) border-box !important;
+		border-color: transparent;
+
+    }
+  }
+
+  &.com-egt-jackpot-html-I {
+    --jp-range: "3 500₾ - 15 000₾";
+    --gradient-level-iii-range: var(--gradient-level-iii);
+    --border-color-level-iii-range: var(--border-color-level-iii);
+
+    .range::before { 
+      background: linear-gradient(180deg, #510664 0%, #2E053D 100%) padding-box,
+        linear-gradient(195deg, #4A23C3 42%, #9581d1 47%, #4A23C3 60%) border-box !important;
+		border-color: transparent;
+    }
   }
 }
   .com-egt-jackpot-html-I {
