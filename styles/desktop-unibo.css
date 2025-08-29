@@ -1,4 +1,4 @@
-:root{
+:root {
   --banner-height: 4.583vw;
   --banner-border-radius: 1.042vw;
   --banner-padding: 0vw 7.656vw;
@@ -17,7 +17,7 @@
   --icon-border-radius: 3.333vw;
   --logo-width: 7.813vw;
   --border-color-light-gold: #d9be8e;
-  --text-color: #fff;
+  --text-color: #5CF5A5;
   --backdrop-filter: blur(9.449999809265137px);
   --font-size-primary: 1vw;
   --letter-spacing: 0.125vw;
@@ -27,12 +27,12 @@
 }
 
 @font-face {
-	font-family: "Noto Sans Ambassadori";
-	font-style: normal;
-	font-weight: 400;
-	font-display: swap;
-	src: url(https://usernamenotavailable12.github.io/Font-Repository/NotoSansAmbassadori-Regular.ttf);
-  }
+  font-family: "Noto Sans Ambassadori";
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: url(https://usernamenotavailable12.github.io/Font-Repository/NotoSansAmbassadori-Regular.ttf);
+}
 
 #EgtFlashBannerHolder {
   display: flex;
@@ -45,6 +45,7 @@
   position: relative;
   z-index: -1;
   border-radius: var(--banner-border-radius);
+
   &::after {
     content: "";
     position: absolute;
@@ -155,6 +156,7 @@ map {
 .com-egt-jackpot-html-popUpMask {
   display: none;
 }
+
 .com-egt-jackpot-html-value {
   display: flex;
   height: 100%;
@@ -162,6 +164,7 @@ map {
   overflow: hidden;
   transform: translateY(5%);
   font-family: 'Noto Sans Ambassadori';
+
   @media (max-width: 768px) {
     height: 80%;
     transform: translateY(20%);
@@ -199,32 +202,32 @@ map {
 }
 
 
-.com-egt-jackpot-html-II  {
-  background: var(--gradient-level-ii);
-  border-color: var(--border-color-level-ii) !important;
+.com-egt-jackpot-html-II {
+  background: linear-gradient(33deg, #3E1300 0%, #A43201 45.47%, #3E1300 85.21%) padding-box, linear-gradient(33deg, #A23101 0%, #FFA67F 45.47%, #A23101 85.21%) border-box;
   border-width: var(--border-width-level-ii, 2px) !important;
   &::before {
     border-color: var(--border-color-level-ii);
-    background: var(--level-ii-mini-image), #185703;
+    background: var(--level-ii-mini-image), linear-gradient(33deg, #3E1300 0%, #A43201 45.47%, #3E1300 85.21%);
     backdrop-filter: var(--backdrop-filter);
     border-width: var(--border-width-level-ii, 2px) !important;
-    background-size: 80% !important;
+    background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
   }
 }
+
 .com-egt-jackpot-html-III {
   order: var(--order-III);
-  background: var(--gradient-level-iii);
-  border-color: var(--border-color-level-iii) !important;
+    background: linear-gradient(33deg, #401EA8 0%, #30167D 45.47%, #401EA8 85.21%) padding-box, linear-gradient(18deg, #4A23C3 40%, #CDBDFF 48.47%, #4A23C3 85.21%) border-box;
+
   border-width: var(--border-width-level-iii, 2px) !important;
 
   &::before {
     border-color: var(--border-color-level-iii);
-    background: var(--level-iii-mini-image),  #0055aa;
+    background: var(--level-iii-mini-image), linear-gradient(33deg, #401EA8 0%, #30167D 45.47%, #401EA8 85.21%);
     backdrop-filter: var(--backdrop-filter);
     border-width: var(--border-width-level-iii, 2px) !important;
-    background-size: 80% !important;
+    background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
   }
@@ -236,37 +239,40 @@ map {
 
 @media screen and (max-width: 768px) {
   :root {
-  --order-IV: 0;
-  --order-logo: 1;
-  --order-III: 2;
-  --banner-height: 13.784vw;
-  --banner-padding: 0vw 3.243vw;
-  --jackpot-width: 34.595vw;
-  --jackpot-height: 9.189vw;
-  --border-main-width: 0.541vw;
-  --border-width: 0.27vw;
-  --icon-size: 10.811vw;
-  --icon-top-offset: -0.811vw;
-  --icon-left-offset: -5.135vw;
-  --jackpot-margin-left: 5.135vw;
-  --jackpot-margin-right: 0vw;
-  --jackpot-border-radius: 1.351vw 3.243vw 3.243vw 1.351vw;
-  --jackpot-padding-right: 2.703vw;
-  --font-size-primary: 3.784vw;
-  --jackpot-gap: 1.351vw;
-  --banner-border-radius: 4.324vw;
-  --level-icon-size: 10.811vw;
-  --level-icon-top-offset: -4.865vw;
+    --order-IV: 0;
+    --order-logo: 1;
+    --order-III: 2;
+    --banner-height: 13.784vw;
+    --banner-padding: 0vw 3.243vw;
+    --jackpot-width: 34.595vw;
+    --jackpot-height: 8.189vw;
+    --border-main-width: 0.341vw;
+    --border-width: 0.27vw;
+    --icon-size: 9.611vw;
+    --icon-top-offset: -0.811vw;
+    --icon-left-offset: -5.135vw;
+    --jackpot-margin-left: 5.135vw;
+    --jackpot-margin-right: 0vw;
+    --jackpot-border-radius: 1.351vw 3.243vw 3.243vw 1.351vw;
+    --jackpot-padding-right: 2.703vw;
+    --font-size-primary: 3.784vw;
+    --jackpot-gap: 1.351vw;
+    --banner-border-radius: 4.324vw;
+    --level-icon-size: 10.811vw;
+    --level-icon-top-offset: -4.865vw;
+    --bg-image: url(/Unibo-dynamic/img/jackpot-content-mob.jpg);
   }
 
 
 
 
 }
+
 .com-egt-jackpot-html-currencyText {
   transform: translateY(20%) !important;
-    display: inline-block;
-@media (max-width: 768px) {
+  display: inline-block;
+
+  @media (max-width: 768px) {
     transform: translateY(1.5vw) !important;
-}
+  }
 }

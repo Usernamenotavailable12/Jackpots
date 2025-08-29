@@ -1,39 +1,32 @@
-
 :root {
   --level-icon-size: 3.698vw;
   --level-icon-top-offset: -1.615vw;
 
-  --border-color-gold: #b28649;
+  --border-color-gold: transparent;
 
   --box-shadow: 0vw 0.208vw 0.208vw 0vw rgba(0, 0, 0, 0.25) inset;
 
-  --gradient-banner: linear-gradient(
-    180deg,
-    rgba(43, 48, 43, 0.6) 0%,
-    rgba(37, 37, 36, 0.6) 95.1%
-  );
-  --gradient-default: linear-gradient(
-    180deg,
-    #380606 0%,
-    #6f0c0b 36%,
-    #6f0c0b 68%,
-    #440606 100%
-  );
+  --gradient-banner: linear-gradient(180deg,
+      #81199F 0%,
+      #81199F 95.1%);
+  --gradient-default: linear-gradient(180deg,
+      #380606 0%,
+      #6f0c0b 36%,
+      #6f0c0b 68%,
+      #440606 100%);
 
-  --gradient-level-ii: #0F3C00;
-  --border-color-level-ii: #40FA00;
+  --gradient-level-ii: linear-gradient(33deg, #3E1300 0%, #A43201 45.47%, #3E1300 85.21%) padding-box, linear-gradient(33deg, #3E1300 0%, #A43201 45.47%, #3E1300 85.21%) border-box;
+  --border-color-level-ii: #A23101;
   --border-width-level-ii: 3px;
   --border-width-level-ii: 2px;
   --border-width-level-iii: 2px;
 
   --gradient-level-iii: #033e7a;
-  --gradient-level-iii-icon: linear-gradient(
-    180deg,
-    #0c0d00 0%,
-    #113001 38%,
-    #0c0c00 100%
-  );
-  --border-color-level-iii: #0069d1;
+  --gradient-level-iii-icon: linear-gradient(180deg,
+      #0c0d00 0%,
+      #113001 38%,
+      #0c0c00 100%);
+  --border-color-level-iii: #643CDC;
 
   --bg-image: url(/Unibo-dynamic/img/jackpot-content.jpg);
   --logo-image: url(/Unibo-dynamic/img/logo.png);
@@ -44,57 +37,83 @@
 
 .com-egt-jackpot-html-box {
   .range::before {
-      content: var(--jp-range);
-      color: var(--text-color);
-      padding: 3px 6px;
-      border-radius: 25px;
-      position: absolute;
-      inset: 0;
+    content: var(--jp-range);
+    color: var(--text-color);
+    border-radius: 25px;
+    padding: 2px 8px;
+    position: absolute;
+    inset: 0;
+    font-size: .75vw;
+    font-family: 'Noto Sans Ambassadori';
+
+    align-items: center;
+    justify-content: center;
+
+
+    border: var(--border-width) solid transparent;
+
+    display: flex;
+    width: fit-content;
+    height: fit-content;
+    margin-left: calc(10vw / 3);
+    top: -20%;
+    z-index: 1;
+
+    @media (width < 1500px) {
       font-size: .75vw;
-      font-family: 'Noto Sans Ambassadori';
-      background: var(--gradient-level-iii-range, var(--gradient-level-ii));
-      border: var(--border-width-level-ii) solid var(--border-color-level-iii-range, var(--border-color-level-ii));
-      display: flex;
-      width: fit-content;
-      height: fit-content;
-      margin-left: calc(10vw / 3);
-      top: -20%;
-      z-index: 1;
-      @media (width < 1500px) {
-        font-size: .75vw;
-        margin-left: calc(10vw / 4);
-      }
+      margin-left: calc(10vw / 4);
+    }
   }
+
   &.com-egt-jackpot-html-II {
     --jp-range: "2 500₾ - 7 500₾";
-    --text-color: #40FA00;
+    --text-color: #FCFA87;
+    
+    .range::before { 
+      --text-color: #FFFB47;
+      background: linear-gradient(180deg, #5E117F 0%, #C40B81 100%) padding-box,
+        linear-gradient(340deg, #F59400 30%, #FFE7C2 47%, #F59400 70%) border-box;
+
+    }
   }
-    &.com-egt-jackpot-html-III {
+
+  &.com-egt-jackpot-html-III {
     --jp-range: "3 500₾ - 15 000₾";
     --gradient-level-iii-range: var(--gradient-level-iii);
     --border-color-level-iii-range: var(--border-color-level-iii);
+
+    .range::before { 
+      background: linear-gradient(180deg, #510664 0%, #2E053D 100%) padding-box,
+        linear-gradient(195deg, #4A23C3 42%, #9581d1 47%, #4A23C3 60%) border-box;
+
+    }
   }
 }
+
 @media screen and (max-width: 768px) {
   :root {
     --logo-image: url(/Unibo-dynamic/img/logo-small.png);
+
     .com-egt-jackpot-html-clear-fix {
-    --logo-width: 12vw !important;
-    scale: 1 !important;
+      --logo-width: 18vw !important;
+      scale: 1 !important;
+    }
+
+    --jackpot-width: 32vw !important;
+    --font-size-primary: 2.784vw !important;
   }
-  --jackpot-width: 32vw !important;
-  --font-size-primary: 2.784vw !important;
-}
+
   .com-egt-jackpot-html-md {
-  .range::before {
-    font-size: 2.1vw;
-    padding: 2px 8px !important;
-    margin-left: calc(10vw / 1.7);
-    top: -25%;
-    padding: 2px 4px;
+    .range::before {
+      font-size: 2.1vw;
+      padding: 2px 8px !important;
+      margin-left: calc(10vw / 1.7);
+      top: -25%;
+      padding: 2px 4px;
+    }
   }
 }
-}
+
 @media (min-width: 769px) and (max-width: 1000px) {
   .range {
     display: none;
