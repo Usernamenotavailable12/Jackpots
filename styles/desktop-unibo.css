@@ -65,6 +65,7 @@
 
 #com-egt-jackpot-html-jackpotBanner {
   display: flex;
+  flex-direction: row-reverse;
   padding: var(--banner-padding) !important;
   justify-content: space-between;
   height: 100%;

@@ -408,7 +408,7 @@ body {
 	margin: 0 auto 20px;
 }
 
-#com-egt-jackpot-html-jackpotBanner.com-egt-jackpot-html-xsm .com-egt-jackpot-html-box.com-egt-jackpot-html-I {
+#com-egt-jackpot-html-jackpotBanner.com-egt-jackpot-html-xsm .com-egt-jackpot-html-box.com-egt-jackpot-html-II {
 	margin-bottom: 0;
 }
 
@@ -1133,3 +1133,12 @@ body {
     --gradient-level-iii-range: var(--gradient-level-iii);
     --border-color-level-iii-range: var(--border-color-level-iii);
   }
+
+  #com-egt-jackpot-html-jackpotBanner {
+	display: flex;
+	flex-direction: column-reverse;
+  }
+  #com-egt-jackpot-html-jackpotBanner .com-egt-jackpot-html-II {
+	margin-bottom: unset;
+}
+
