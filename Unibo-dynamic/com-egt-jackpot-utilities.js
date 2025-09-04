@@ -168,10 +168,7 @@ function RollingComponent(h, w, d, b) {
 	LEVEL_HTML = '<div class="com-egt-jackpot-html-level"></div>';
 	CURRENCY_TEXT = '<span class="com-egt-jackpot-html-currencyText"></span>';
 	sadasdlas = '<div class="com-egt-jackpot-html-currency">' + CURRENCY_TEXT + "</div>";
-	f.generateLevels = function (b, c) {
-		this.level[0].className += ' ' + "img" + b
-		$(this.level).css({backgroundImage: 'url("' + this.resourceURL + "img/" + b + '.png")' })
-	};
+	f.generateLevels = function (b, c) {};
 	f.box = $(BOX_HTML);
 	$(h).css({ padding: d.boxPadding + "px 0", position: "relative" });
 	h.append(f.box.addClass("class-md com-egt-jackpot-html-" + w));
